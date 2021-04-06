@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { useState } from 'react'
+import { FormattedMessage, IntlProvider } from "react-intl";
 
 function App() {
+  const [lang, setLang] = useState('en')
+  const [language, setLanguage] = useState(undefined)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <IntlProvider>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <div>
+            <select
+              value={lang}
+              onChange={(evt) => {
+                setLang(evt.target.value);
+              }}
+            >
+              <option value="en">English</option>
+              <option value="cn">中文</option>
+              <option value="fr">Français</option>
+              <option value="jp">日本語</option>
+            </select>
+          </div>
+          <p>
+            <FormattedMessage
+              id="app.header"
+              defaultMessage="Edit src/App.js and save to reload."
+            />
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FormattedMessage id="app.content" defaultMessage="Learn React" />
+          </a>
+        </header>
+      </div>
+    </IntlProvider>
   );
 }
 
