@@ -1,14 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FormattedMessage, IntlProvider } from "react-intl";
 
 function App() {
   const [lang, setLang] = useState('en')
-  const [language, setLanguage] = useState(undefined)
+  const [locale, setLocale] = useState(undefined)
+
+  useEffect(async() => {
+    const resp = await fetch(`./lang/${lang}.json`)
+    const data = await resp.json()
+    setLocale(data)
+  },[lang])
 
   return (
-    <IntlProvider>
+    <IntlProvider 
+      messages={locale}
+    >
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
