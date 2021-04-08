@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import translate from "./GoogleTranslatelogo.svg.png";
 import "./App.css";
 import React, { useState, useEffect } from 'react'
 import { FormattedMessage, IntlProvider } from "react-intl";
@@ -19,7 +20,10 @@ function App() {
     >
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <div className="flex-center">
+            <img src={logo} className="App-logo" alt="logo" />
+            <div className="translate-wrapper"><img src={translate} className="translate" alt="translate" /></div>
+          </div>
           <div>
             <select
               value={lang}
