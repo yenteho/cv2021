@@ -3,24 +3,16 @@ import "./App.css";
 import React, { useState, useEffect } from 'react'
 import { FormattedMessage, IntlProvider } from "react-intl";
 import AppView from "./components/AppView";
-import { rgba, darken, opacify } from 'polished'
+import { rgba, darken, opacify, adjustHue } from 'polished'
 import styled from 'styled-components'
-import Color_188 from './colors/188.json'
+import colors from './colors/light.js'
 import {ThemeProvider} from './components/base/common'
 
-const colors = Color_188.schemes
-// const Container = styled.div`
-//   height: 100vh;
-//   overflow: scroll;
-//   background-color: ${props => props.theme.color_P1};
-// `
 
 const Container = styled.div`
   height: 100vh;
   overflow: scroll;
-  /* background: ${props => darken('0.2', `${props.theme.color_P1}`)}; */
-  /* background: ${props => opacify('0.1', `${props.theme.color_P1}`)}; */
-  background: ${props => opacify('0.1', `${props.theme.color_P1}`)};
+  background: ${props => adjustHue('180', `${props.theme.color_P1}`)};
 `
 function App() {
   const [lang, setLang] = useState('en')
@@ -36,9 +28,8 @@ function App() {
     <IntlProvider 
       messages={locale}
     >
-      <div className="App">
       <ThemeProvider theme={{...colors}}>
-        <Container>
+        <Container className="App">
 
           <header className="App-header">
             <div className="flex-center">
@@ -75,7 +66,6 @@ function App() {
         </Container>
       </ThemeProvider>
         <AppView/>
-      </div>
     </IntlProvider>
   );
 }
