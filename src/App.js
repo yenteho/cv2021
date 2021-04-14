@@ -7,7 +7,10 @@ import { rgba, darken, opacify, adjustHue } from 'polished'
 import styled from 'styled-components'
 import colors from './colors/light.js'
 import {ThemeProvider} from './components/base/common'
-
+import {
+  ResetStyle,
+  GlobalStyle,
+} from './components/base/globalStyle'
 
 const Container = styled.div`
   height: 100vh;
@@ -29,8 +32,10 @@ function App() {
       messages={locale}
     >
       <ThemeProvider theme={{...colors}}>
+        <ResetStyle />
+        <GlobalStyle />
+        <AppView/>
         <Container className="App">
-
           <header className="App-header">
             <div className="flex-center">
               <img src={logo} className="App-logo" alt="logo" />
@@ -65,7 +70,6 @@ function App() {
           </header>
         </Container>
       </ThemeProvider>
-        <AppView/>
     </IntlProvider>
   );
 }

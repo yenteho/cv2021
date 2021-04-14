@@ -5,7 +5,7 @@ import {
   Shadow,
   HeaderItemContainer,
   HeaderItem,
-  SbkHeaderWrapper,
+  HeaderWrapper,
   MenuButton,
   ArrowButtonRight,
   ArrowButtonLeft,
@@ -45,11 +45,7 @@ const Header = ({
   }
   const [tab, setTab] = useState('Main Markets')
   return (
-    <SbkHeaderTransition
-      // hideSbkHeader={!showSbkHeader}
-      // onClick={() => toggleSbkHeader('toggleSbkHeader')}
-    >
-      <SbkHeaderWrapper>
+      <HeaderWrapper>
           
         <MenuButton 
             // toggleMenuPanel={() => toggleMenuPanel()} 
@@ -85,7 +81,8 @@ const Header = ({
             />
             <HeaderItem
               competition={'My Bets'}
-              active={headerActive === 'My Bets'}
+              // active={headerActive === 'My Bets'}
+              active
               switchPage={() => switchPage('My Bets')}
               counter={'99+'}
             />
@@ -95,8 +92,7 @@ const Header = ({
           fromColor={(props) => props.theme.color_P1_OP0}
           toColor={(props) => props.theme.color_P1}
         />
-      </SbkHeaderWrapper>
-    </SbkHeaderTransition>
+      </HeaderWrapper>
   )
 }
 export default Header

@@ -21,20 +21,20 @@ import {
   transparentize,
   toColorString
 } from "polished";
-const primary = '#1a237e'
+// const primary = '#1a237e'
+// const primary = "#61dafb";
+const primary = "#5c6bc0";
+const secondary = `${adjustHue("180", `${primary}`)}`
 
 
 const color_P1 =`${primary}`
 const color_P1_Lmin8 =`rgba(41,41,41,1)`
 const color_P1_OP0 =`rgba(61,61,61,0)`
 const color_P1_Lplus4 =`rgba(71,71,71,1)`
-const color_P2_1 =`rgba(255,146,0,1)`
-const color_P2_2 =`rgba(255,146,0,1)`
-const color_P2_3 =`rgba(255,146,0,1)`
-const color_P2_4 =`rgba(255,146,0,1)`
-const color_P2_4_Lplus42 =`rgba(255,237,214,1)`
-const color_P2_5 =`rgba(255,146,0,1)`
-const color_P3_1 =`rgba(0,0,0,1)`
+const color_P2 =`${lighten(0.3,`${invert(`${primary}`)}`)}`
+const color_P2_Lplus42 =`rgba(255,237,214,1)`
+const color_T1 =`${readableColor(`${primary}`, "#fff", "#000", true)}`
+const color_T2 =`${readableColor(`${primary}`, "#000", "#fff", true)}`
 const color_P3_1_OP56 =`rgba(0,0,0,0.56)`
 const color_P3_1_OP64 =`rgba(0,0,0,0.64)`
 const color_P3_1_OP16 =`rgba(0,0,0,0.16)`
@@ -277,17 +277,16 @@ const color_A13 =`rgba(255,255,255,1)`
 const color_A13_Lmin8 =`rgba(235,235,235,1)`
 
 export default {
-color_P1,
+  color_T1,
+  color_T2,
+  color_P1,
+  color_P2,
+
+
 color_P1_Lmin8,
 color_P1_OP0,
 color_P1_Lplus4,
-color_P2_1,
-color_P2_2,
-color_P2_3,
-color_P2_4,
-color_P2_4_Lplus42,
-color_P2_5,
-color_P3_1,
+color_P2_Lplus42,
 color_P3_1_OP56,
 color_P3_1_OP64,
 color_P3_1_OP16,

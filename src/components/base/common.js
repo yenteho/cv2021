@@ -387,11 +387,6 @@ const PopUpTransition = styled.div`
   bottom: 0;
 `
 export const SbkHeaderTransition = styled.div`
-  top: ${(props) =>
-    props.theme.iframe ? `0` : `${props.theme.headerHeight}px`};
-  /* ${(props) =>
-    props.hideSbkHeader &&
-    `transform: translate3d(0,-48px,0);  overflow-y: inherit;`}; */
   transition: transform 0.3s ease;
   position: sticky;
   width: 100%;
@@ -8050,12 +8045,10 @@ export const SportCarouselItem = ({
   </SportCarouselItemWrapper>
 )
 
-export const SbkHeaderWrapper = styled(FlexScrollWrapper)`
+export const HeaderWrapper = styled(FlexScrollWrapper)`
+  position: sticky;
+  top: 0;
   background: ${(props) => props.theme.color_P1};
-  transform: translate3d(0, 0, 0);
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P1')};
   ${ArrowButtonLeftWrapper} {
     left: 64px;
   }
@@ -8076,14 +8069,8 @@ export const MenuButtonWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) =>
       props.active
-        ? `${props.theme.color_P2_1};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P2_1')
-          };`
-        : `${props.theme.color_P4_1};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_1')
-          };`};
+        ? `${props.theme.color_P2_1};`
+        : `${props.theme.color_T1};`};
   }
   @media (min-width: 1024px) {
     &:hover {
@@ -8109,8 +8096,6 @@ export const HeaderItemContainer = styled(FlexScrollWrapper)`
   position: relative;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  background: black;
-  color: white;
 `
 export const HeaderItemWrapper = styled(FlexCenter)`
   position: relative;
@@ -8125,16 +8110,14 @@ export const HeaderItemWrapper = styled(FlexCenter)`
     transform: translate3d(100%, 0, 0);
     padding: 0px 4%;
   }
+  /* background: ${(props) =>
+    props.active
+      ? `${props.theme.color_P2};`
+      : 'transparent'}; */
   color: ${(props) =>
     props.active
-      ? `${props.theme.color_P2_1};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P2_1')
-        }`
-      : `${props.theme.color_P4_1_OP64};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_1')
-        }`};
+      ? `${props.theme.color_P2};`
+      : `${props.theme.color_T1};`};
   ${AbsoluteRightCenter} {
     top: ${(props) => props.favorite && '25%'};
     g {
