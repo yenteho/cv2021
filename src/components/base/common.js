@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css, keyframes } from 'styled-components'
 import { F32, F24, F22, F20, F18, F16, F15, F14, F13, F12, F11 } from './font'
 // import Images from '../../img/index'
-import { HiMenu } from "react-icons/hi";
+import { HiMenu } from 'react-icons/hi'
 import { ThemeProvider as BaseThemeProvider } from 'styled-components'
 let Icons = null
 export const ThemeProvider = (props) => {
@@ -39,18 +39,13 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 
 export const Container = styled.div`
   ${media.desktopLarge`background: ${(props) => props.theme.color_P4_2};`}
-  ${media.desktopMedium`background: ${(props) =>
-    props.theme.color_P4_2};`}
-  ${media.desktop`background: ${(props) =>
-    props.theme.color_P4_2};`}
+  ${media.desktopMedium`background: ${(props) => props.theme.color_P4_2};`}
+  ${media.desktop`background: ${(props) => props.theme.color_P4_2};`}
   ${media.tabletLandscape`${(props) =>
     props.disableScroll && `position: fixed; width:100%; `}
-    background: ${(props) =>
-      props.theme.color_P4_2};`}
-  ${media.tablet`background: ${(props) =>
-    props.theme.color_P4_2};`}
-  ${media.mobile`background: ${(props) =>
-    props.theme.color_P4_2};`}
+    background: ${(props) => props.theme.color_P4_2};`}
+  ${media.tablet`background: ${(props) => props.theme.color_P4_2};`}
+  ${media.mobile`background: ${(props) => props.theme.color_P4_2};`}
 `
 //-------------------- Contextfiy --------------------//
 export const ContxtCss = styled.div.attrs({ className: '' })`
@@ -477,8 +472,7 @@ export const LeftPanelPopUpTransition = styled.div`
       ? `transform: translate3d(0%,0,0);`
       : `transform: translate3d(-100%,0,0);`};
   /* transition: width 3s ease;
-  ${(props) =>
-    props.show ? `width: 100%;` : `width: 0px;`};  */
+  ${(props) => (props.show ? `width: 100%;` : `width: 0px;`)};  */
   z-index: 4;
   pointer-events: auto;
   ${Separator1} {
@@ -523,9 +517,7 @@ export const KeypadWrapper = styled.div`
   height: 144px;
   width: 100%;
   background: ${(props) => props.theme.color_S5};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S5')};
+
   ${Grid(5)};
   grid-template-rows: repeat(3, 1fr);
   font-size: 1.4rem;
@@ -687,18 +679,12 @@ export const Wrapper = styled.div`
     width: 10px;
     g {
       fill: ${(props) => props.theme.color_P1_OP0};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P1')};
     }
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
         g {
           fill: ${(props) => props.theme.color_P1};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P1')};
         }
       }
     }
@@ -717,16 +703,10 @@ export const Dot = styled(Flex)`
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
     }
   }
   &:active {
     background: ${(props) => props.theme.color_A3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3')};
   }
   margin-right: 8px;
   &:nth-last-child(1) {
@@ -735,14 +715,7 @@ export const Dot = styled(Flex)`
   background: ${(props) =>
     props.dark
       ? `${props.active ? props.theme.color_A3_2 : props.theme.color_S6_1}`
-      : `${
-          props.active
-            ? `${props.theme.color_A3};${
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_A3')
-              }`
-            : props.theme.color_S6
-        }`};
+      : `${props.active ? `${props.theme.color_A3};` : props.theme.color_S6}`};
 `
 export const Dots = ({ switchDot, list = [] }) => {
   return (
@@ -767,18 +740,12 @@ export const ButtonLeft = styled.div`
   ${(props) => props.theme.icons.Caret_left} {
     g {
       fill: ${(props) => props.theme.color_P1_OP0};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P1')};
     }
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
         g {
           fill: ${(props) => props.theme.color_P1};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P1')};
         }
       }
     }
@@ -791,18 +758,12 @@ export const ButtonRight = styled.div`
   ${(props) => props.theme.icons.Caret_right} {
     g {
       fill: ${(props) => props.theme.color_P1_OP0};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P1')};
     }
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
         g {
           fill: ${(props) => props.theme.color_P1};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P1')};
         }
       }
     }
@@ -847,20 +808,20 @@ export const IconWrapper48 = styled(FlexCenter)`
   height: 48px;
 `
 export const IconWrapper32 = styled(FlexCenter)`
-svg{
-  width: 32px;
-  height: 32px;
-}
+  svg {
+    width: 32px;
+    height: 32px;
+  }
   width: 32px;
   max-width: 32px;
   min-width: 32px;
   height: 32px;
 `
 export const IconWrapper24 = styled(FlexCenter)`
-svg{
-  width: 24px;
-  height: 24px;
-}
+  svg {
+    width: 24px;
+    height: 24px;
+  }
   width: 24px;
   height: 24px;
   max-width: 24px;
@@ -1269,9 +1230,6 @@ export const CloseButtonWrapper = styled(AbsoluteRightCenter)`
               : props.betSlip
               ? props.theme.color_P3_22
               : props.theme.color_P3_1};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_22')};
         }
       }
     }
@@ -1286,14 +1244,8 @@ export const CloseButtonWrapper = styled(AbsoluteRightCenter)`
             : props.betSlip
             ? props.theme.color_P3_22
             : props.theme.color_P3_1};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_22')};
       }
       background: ${(props) => props.theme.color_P3_1_OP8_2};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_1_OP8_2')};
     }
   }
 `
@@ -1324,26 +1276,14 @@ export const TvWrapper = styled(FlexCenter)`
         fill: ${(props) =>
           props.active
             ? `${props.theme.color_A3};
-              ${
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_A3')
-              };
             `
             : props.homePageActive
             ? `${props.theme.color_P2_2};
-              ${
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_P2_2')
-              };
             `
             : props.homePage
             ? props.theme.color_P4_2
             : props.contentCenter
             ? `${props.theme.color_P3_12_OP64};
-              ${
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_P3_12_OP64')
-              };
             `
             : props.theme.color_P3_16_OP64};
       }
@@ -1358,9 +1298,6 @@ export const TvWrapper = styled(FlexCenter)`
               : props.homePage
               ? props.theme.color_P4_2
               : props.theme.color_A3};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')};
         }
         ${AbsoluteCenter}:first-child {
           display: ${(props) =>
@@ -1380,9 +1317,6 @@ export const TvWrapper = styled(FlexCenter)`
             : props.homePage
             ? props.theme.color_P4_2
             : props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
       background: ${(props) =>
         props.homePage || props.homePageActive
@@ -1415,18 +1349,12 @@ export const StatisticsWrapper = styled(FlexCenter)`
         cursor: pointer;
         g {
           fill: ${(props) => props.theme.color_A3};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')};
         }
       }
     }
     &:active {
       g {
         fill: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
       background: ${(props) => props.theme.color_P3_1_OP8_1};
     }
@@ -1471,9 +1399,6 @@ export const InfoIconWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) =>
       props.eventHeader ? props.theme.color_A6_5 : props.theme.color_A6_2};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A6_2')};
   }
   &:after {
     content: '';
@@ -1505,9 +1430,6 @@ export const InfoIconWrapper = styled(FlexCenter)`
   ${IconWrapper12} {
     g {
       fill: ${(props) => props.active && props.theme.color_A6_2_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A6_2')};
     }
   }
   ${IconWrapper32} {
@@ -1528,9 +1450,6 @@ export const InfoIconWrapper = styled(FlexCenter)`
           props.eventHeader
             ? props.theme.color_A6_5_Lplus4
             : props.theme.color_A6_2_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A6_5_Lplus4')};
       }
       background: ${(props) => props.theme.color_A11_Lmin8};
     }
@@ -1553,9 +1472,7 @@ export const InfoPopUpWrapper = styled(RelativeWrapper)`
     position: relative;
     padding-left: 16px;
     color: ${(props) => props.theme.color_P3_18};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_18')};
+
     ${CloseButtonWrapper} {
       height: 32px;
       width: 32px;
@@ -1568,9 +1485,6 @@ export const InfoPopUpWrapper = styled(RelativeWrapper)`
       &:active {
         margin: 0px;
         background: ${(props) => props.theme.color_P3_1_OP8_1};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_1')};
       }
       @media (min-width: 1024px) {
         &:hover {
@@ -1655,9 +1569,6 @@ export const Information16 = ({
 export const NeutralWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) => props.theme.color_A6_3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A6_3')};
   }
   ${RelativeWrapper}:first-child {
     display: ${(props) => (props.theme.isCN ? 'block' : 'none')};
@@ -1700,9 +1611,6 @@ export const PriceBoost16 = () => (
 export const In_play_indicatorWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) => props.theme.color_P3_16_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_16')};
   }
 `
 export const In_play_indicator = () => (
@@ -1717,34 +1625,16 @@ export const FavoriteWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) =>
       props.active
-        ? `${props.theme.color_A3_4}; ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_4')
-          };`
+        ? `${props.theme.color_A3_4};`
         : props.mopPanelActive
-        ? `${props.theme.color_A3_5};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_5')
-          };`
+        ? `${props.theme.color_A3_5};`
         : props.menuPanelActive
-        ? `${props.theme.color_A3}; ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          };`
+        ? `${props.theme.color_A3};`
         : props.menuPanel
-        ? `${props.theme.color_P3_16_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_16_OP64')
-          };`
+        ? `${props.theme.color_P3_16_OP64};`
         : props.marketline
-        ? `${props.theme.color_P3_2_OP40};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_2_OP40')
-          };`
-        : `${props.theme.color_P3_16_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_16_OP64')
-          };`};
+        ? `${props.theme.color_P3_2_OP40};`
+        : `${props.theme.color_P3_16_OP64};`};
   }
   ${IconWrapper32} {
     @media (min-width: 1024px) {
@@ -1752,18 +1642,12 @@ export const FavoriteWrapper = styled(FlexCenter)`
         cursor: pointer;
         g {
           fill: ${(props) => props.theme.color_A3};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')};
         }
       }
     }
     &:active {
       g {
         fill: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
       background: ${(props) => props.theme.color_P3_1_OP8_1};
     }
@@ -1784,9 +1668,6 @@ export const MarketlineIndicator = styled(FlexCenter)`
   padding: 8px 0;
   ${F12} {
     color: ${(props) => props.theme.color_P3_16_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_16')};
   }
   g {
     fill: ${(props) => props.theme.color_P3_6_OP64};
@@ -1796,9 +1677,6 @@ export const MarketlineIndicator = styled(FlexCenter)`
       cursor: pointer;
       ${F12} {
         color: ${(props) => props.theme.color_P3_6};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_6')};
       }
     }
   }
@@ -1934,14 +1812,8 @@ export const CompetitionFilterIconWrapper = styled(FavoriteWrapper)`
     g {
       fill: ${(props) =>
         props.active
-          ? `${props.theme.color_A3_3};${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_A3_3')
-            }`
-          : `${props.theme.color_P3_11_OP64};${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_P3_11_OP64')
-            }`};
+          ? `${props.theme.color_A3_3};`
+          : `${props.theme.color_P3_11_OP64};`};
     }
   }
   ${IconWrapper32} {
@@ -1965,9 +1837,7 @@ export const CompetitionFilterIconWrapper = styled(FavoriteWrapper)`
     height: 4px;
     border-radius: 50%;
     background: ${(props) => props.theme.color_A5_4};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A5_4')};
+
     position: absolute;
     top: 4px;
     right: 50%;
@@ -2059,9 +1929,6 @@ export const BetSettingsIcon = ({ toggleSettings }) => {
 export const BackButtonWrapper = styled(IconWrapper48)`
   g {
     fill: ${(props) => props.theme.color_P3_1_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_1')};
   }
   ${IconWrapper32} {
     @media (min-width: 1024px) {
@@ -2069,18 +1936,12 @@ export const BackButtonWrapper = styled(IconWrapper48)`
         cursor: pointer;
         g {
           fill: ${(props) => props.theme.color_P3_1};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_1')};
         }
       }
     }
     &:active {
       g {
         fill: ${(props) => props.theme.color_P3_1};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_1')};
       }
       background: ${(props) => props.theme.color_A11_Lmin8};
     }
@@ -2410,9 +2271,7 @@ export const PageHeaderTitleWrapper = styled.div`
   ${F18} {
     ${(props) => (props.allMarketPage ? `${Truncate(2)}` : `${Truncate(1)}`)};
     color: ${(props) => props.theme.color_P3_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_1')};
+
     margin: 4px 0px;
   }
   text-align: center;
@@ -2422,27 +2281,18 @@ export const PageHeaderTitleWrapper = styled.div`
   ${InfoIconWrapper} {
     g {
       fill: ${(props) => props.theme.color_A6_5};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A6_5')};
     }
     ${IconWrapper32} {
       @media (min-width: 1024px) {
         &:hover {
           g {
             fill: ${(props) => props.theme.color_A6_5_Lplus4};
-            ${(props) =>
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_A6_5_Lplus4')};
           }
         }
       }
       &:active {
         g {
           fill: ${(props) => props.theme.color_A6_5_Lplus4};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A6_5')};
         }
       }
     }
@@ -2498,14 +2348,9 @@ export const PageHeaderTabWrapper = styled.div`
       props.active
         ? `border-bottom: 2px solid ${props.theme.color_A3_3};
           color:${props.theme.color_A3_3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_3')
-          }
         `
         : `border-bottom: 2px solid transparent;
-          color:${props.theme.color_P3_1_OP64};
-          ${(props) => props.theme.getColorToHighlight('color_P3_1')};`};
+          color:${props.theme.color_P3_1_OP64};`};
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
@@ -2518,9 +2363,6 @@ export const PageHeaderTabWrapper = styled.div`
   }
   &:active {
     color: ${(props) => props.theme.color_A3_3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3_3')};
     background: ${(props) => props.theme.color_P3_1_OP8_1};
     padding: 0 8px;
   }
@@ -2580,19 +2422,11 @@ const CompetitionTabWrapper = styled(FlexCenter)`
 const CompetitionTabText = styled(FlexCenter)`
   padding: 12px 8px;
   color: ${(props) =>
-    props.active
-      ? `${props.theme.color_P3_4};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_4')
-        }`
-      : props.theme.color_P3_OP56};
+    props.active ? props.theme.color_P3_4 : props.theme.color_P3_OP56};
   @media (min-width: 1024px) {
     &:hover {
       cursor: ${(props) => (props.tab ? `unset` : `pointer`)};
       color: ${(props) => props.theme.color_P3_2};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_2')};
     }
   }
   &:active {
@@ -2753,9 +2587,6 @@ const TooltipContainer = styled(FlexStickyBottom)`
 `
 const TooltipWrapper = styled(FlexCenter)`
   background: ${(props) => props.theme.color_A6_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A6_1', 'color_P4_5')};
   color: ${(props) => props.theme.color_P4_5};
   padding: 8px 16px;
   min-height: 48px;
@@ -2781,16 +2612,10 @@ const TooltipSubmitButton = styled(FlexCenter)`
   @media (min-width: 1024px) {
     &:hover {
       background: ${(props) => props.theme.color_A6_1_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A6_1')};
     }
   }
   &:active {
     background: ${(props) => props.theme.color_A6_1_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A6_1')};
   }
 `
 export const Tooltip = ({
@@ -2832,16 +2657,10 @@ const MatchesSubmitWrapper = styled(TooltipWrapper)`
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_A1_2_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A1_2')};
     }
   }
   &:active {
     background: ${(props) => props.theme.color_A1_2_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1_2')};
   }
 `
 export const MatchesSubmit = ({ submitText, submit }) => (
@@ -2861,9 +2680,6 @@ const PanelHeaderClickableButtonWrapper = styled(RelativeWrapper)`
   g {
     fill: ${(props) =>
       props.betDetail ? props.theme.color_P3_OP40 : props.theme.color_P4_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_1')};
   }
   ${IconWrapper48} {
     g {
@@ -2880,9 +2696,6 @@ const PanelHeaderClickableButtonWrapper = styled(RelativeWrapper)`
             props.betDetail
               ? props.theme.color_P3_OP100
               : props.theme.color_P4_1};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_1')};
         }
       }
     }
@@ -2895,17 +2708,11 @@ const PanelHeaderClickableButtonWrapper = styled(RelativeWrapper)`
           props.betDetail
             ? props.theme.color_P3_OP100
             : props.theme.color_P4_1};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_1')};
       }
       background: ${(props) =>
         props.betDetail
           ? props.theme.color_P3_1_OP8_1
           : props.theme.color_P1_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P1')};
     }
   }
 `
@@ -2913,9 +2720,6 @@ const PanelHeaderIconWrapper = styled(RelativeWrapper)`
   ${IconWrapper48} {
     g {
       fill: ${(props) => props.theme.color_P4_1};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_1')};
     }
   }
 `
@@ -2935,24 +2739,16 @@ const RemoveAllWrapper = styled(FlexCenter)`
   right: 48px;
   white-space: nowrap;
   background: ${(props) => props.theme.color_A7_3};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A7_3')};
+
   justify-content: center;
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_A7_3_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A7_3')};
     }
   }
   &:active {
     background: ${(props) => props.theme.color_A7_3_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A7_3')};
   }
 `
 export const PanelHeaderWrapper = styled.div`
@@ -2962,14 +2758,10 @@ export const PanelHeaderWrapper = styled.div`
     props.betDetail ? 'transparent' : props.theme.color_P1};
   color: ${(props) =>
     props.betDetail ? props.theme.color_P3_18 : props.theme.color_P4_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P1', 'color_P4_1')};
+   'color_P4_1')};
   ${F12} {
     color: ${(props) => props.theme.color_A8_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A8_1')};
+    
   }
   ${FlexLeft} {
     height: 100%;
@@ -3139,9 +2931,7 @@ export const ViewAllMultipleWrapper = styled(Flex)`
   background: ${(props) => props.theme.color_P4_25};
   color: ${(props) => props.theme.color_P3_20};
   border-top: 2px solid ${(props) => props.theme.color_A4_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_20')};
+
   ${FlexLeft} {
     padding: 4px 16px 4px 8px;
   }
@@ -3240,21 +3030,12 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
     g {
       fill: ${(props) =>
         props.active
-          ? `${props.theme.color_A3};${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_A3')
-            }`
+          ? `${props.theme.color_A3};`
           : props.priceBoost
-          ? `${props.theme.color_A1};${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_A1')
-            }`
+          ? `${props.theme.color_A1};`
           : props.multiColorIcon
           ? null
-          : `${props.theme.color_P3_11_OP64}; ${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_P3_11_OP64')
-            }`};
+          : `${props.theme.color_P3_11_OP64};`};
     }
   }
   ${CounterWrapper} {
@@ -3269,14 +3050,8 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
     ${Truncate(2)}
     color: ${(props) =>
       props.active
-        ? `${props.theme.color_A3}; ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }`
-        : `${props.theme.color_P3_11_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_11_OP64')
-          }`}
+        ? `${props.theme.color_A3}; `
+        : `${props.theme.color_P3_11_OP64};`}
   }
 `
 export const MenuPanelItem = ({
@@ -3458,14 +3233,8 @@ export const Handicap = styled.div`
   max-width: 100%;
   color: ${(props) =>
     props.malayOdds
-      ? `${props.theme.color_P3_25};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_25')
-        }`
-      : `${props.theme.color_A3_8};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_8')
-        }`};
+      ? `${props.theme.color_P3_25};`
+      : `${props.theme.color_A3_8};`};
   text-align: center;
   margin-left: ${(props) => props.selectionName && '4px'};
   ${F13} {
@@ -3474,9 +3243,7 @@ export const Handicap = styled.div`
 `
 export const SelectionName = styled(FlexCenter)`
   color: ${(props) => props.theme.color_P3_15_OP64};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_15_OP64')};
+
   font-size: 13px;
   text-align: center;
   line-height: 15px;
@@ -3511,10 +3278,7 @@ export const Odds = styled(FlexCenter)`
         ? props.theme.color_A7_4
         : props.malayOdds
         ? props.theme.color_P3_3
-        : `${props.theme.color_P3_3};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_3')
-          }`};
+        : props.theme.color_P3_3};
   }
   ${(props) => props.priceBoost && `${F15} {color: ${props.theme.color_A1};}`}
 `
@@ -3527,9 +3291,6 @@ export const OddsWrapper = styled(FlexCenterColumn)`
   ${F14} {
     text-align: center;
     color: ${(props) => props.theme.color_P3_3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_3')};
   }
   g {
     fill: ${(props) => props.theme.color_P3_OP64};
@@ -3552,10 +3313,6 @@ export const OddsWrapper = styled(FlexCenterColumn)`
           cursor: pointer;
           background:${props.theme.color_P2_4_Lplus42};
           border: 1px solid ${props.theme.color_P2_4};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P2_4')
-          };
         }
           `
         : props.noOdds || props.locked || props.withoutBorder
@@ -3565,46 +3322,26 @@ export const OddsWrapper = styled(FlexCenterColumn)`
           cursor: pointer;
           background:${props.theme.color_P2_4_Lplus42};
           border: 1px solid ${props.theme.color_P2_4};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P2_4')
-          };
           }
         `};
   }
   ${(props) =>
     props.oddsUp
-      ? `background:${props.theme.color_A2_2};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A2_2')
-        };
+      ? `background:${props.theme.color_A2_2};
       border: 1px solid ${props.theme.color_A2_2};
       ${SelectionName},${F13},${F15}{color:${props.theme.color_P4_14};}
       ${F15}::after{border-bottom: 2px solid  ${props.theme.color_P4_14};}`
       : props.oddsDown
-      ? `background:${props.theme.color_A7_1};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A7_1')
-        };
+      ? `background:${props.theme.color_A7_1};
         border: 1px solid ${props.theme.color_A7_1};
         ${SelectionName},${F13},${F15}{color:${props.theme.color_P4_13};} 
         ${F15}::after{border-bottom: 2px solid ${props.theme.color_P4_13};}`
       : props.active
-      ? `background:${props.theme.color_P2_4};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P2_4', 'color_P4_13')
-        };
+      ? `background:${props.theme.color_P2_4};
         border: 1px solid ${props.theme.color_P2_4};
-         ${SelectionName},${F13},${F15}{ color:${props.theme.color_P4_9};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_9')
-        }} 
+         ${SelectionName},${F13},${F15}{ color:${props.theme.color_P4_9};} 
           ${F15}::after{
             border-bottom: 2px solid  ${props.theme.color_P4_9};
-            ${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_P4_9')
-            }
           }
         `
       : props.withBGColor
@@ -3623,9 +3360,6 @@ export const OddsWrapper = styled(FlexCenterColumn)`
         border: 1px solid ${props.theme.color_P3_OP24};
         `};
   user-select: none;
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P4_29')};
 `
 
 export const OddsWrapperAlignEnd = styled.div`
@@ -3770,9 +3504,6 @@ export const SelectionTitleTextWrapper = styled(FlexCenter)`
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
     }
   }
   &:active {
@@ -3791,19 +3522,11 @@ export const OBTTitleSwitchTabTextWrapper = styled(FlexCenter)`
   line-height: 40px;
   padding: 0 8px;
   color: ${(props) =>
-    props.active
-      ? `${props.theme.color_P3_4};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_4')
-        };`
-      : props.theme.color_P3_OP56};
+    props.active ? props.theme.color_P3_4 : props.theme.color_P3_OP56};
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_P3_4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_4')};
     }
   }
   &:active {
@@ -3880,9 +3603,7 @@ export const ViewMoreWrapper = styled(FlexCenter)`
   height: 48px;
   ${F12} {
     color: ${(props) => props.theme.color_P3_13_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_13_OP64')};
+
     margin-right: 8px;
   }
   g {
@@ -4017,9 +3738,6 @@ export const MarketWrapperT7 = styled.div`
     ${MarketWrapper1}:nth-child(2) { display: none; } 
       ${SelectionTitleTextWrapper}:nth-child(1) > ${F14}  {
         color: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
           ${(props) =>
             props.SwitchTab && `color: ${props.theme.color_P3_4_OP56};`}
       }
@@ -4036,14 +3754,9 @@ export const MarketWrapperT7 = styled.div`
           border-left: 1px solid transparent;
           display: inherit;
         }
-        ${SelectionTitleTextWrapper}:nth-child(1):hover {${F14}{color: ${
-        props.theme.color_A3
-      };}}
+        ${SelectionTitleTextWrapper}:nth-child(1):hover {${F14}{color: ${props.theme.color_A3};}}
         ${SelectionTitleTextWrapper}:nth-child(2) > ${F14} {
           color: ${props.theme.color_A3};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')};
         }
       `};
       ${NoGoalsT7} {
@@ -4164,9 +3877,7 @@ export const MarketWrapperT9 = styled.div`
     ${MarketWrapper1}:nth-child(2) {display:none;} 
     ${SelectionTitleTextWrapper}:nth-child(1) {
       color: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
+      
     }
     ${SelectionTitleTextWrapper}{
       &:hover{cursor: pointer;} 
@@ -4175,9 +3886,6 @@ export const MarketWrapperT9 = styled.div`
     ${MarketWrapper1}:nth-child(2) { display: none; } 
       ${SelectionTitleTextWrapper}:nth-child(1) > ${F14}  {
         color: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')}
           ${(props) =>
             props.SwitchTab && `color: ${props.theme.color_P3_4_OP56};`}
       }
@@ -4187,17 +3895,9 @@ export const MarketWrapperT9 = styled.div`
       ${MarketWrapper1}:nth-child(2) {display: inherit;}
       ${SelectionTitleTextWrapper}:nth-child(1) {
         color: ${props.theme.color_P3_14_OP56};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_14_OP56')
-        }
       } 
       ${SelectionTitleTextWrapper}:nth-child(2) {
           color: ${props.theme.color_A3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }
         }
       `};
   `}
@@ -4286,16 +3986,10 @@ export const OddsTypeWrapper = styled(FlexCenterColumn)`
   ${F12}:first-child {
     ${(props) => (props.childEvent ? `${Truncate(2)}` : `${Truncate(3)}`)};
     color: ${(props) => props.theme.color_P3_14_OP56};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_14_OP56')};
   }
   ${F12}:nth-child(2) {
     ${Truncate(1)};
     color: ${(props) => props.theme.color_A3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3')};
   }
 
   ${(props) =>
@@ -4325,8 +4019,7 @@ export const OddsPanelContainer = styled.div`
 
   ${(props) =>
     props.FiveColumns && `grid-template-columns: 232px 1fr 1fr 1fr 1fr;`}
-  ${(props) =>
-    props.ThreeColumns && `grid-template-columns: 232px 1fr 1fr;`}
+  ${(props) => props.ThreeColumns && `grid-template-columns: 232px 1fr 1fr;`}
   ${(props) =>
     props.teamTotals &&
     `grid-template-columns: 232px 1fr;
@@ -4498,103 +4191,60 @@ export const Score = styled(FlexLeft)`
   color: ${(props) =>
     props.cricketActive || props.tennisSet
       ? `${props.theme.color_A3_5};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_5')
-        }
+        
       `
       : props.tennisGame || props.tennisGame_m
       ? `${props.theme.color_P3_OP100};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_OP100')
-        }
+        
       `
       : props.points || props.tennisPoints_m
       ? props.theme.color_P3_OP56
       : props.tennisPoints
       ? `${props.theme.color_P3_OP56};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_OP56')
-        }
+        
       `
       : props.tennisSet_sc || props.sc
       ? `${props.theme.color_P2_2};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P2_2')
-      }
+      
       `
       : props.tennisGame_sc
       ? props.theme.color_P4_4
       : props.tennisPoints_sc
       ? `${props.theme.color_P4_24_OP56};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_24_OP56')
-        };
+        
       `
       : props.scoreboardActive
       ? `${props.theme.color_P4_24_OP64};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_24_OP64')
-        };
+        
       `
       : props.detail_sc
       ? `${props.theme.color_P4_24_OP56};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_24_OP56')
-        };
+        
       `
       : `${props.theme.color_A3_5};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_5')
-        }
+        
       `};
   ${(props) => props.bold && `font-weight: bold;`}
-  ${(props) =>
-    (props.tennisGame_m || props.tennisPoints_m) &&
-    `display: none;`}
+  ${(props) => (props.tennisGame_m || props.tennisPoints_m) && `display: none;`}
   ${media.tablet`  ${(props) =>
     (props.tennisGame_m || props.tennisPoints_m) && `display: flex;`}`}
-  ${(
-    props
-  ) => props.scoreboardActive && `font-weight: bold;`};
+  ${(props) => props.scoreboardActive && `font-weight: bold;`};
 `
 
 export const Period = styled(FlexCenter)`
   white-space: normal;
   color: ${(props) =>
     props.scoreboardLive
-      ? `${props.theme.color_P2_3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P2_3')
-          };
-      `
+      ? props.theme.color_P2_3
       : props.scoreboardPlaySuspended
       ? props.theme.color_A5_3
       : props.scoreboard
       ? props.theme.color_P4_4_OP56
       : props.live
-      ? `${props.theme.color_A3_6};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_6')
-        }
-      `
+      ? props.theme.color_A3_6
       : props.playSuspended
       ? props.theme.color_A7_2
-      : `${props.theme.color_P3_23_OP56};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_23_OP56')
-        }
-      `};
+      : props.theme.color_P3_23_OP56};
   font-size: 12px;
   ${(props) => props.esportsPeriod && `white-space:nowrap;`};
   ${media.tablet`
@@ -4607,17 +4257,11 @@ export const Out = styled(FlexCenter)`
 `
 export const Time = styled(FlexCenter)`
   color: ${(props) => props.theme.color_A3};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A3')};
 `
 export const Legs = styled(FlexCenter)`
   color: ${(props) => props.theme.color_P3_4_OP56};
   font-size: 12px;
   white-space: nowrap;
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_4')};
 `
 export const MatchTrackerIconWrapper = styled.div`
   ${IconWrapper12} {
@@ -4662,14 +4306,7 @@ export const MatchTrackerIconWrapper = styled.div`
 
 export const EsportsStatus = styled(F12)`
   color: ${(props) =>
-    props.scoreboard
-      ? `${props.theme.color_P2_3}`
-      : `${props.theme.color_A3_6};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_6')
-        }
-      `};
+    props.scoreboard ? props.theme.color_P2_3 : props.theme.color_A3_6};
   padding-left: 8px;
   margin-left: 8px;
   border-left: ${(props) =>
@@ -4683,10 +4320,7 @@ export const EsportsGameType = styled(F12)`
     props.scoreboard
       ? `${props.theme.color_P4_4_OP56}`
       : `${props.theme.color_P3_OP40};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_OP40')
-      }
+      
     `};
   padding-left: ${(props) => props.scoreboard && `8px`};
   line-height: 16px;
@@ -4696,28 +4330,11 @@ export const EsportsScore = styled(F12)`
   line-height: 16px;
   white-space: nowrap;
   color: ${(props) =>
-    props.sc
-      ? `${props.theme.color_P2_2};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P2_2')
-      }
-      `
-      : `${props.theme.color_A3_5};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_5')
-        }
-      `};
+    props.sc ? props.theme.color_P2_2 : props.theme.color_A3_5};
 `
 export const EsportsStatistics = styled(IconWrapper16)`
   g {
-    fill: ${(props) => `${props.theme.color_P4_24_OP64};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_24_OP64')
-        }
-      `};
+    fill: ${(props) => props.theme.color_P4_24_OP64};
   }
   @media (min-width: 1024px) {
     &:hover {
@@ -4771,9 +4388,6 @@ export const PDetailWrapper = styled(Flex)`
       ${InfoIconWrapper} {
         g {
           fill: ${(props) => props.theme.color_A6_2_Lplus4};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A6_2')};
         }
       }
     }
@@ -4782,9 +4396,6 @@ export const PDetailWrapper = styled(Flex)`
     ${InfoIconWrapper} {
       g {
         fill: ${(props) => props.theme.color_A6_2_Lmin8};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A6_2')};
       }
     }
   }
@@ -4827,18 +4438,12 @@ export const NonPremiumPanelWrapper = styled(RelativeWrapper)`
     }
     ${TeamName} {
       color: ${(props) => props.theme.color_P3_5};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_5')};
     }
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
         ${TeamName} {
           color: ${(props) => props.theme.color_A3};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')};
         }
       }
     }
@@ -4978,9 +4583,6 @@ export const PremiumPanelWrapper = styled(RelativeWrapper)`
                 : 'calc(192px - 16px- 8px)'};
           `}
           color: ${(props) => props.theme.color_P3_5};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_5')};
         }
         @media (min-width: 1024px) {
           &:hover {
@@ -4988,9 +4590,6 @@ export const PremiumPanelWrapper = styled(RelativeWrapper)`
             ${TeamName} {
               color: ${(props) =>
                 props.obtPanel ? props.theme.color_P3_5 : props.theme.color_A3};
-              ${(props) =>
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_A3')};
             }
           }
         }
@@ -6311,32 +5910,18 @@ export const OBTOddsTypeWrapper = styled.div`
     ${(props) =>
       props.active
         ? `color:${props.theme.color_A3}; 
-       border-bottom: 2px solid ${props.theme.color_A3};
-       ${
-         props.theme.getColorToHighlight &&
-         props.theme.getColorToHighlight('color_A3')
-       }`
+       border-bottom: 2px solid ${props.theme.color_A3};`
         : `color:${props.theme.color_P3_9_OP64};
-        border-bottom: 2px solid transparent;
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_9_OP64')
-        }`};
+        border-bottom: 2px solid transparent;}`};
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
     }
     &:active {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
     }
   }
   &:active {
@@ -6357,9 +5942,6 @@ export const OBTOddsTypeTitleWrapper = styled(FlexScrollWrapper)`
 export const OBTPanelWrapper = styled.div`
   position: relative;
   background: ${(props) => props.theme.color_S4};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S4')};
   margin-bottom: 8px;
   ${MarketWrapper2} {
     padding: 16px;
@@ -6401,9 +5983,7 @@ export const CorrectScoreTeamNameWrapper = styled.div`
   grid-auto-rows: 50%;
   height: 100%;
   background: ${(props) => props.theme.color_S4_OP32};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S4')};
+
   padding: 8px 0px 8px 0px;
   margin-bottom: 16px;
   grid-template-columns: 16px 1fr 64px;
@@ -6423,9 +6003,6 @@ export const CorrectScoreTeamNameWrapper = styled.div`
     ${F16} {
       ${Truncate(2)}
     }
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_2')};
   }
   ${NPDetailWrapper} {
     height: 100%;
@@ -6437,15 +6014,7 @@ export const CorrectScoreTeamNameWrapper = styled.div`
       text-align: center;
       padding-bottom: 5px;
       ${(props) =>
-        props.active
-          ? `${props.theme.color_A3};${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_A3')
-            }`
-          : `${props.theme.color_P3_2_OP56};${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_P3_2')
-            }`};
+        props.active ? props.theme.color_A3 : props.theme.color_P3_2_OP56};
     }
   }
   ${(props) =>
@@ -6634,9 +6203,6 @@ export const RoundWrapper = styled.div`
     &:nth-child(1) {
       white-space: nowrap;
       color: ${(props) => props.theme.color_A3_7};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
     }
     &:last-child {
       ${Truncate(1)};
@@ -6680,9 +6246,6 @@ export const TennisGame = styled(F12)`
   margin-left: 8px;
   white-space: normal;
   color: ${(props) => props.theme.color_P2_3};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P2_3')};
 `
 export const DartSets = styled(Score)`
   margin-left: 2px;
@@ -6693,9 +6256,6 @@ export const ScoreboardWrapper = styled.div`
   grid-template-rows: 40px 40px;
   ${PensWrapper} {
     background: ${(props) => props.theme.color_S1_2};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S1_2')};
   }
   ${TeamName} {
     padding-right: 20px;
@@ -6723,14 +6283,9 @@ export const ScoreboardWrapper = styled.div`
   ${RoundWrapper} {
     ${F12} {
       color: ${(props) => props.theme.color_P4_24_OP56};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_24_OP56')};
+
       &:nth-child(1) {
         color: ${(props) => props.theme.color_P2_3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P2_3')};
       }
     }
   }
@@ -6773,9 +6328,6 @@ export const ScoreboardWrapper = styled.div`
     }
     ${Out},${Legs},${Batsman} {
       color: ${(props) => props.theme.color_P4_24_OP56};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_24_OP56')};
     }
   }
 
@@ -7472,8 +7024,7 @@ export const EsportsModalRoundWrapper = styled.div`
     props.oneColumn ? `1fr` : `1fr 112px 1fr`};`}
   ${media.tablet`grid-template-columns: ${(props) =>
     props.oneColumn ? `1fr` : `1fr 80px 1fr`};`}
-  background: ${(props) =>
-    props.theme.color_P4_2};
+  background: ${(props) => props.theme.color_P4_2};
   padding: 8px;
   height: 40px;
   border: 1px solid ${(props) => props.theme.color_A4};
@@ -7877,150 +7428,55 @@ export const SportCarouselItemWrapper = styled(FlexCenterColumn)`
   g {
     fill: ${(props) =>
       props.disabled
-        ? `
-        ${props.theme.color_P4_OP64};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_OP64')
-        }
-        `
+        ? props.theme.color_P4_OP64
         : props.active && props.homePage
-        ? `
-        ${props.theme.color_A3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')
-        }
-        `
+        ? props.theme.color_A3
         : props.homePage
-        ? `${props.theme.color_P3_9_OP64};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_9_OP64')
-        }
-        `
+        ? props.theme.color_P3_9_OP64
         : props.active
-        ? `
-        ${props.theme.color_A3_3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_3')
-        }
-        `
-        : `${props.theme.color_P3_1_OP64};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_1_OP64')
-        }
-        `};
+        ? props.theme.color_A3_3
+        : props.theme.color_P3_1_OP64};
   }
   color: ${(props) =>
     props.disabled
       ? `
       ${props.theme.color_P4_OP64};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_OP64')
-      }
+      
       `
       : props.active && props.homePage
       ? `
       ${props.theme.color_A3};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')
-      }
+      
       `
       : props.homePage
       ? `${props.theme.color_P3_9_OP64};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_9_OP64')
-      }
+      
       `
       : props.active
       ? `
       ${props.theme.color_A3_3};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3_3')
-      }
+      
       `
       : `${props.theme.color_P3_1_OP64};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_1_OP64')
-      }
+      
       `};
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       color: ${(props) =>
-        props.homePage
-          ? `${props.theme.color_A3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')
-        }
-        `
-          : `
-        ${props.theme.color_A3_3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_3')
-        }
-      `};
+        props.homePage ? props.theme.color_A3 : props.theme.color_A3_3};
       g {
         fill: ${(props) =>
-          props.homePage
-            ? `${props.theme.color_A3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')
-        }
-        `
-            : `
-        ${props.theme.color_A3_3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_3')
-        }
-      `};
+          props.homePage ? props.theme.color_A3 : props.theme.color_A3_3};
       }
     }
   }
   &:active {
     color: ${(props) =>
-      props.homePage
-        ? `${props.theme.color_A3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }
-          `
-        : `
-          ${props.theme.color_A3_3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_3')
-          }
-        `};
+      props.homePage ? props.theme.color_A3 : props.theme.color_A3_3};
     g {
       fill: ${(props) =>
-        props.homePage
-          ? `${props.theme.color_A3};
-              ${
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_A3')
-              }
-              `
-          : `
-            ${props.theme.color_A3_3};
-            ${
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_A3_3')
-            }
-          `};
+        props.homePage ? props.theme.color_A3 : props.theme.color_A3_3};
     }
     background: ${(props) => props.theme.color_P3_1_OP8_1};
   }
@@ -8045,32 +7501,15 @@ export const SportCarouselItem = ({
   </SportCarouselItemWrapper>
 )
 
-export const HeaderWrapper = styled(FlexScrollWrapper)`
-  position: sticky;
-  top: 0;
-  background: ${(props) => props.theme.color_P1};
-  ${ArrowButtonLeftWrapper} {
-    left: 64px;
-  }
-  ${Shadow} {
-    display: none;
-  }
-  ${media.desktop`${FlexRight}{display:none;} ${Shadow}{display:block;}`}
-`
 export const MenuButtonWrapper = styled(FlexCenter)`
   width: 64px;
   position: absolute;
   height: 100%;
   left: 0;
   background: ${(props) => props.theme.color_P1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P1')};
   g {
     fill: ${(props) =>
-      props.active
-        ? `${props.theme.color_P2_1};`
-        : `${props.theme.color_T1};`};
+      props.active ? `${props.theme.color_P2_1};` : `${props.theme.color_T1};`};
   }
   @media (min-width: 1024px) {
     &:hover {
@@ -8085,10 +7524,22 @@ export const MenuButtonWrapper = styled(FlexCenter)`
 export const MenuButton = ({ toggleMenuPanel }) => (
   <MenuButtonWrapper onClick={toggleMenuPanel}>
     <IconWrapper24>
-      <HiMenu/>
+      <HiMenu />
     </IconWrapper24>
   </MenuButtonWrapper>
 )
+export const HeaderWrapper = styled(FlexScrollWrapper)`
+  position: sticky;
+  top: 0;
+  background: ${(props) => props.theme.color_P1};
+  ${ArrowButtonLeftWrapper} {
+    left: 64px;
+  }
+  ${Shadow} {
+    display: none;
+  }
+  ${media.desktop`${FlexRight}{display:none;} ${Shadow}{display:block;}`}
+`
 export const HeaderItemContainer = styled(FlexScrollWrapper)`
   margin-left: 64px;
   margin-right: 22px;
@@ -8111,13 +7562,9 @@ export const HeaderItemWrapper = styled(FlexCenter)`
     padding: 0px 4%;
   }
   /* background: ${(props) =>
-    props.active
-      ? `${props.theme.color_P2};`
-      : 'transparent'}; */
+    props.active ? `${props.theme.color_P2};` : 'transparent'}; */
   color: ${(props) =>
-    props.active
-      ? `${props.theme.color_P2};`
-      : `${props.theme.color_T1};`};
+    props.active ? `${props.theme.color_T2};` : `${props.theme.color_T1};`};
   ${AbsoluteRightCenter} {
     top: ${(props) => props.favorite && '25%'};
     g {
@@ -8128,9 +7575,6 @@ export const HeaderItemWrapper = styled(FlexCenter)`
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_P2_1};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P2_1')};
     }
   }
   &:active {
@@ -8142,9 +7586,6 @@ export const HeaderItemWrapper = styled(FlexCenter)`
     height: 8px;
     border-radius: 50%;
     background: ${(props) => props.theme.color_A5_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A5_1')};
     position: absolute;
     top: 10px;
     right: -2px;
@@ -8212,17 +7653,9 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
       props.betSlip
         ? `
     ${props.theme.color_A9};
-    ${
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A9')
-    };
     `
         : `
     ${props.theme.color_P1};
-    ${
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P1')
-    };
     `}
     g {
     fill: ${(props) =>
@@ -8230,17 +7663,10 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
         ? props.theme.color_P4_1_OP24
         : props.active
         ? `
-        ${props.theme.color_P2_1};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P2_1')
-        };`
+        ${props.theme.color_P2_1};;`
         : `
         ${props.theme.color_P4_1_OP64};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_1')
-        };`};
+`};
   }
   ${F11} {
     padding-top: 4px;
@@ -8249,29 +7675,14 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
     color: ${(props) =>
       props.disabled
         ? `${props.theme.color_P4_1_OP24};
-           ${
-             props.theme.getColorToHighlight &&
-             props.theme.getColorToHighlight('color_P4_1')
-           }
         `
         : props.active
         ? `${props.theme.color_P2_1};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P2_1')
-          }  
         `
         : props.betSlip
         ? `${props.theme.color_P4_3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_3')
-          }  
         `
-        : `${props.theme.color_P4_1_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_1_OP64')
-          }`};
+        : `${props.theme.color_P4_1_OP64};`};
   }
   &:before {
     content: ${(props) => props.withBadge && `''`};
@@ -8279,9 +7690,6 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
     height: 8px;
     border-radius: 50%;
     background: ${(props) => props.theme.color_A5_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A5_1')};
     position: absolute;
     top: 4px;
     left: 50%;
@@ -8292,9 +7700,6 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
     `${IconWrapper24}{display: none;} ${F11}{padding-top:0px;}`};
   ${F32} {
     color: ${(props) => props.theme.color_P4_3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_3')};
     margin-top: -2px;
   }
   ${AbsoluteRightCenter} {
@@ -8312,9 +7717,6 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
           props.disabled
             ? props.theme.color_P4_1_OP24
             : props.theme.color_P2_1};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_1')};
       }
       ${F11} {
         color: ${(props) =>
@@ -8325,18 +7727,12 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
             : props.theme.color_P2_1};
       }
       background: ${(props) => props.betSlip && props.theme.color_A9_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A9')};
     }
   }
   &:active {
     g {
       fill: ${(props) =>
         props.disabled ? props.theme.color_P4_1_OP24 : props.theme.color_P2_1};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_1')};
     }
     ${F11} {
       color: ${(props) =>
@@ -8353,9 +7749,6 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
         : props.disabled
         ? props.theme.color_P1
         : props.theme.color_P1_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A9')};
   }
 `
 export const BottomNavItem = ({
@@ -8413,9 +7806,7 @@ export const RightPanelWrapper = styled(PageScrollWrapper)`
 `
 export const LeftSportsWrapper = styled.div`
   background: ${(props) => props.theme.color_P1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P1')};
+
   padding: 8px;
   ${media.desktopMedium` 
     padding: 0px;   
@@ -8555,23 +7946,15 @@ export const InfoContentButtonWrapper = styled(FlexCenter)`
     line-height: 24px;
   }
   color: ${(props) => props.theme.color_A12_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A12_1')};
+
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A12_1_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A12_1')};
     }
   }
   &:active {
     color: ${(props) => props.theme.color_A12_1_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A12_1')};
   }
 `
 export const InfoContentButton = ({ text, toggleInfoContent }) => (
@@ -8595,31 +7978,20 @@ export const FantasyMatchInfoWrapper = styled(Flex)`
   padding: 16px 0px;
   g {
     fill: ${(props) => props.theme.color_A6_2};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A6_2')};
   }
   ${FlexLeft} {
     margin-left: 8px;
   }
   color: ${(props) => props.theme.color_A12_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A12_1')};
+
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A12_1_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A12_1')};
     }
   }
   &:active {
     color: ${(props) => props.theme.color_A12_1_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A12_1')};
   }
 `
 export const FantasyMatchInfo = ({ text, toggleInfo }) => (
@@ -8633,9 +8005,7 @@ export const FantasyMatchInfo = ({ text, toggleInfo }) => (
 const CopyRightTextWrapper = styled(FlexCenter)`
   text-align: center;
   color: ${(props) => props.theme.color_P3_4_OP40};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_4')};
+
   width: 100%;
   height: 40px;
   padding: 4px 16px;
@@ -8680,9 +8050,7 @@ export const CenterPopUpWrapper = styled(PopUpWrapper)`
       ? `${props.theme.iPadInnerheight + 48}px`
       : ``};
   color: ${(props) => props.theme.color_P3_5_OP64};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_5')};
+
   ${ContentContainer} {
     width: 100%;
     margin: 0px;
@@ -8972,9 +8340,6 @@ const HeaderFilterPeriod = styled.span`
   margin-right: 4px;
   color: ${(props) =>
     props.periodLive ? props.theme.color_A3_4 : props.theme.color_P3_2_OP56};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_1')};
 `
 const HeaderFilterScore = styled.span`
   max-width: 50%;
@@ -8987,9 +8352,6 @@ const HeaderFilterScore = styled.span`
   line-height: 16px;
   height: 16px;
   color: ${(props) => props.theme.color_A3_4};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A3_4')};
 `
 
 export const BetTypeTextWrapper = styled.div`
@@ -9001,17 +8363,12 @@ export const BetTypeTextWrapper = styled.div`
     ${Truncate(2)};
     text-align: ${(props) => (props.outright ? 'center' : 'left')};
     color: ${(props) => props.theme.color_P3_2};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_2')};
   }
   ${F18} {
     line-height: ${(props) => props.sportIcon && '40px'};
     padding: ${(props) => props.sportIcon && '4px 0px'};
     color: ${(props) => props.theme.color_P3_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_1')};
+
     ${Truncate(1)}
   }
 `
@@ -9299,9 +8656,7 @@ export const FilterItemWrapper = styled(FlexCenter)`
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
+
       border: 1px solid ${(props) => props.theme.color_A3};
       ${F12}:nth-child(2) {
         color: ${(props) => props.theme.color_A3_OP56};
@@ -9316,18 +8671,13 @@ export const FilterItemWrapper = styled(FlexCenter)`
   }
   &:active {
     color: ${(props) => props.theme.color_A3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3')};
+
     border: 1px solid ${(props) => props.theme.color_A3};
     ${F12}:nth-child(2) {
       color: ${(props) => props.theme.color_A3_OP56};
     }
     g {
       fill: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
     }
     background: ${(props) => props.theme.color_P3_1_OP8_1};
   }
@@ -9514,17 +8864,9 @@ const MarketLineWrapper = styled(FlexCenterColumn)`
   ${Period} {
     color: ${(props) =>
       props.periodLive
-        ? `${props.theme.color_A3_6};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3_6')
-      }`
+        ? `${props.theme.color_A3_6};`
         : props.marketline
-        ? `${props.theme.color_P3_7_OP56};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_7')
-      }`
+        ? `${props.theme.color_P3_7_OP56};`
         : props.theme.color_P3_7_OP56};
   }
   ${media.desktop`
@@ -9578,10 +8920,7 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     ${(props) =>
       props.active
         ? `${props.theme.color_A3};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')
-      }`
+      `
         : `${props.theme.color_P3_9_OP32};${
             props.theme.getColorToHighlight &&
             props.theme.getColorToHighlight('color_P3_9_OP64')
@@ -9590,9 +8929,7 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     &:hover {
       cursor: pointer;
       border: 1px solid ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
+
       ${F12}:first-child {
         background: ${(props) => props.theme.color_A3};
         ${(props) =>
@@ -9612,9 +8949,7 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     ${Truncate(1)};
     line-height: 20px;
     color: ${(props) => props.theme.color_P4_12};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_12')};
+
     background: ${(props) =>
       props.active
         ? `${props.theme.color_A3};${
@@ -9640,10 +8975,7 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
           }`
         : props.active
         ? `${props.theme.color_A3};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')
-      }`
+      `
         : `${props.theme.color_P3_9_OP64};${
             props.theme.getColorToHighlight &&
             props.theme.getColorToHighlight('color_P3_9_OP64')
@@ -9661,14 +8993,9 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
   }
   &:active {
     border: 1px solid ${(props) => props.theme.color_A3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3')};
+
     ${F12}:first-child {
       background: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
     }
     background: ${(props) =>
       props.allDate
@@ -9720,13 +9047,7 @@ export const DateFilterItem = ({
 const ScheduleEventIconWrapper = styled(IconWrapper16)`
   g {
     fill: ${(props) =>
-      props.active
-        ? `${props.theme.color_A3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')
-        }`
-        : props.theme.color_P3_OP72};
+      props.active ? props.theme.color_A3 : props.theme.color_P3_OP72};
   }
 `
 
@@ -9794,9 +9115,6 @@ export const ScheduleDateWrapper = styled.div`
   padding: 4px 16px;
   background: ${(props) => props.theme.color_S4};
   color: ${(props) => props.theme.color_P3_OP56};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S4')};
 `
 export const ScheduleDate = ({ date }) => {
   return (
@@ -9812,9 +9130,7 @@ export const SchedulePanelWrapper = styled.div``
 export const SpecialEventWrapper = styled(RelativeWrapper)`
   margin: 0 16px;
   background: ${(props) => props.theme.color_S1_2};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S1_2')};
+
   ${media.desktop`
     margin: 0;
   `}
@@ -9827,16 +9143,10 @@ const SpecialEventItemWrapper = styled.div`
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S1_2_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S1_2')};
     }
   }
   &:active {
     background: ${(props) => props.theme.color_S1_2_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S1_2')};
   }
   flex-shrink: 0;
   height: 128px;
@@ -9847,9 +9157,7 @@ const SpecialEventItemWrapper = styled.div`
   }
   ${F12} {
     color: ${(props) => props.theme.color_P4_6};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_6')};
+
     ${Truncate(3)}
     line-height: 15px;
     text-align: center;
@@ -9873,9 +9181,6 @@ export const SpecialEventItem = ({
 export const CouponButtonEdgeWrapper = styled(Flex)`
   g {
     fill: ${(props) => props.theme.color_S1_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S1_1')};
   }
 `
 const RegionalCouponWrapper = styled(FlexCenter)`
@@ -9911,9 +9216,6 @@ const RegionalCouponWrapper = styled(FlexCenter)`
   &:active {
     ${FlexCenter}, ${IconWrapper32} {
       background: ${(props) => props.theme.color_S1_1_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S1_1')};
     }
     ${CouponButtonEdgeWrapper} {
       g,
@@ -9928,9 +9230,7 @@ const RegionalCouponWrapper = styled(FlexCenter)`
   ${FlexCenter} {
     ${FlexSpaceBetween(56)}
     background: ${(props) => props.theme.color_S1_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S1_1')};
+
     border-radius: 4px;
     ${IconWrapper32} {
       margin-left: 4px;
@@ -9938,17 +9238,12 @@ const RegionalCouponWrapper = styled(FlexCenter)`
   }
   ${F16} {
     color: ${(props) => props.theme.color_P4_8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_8')};
+
     ${Truncate(2)}
   }
   ${FlexRight} {
     g {
       fill: ${(props) => props.theme.color_P4_8_OP56};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_8')};
     }
     ${F16} {
       margin-right: 3px;
@@ -9986,9 +9281,7 @@ export const RegionalCoupon = ({ text, icon, match, enterOop }) => (
 //-------------------- GMT info --------------------//
 const GMTInfoWrapper = styled(FlexCenter)`
   background: ${(props) => props.theme.color_S3_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S3_1')};
+
   color: ${(props) => props.theme.color_P4_17};
   width: 100%;
   height: 32px;
@@ -9996,9 +9289,6 @@ const GMTInfoWrapper = styled(FlexCenter)`
     padding: 8px;
     g {
       fill: ${(props) => props.theme.color_P4_17_OP64};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_17')};
     }
   }
 `
@@ -10154,32 +9444,20 @@ const AllSelectionButtonWrapper = styled(FlexCenter)`
   position: relative;
   background: ${(props) => props.theme.color_S3};
   color: ${(props) => props.theme.color_P4_7};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S3', 'color_P4_7')};
   margin: 16px 0px;
   border-radius: 4px;
   height: 48px;
   g {
     fill: ${(props) => props.theme.color_P4_7_OP56};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_7')};
   }
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S3_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S3')};
     }
   }
   &:active {
     background: ${(props) => props.theme.color_S3_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S3')};
   }
   ${media.desktop`margin: 16px 16px;`}
 `
@@ -10229,17 +9507,13 @@ export const DropdownListItemWrapper = styled(FlexLeft)`
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3')};
+
       background: ${(props) => props.theme.color_P3_1_OP4_1};
     }
   }
   &:active {
     color: ${(props) => props.theme.color_A3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3')};
+
     background: ${(props) => props.theme.color_P3_1_OP8_1};
   }
 `
@@ -10299,9 +9573,7 @@ export const SelectWrapper = styled.select`
   border: 1px solid ${(props) => props.theme.color_P3_9_OP32};
   background: ${(props) => props.theme.color_P4_2};
   color: ${(props) => props.theme.color_P3_9_OP64};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_9_OP64')};
+
   @media (min-width: 1024px) {
     &:hover {
       background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -10457,9 +9729,7 @@ export const RulesSelectWrapper = styled.div`
   border: 1px solid ${(props) => props.theme.color_P3_9_OP32};
   background: ${(props) => props.theme.color_P4_2};
   color: ${(props) => props.theme.color_P3_9_OP64};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_9_OP64')};
+
   @media (min-width: 1024px) {
     &:hover {
       background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -10662,24 +9932,12 @@ export const PlaceBetButton = styled(FlexCenterColumn)`
         &:hover{
           cursor: pointer;
           background: ${props.theme.color_S1_2_Lplus4};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_S1_2')
-          };
         }
       }
       &:active{
         background: ${props.theme.color_S1_2_Lmin8};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_S1_2')
-        };
       }
-      color: ${props.theme.color_P4_8};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_6')
-      };`
+      color: ${props.theme.color_P4_8};`
       : `background: ${props.theme.color_P3_22_OP24};
         color: ${props.theme.color_P3_22_OP64}`};
 `
@@ -10700,9 +9958,6 @@ export const TickboxWrapper = styled.div`
   @media (min-width: 1024px) {
     &:hover {
       border: 1px solid ${(props) => props.theme.color_A1_8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A1_8')};
     }
   }
   &:after {
@@ -10711,9 +9966,7 @@ export const TickboxWrapper = styled.div`
     height: 12px;
     margin: 5px;
     background: ${(props) => props.theme.color_A1_8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1_8')};
+
     border: 1px solid ${(props) => props.theme.color_A1_8};
     position: absolute;
   }
@@ -10762,9 +10015,7 @@ export const Tickbox = ({ onClick, selected }) => {
 const RememberStakeButton = styled(FlexLeft)`
   width: 50%;
   background: ${(props) => props.theme.color_S4_2};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S4_2')};
+
   color: ${(props) => props.theme.color_P3_10_OP64};
   ${TickboxWrapper} {
     background: ${(props) => props.theme.color_P4_25};
@@ -10781,9 +10032,7 @@ const RememberStakeButton = styled(FlexLeft)`
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S4_2_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S4_2')};
+
       ${TickboxWrapper} {
         cursor: pointer;
         border: 1px solid ${(props) => props.theme.color_A1_1};
@@ -10792,9 +10041,6 @@ const RememberStakeButton = styled(FlexLeft)`
   }
   &:active {
     background: ${(props) => props.theme.color_S4_2_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S4_2')};
     ${TickboxWrapper}:after {
       content: '';
     }
@@ -10806,26 +10052,18 @@ const RememberStakeButton = styled(FlexLeft)`
 const AddtoBetSlipButton = styled(FlexCenter)`
   padding: 4px 8px;
   background: ${(props) => props.theme.color_S4_2};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S4_2')};
+
   color: ${(props) => props.theme.color_P3_10_OP64};
   @media (min-width: 1024px) {
     &:hover {
       cursor: ${(props) => (props.loading ? 'default' : 'pointer')};
       background: ${(props) =>
         props.loading ? props.theme.color_S4_2 : props.theme.color_S4_2_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S4_2')};
     }
   }
   &:active {
     background: ${(props) =>
       props.loading ? props.theme.color_S4_2 : props.theme.color_S4_2_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_S4_2')};
   }
   width: ${(props) => (props.retainSelection ? `100%` : `calc(50% - 48px)`)};
 `
@@ -10849,9 +10087,7 @@ export const ControlBarWrapper = styled(Flex)`
     ${(props) =>
       props.quickBetslip &&
       `border-right: 1px solid ${props.theme.color_P4_25}`};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_25')};
+
     @media (min-width: 1024px) {
       &:hover {
         cursor: ${(props) => (props.loading ? 'default' : 'pointer')};
@@ -10859,23 +10095,14 @@ export const ControlBarWrapper = styled(Flex)`
           props.loading
             ? props.theme.color_S4_2
             : props.theme.color_S4_2_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_S4_2')};
       }
     }
     &:active {
       background: ${(props) =>
         props.loading ? props.theme.color_S4_2 : props.theme.color_S4_2_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S4_2')};
     }
     g {
       fill: ${(props) => props.theme.color_P3_10_OP64};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P3_10_OP64')};
     }
   }
 `
@@ -10978,24 +10205,15 @@ const TotalBetsWrapper = styled.div`
   height: ${(props) => (props.freeBet ? '88px' : '68px')};
   width: 100%;
   border-top: 2px solid ${(props) => props.theme.color_A4_1};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A4_1')};
+
   padding: 16px;
   grid-template-rows: 1fr 1fr;
   grid-gap: 4px;
   ${FlexLeft} > ${F14}:first-child {
     color: ${(props) => props.theme.color_P3_22_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_22_OP64')};
   }
   /* ${FlexLeft}:first-child > ${F14}:first-child {
-    border-right: 1px solid ${(
-    props
-  ) =>
-    props.theme
-      .color_P3_22_OP24};
+    border-right: 1px solid ${(props) => props.theme.color_P3_22_OP24};
     padding-right: 8px;
     margin-right: 8px;
   } */
@@ -11112,9 +10330,6 @@ const RotateDeviceAlertWrapper = styled(FlexCenterColumn)`
     }
     &:active {
       color: ${(props) => props.theme.color_A12_1_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A12_1')};
     }
   }
 `
@@ -11160,9 +10375,7 @@ const InputWrapper = styled(FlexColumn)`
       props.useFreeBet
         ? props.theme.color_P3_22_OP64
         : props.theme.color_P3_22};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_22')};
+
     font-weight: bold;
     font-size: 16px;
     width: 100%;
@@ -11222,23 +10435,15 @@ const MaxBetButtonWrapper = styled(FlexColumn)`
 `
 const MaxBetTextWrapper = styled.div`
   color: ${(props) => props.theme.color_A12};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A12')};
+
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A12_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A12')};
     }
   }
   &:active {
     color: ${(props) => props.theme.color_A12_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A12')};
   }
 `
 const MaxBetStake = styled.div`
@@ -11493,9 +10698,6 @@ const BetSlipCompetitionName = styled.span`
   position: relative;
   line-height: 32px;
   color: ${(props) => props.theme.color_P3_20};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_20')};
 `
 const BetSlipHandicap = styled.span`
   padding: 0 1px;
@@ -11504,24 +10706,15 @@ const BetSlipHandicap = styled.span`
     props.handicapChange && `background: ${props.theme.color_A3_11}`};
   color: ${(props) =>
     props.handicapChange ? props.theme.color_P4_22 : props.theme.color_A3_11};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A3_11')};
 `
 const BetSlipAtWrapper = styled.span`
   color: ${(props) => props.theme.color_P3_20};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_20')};
 `
 const BetSlipOdds = styled.span`
   padding: ${(props) => (props.freeBetOdds ? '0px 1px 0px 8px' : '0px 1px')};
   background: ${(props) => props.oddsChange && `${props.theme.color_A3_11}`};
   color: ${(props) =>
     props.oddsChange ? props.theme.color_P4_22 : props.theme.color_P3_20};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_20')};
 `
 const BetSlipCompetitionNameWrapper = styled.div`
   margin: 7px 40px 8px 16px;
@@ -12276,9 +11469,6 @@ export const BetErrorsMessageWrapper = styled.div`
     cursor: pointer;
     padding-top: 2px;
     color: ${(props) => props.theme.color_A12};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A12')};
   }
 `
 
@@ -12356,9 +11546,7 @@ export const ViewBetDetailWrapper = styled(FlexCenterColumn)`
   ${F12} {
     line-height: 16px;
     color: ${(props) => props.theme.color_A12_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A12_1')};
+
     @media (min-width: 1024px) {
       &:hover {
         cursor: pointer;
@@ -12370,9 +11558,6 @@ export const ViewBetDetailWrapper = styled(FlexCenterColumn)`
     }
     &:active {
       color: ${(props) => props.theme.color_A12_1_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A12_1')};
     }
     &:nth-last-child(2) {
       color: ${(props) => props.theme.color_P3_OP56};
@@ -12401,9 +11586,6 @@ export const CashoutButtonTextWrapper = styled(FlexCenterColumn)`
       : props.cashoutUnavailable
       ? props.theme.color_P3_OP64
       : props.theme.color_P4_15};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P4_15', 'color_A1_3')};
   @media (min-width: 1024px) {
     &:hover {
       cursor: ${(props) =>
@@ -12422,9 +11604,6 @@ export const CashoutButtonTextWrapper = styled(FlexCenterColumn)`
           : props.cashoutConfirm
           ? props.theme.color_A3_1_Lplus4
           : props.theme.color_A1_3_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A1_3')};
     }
   }
   &:active {
@@ -12438,9 +11617,6 @@ export const CashoutButtonTextWrapper = styled(FlexCenterColumn)`
         : props.cashoutConfirm
         ? props.theme.color_A3_1_Lmin8
         : props.theme.color_A1_3_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1')};
   }
   user-select: none;
   ${(props) =>
@@ -12514,9 +11690,6 @@ export const CashoutButtonWrapper = styled(FlexCenter)`
       props.cashoutActive
         ? props.theme.color_P4_15
         : props.theme.color_P4_15_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_15')};
   }
   ${AbsoluteRightCenter} {
     background: ${(props) =>
@@ -12527,12 +11700,7 @@ export const CashoutButtonWrapper = styled(FlexCenter)`
         : props.cashoutConfirm
         ? props.theme.color_A3_1
         : props.theme.color_A1_3};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1_3')};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1')};
+
     border-left: 1px solid ${(props) => props.theme.color_P3_OP24};
     margin-left: auto;
     pointer-events: auto;
@@ -12643,9 +11811,13 @@ export const CashoutButton = ({
               <F14>{cashoutButtonText}</F14>
               {cashoutOdds &&
                 (cashoutUnavailable ? (
-                  <F14 bold={1} data-txt-cashout-amt>{cashoutOdds}</F14>
+                  <F14 bold={1} data-txt-cashout-amt>
+                    {cashoutOdds}
+                  </F14>
                 ) : (
-                  <F16 bold={1} data-txt-cashout-amt>{cashoutOdds}</F16>
+                  <F16 bold={1} data-txt-cashout-amt>
+                    {cashoutOdds}
+                  </F16>
                 ))}
             </CashoutButtonTextWrapper>
             {cashoutSuccessful || cashoutUnavailable ? null : (
@@ -12747,18 +11919,12 @@ const MyBetsSelectionName = styled.span`
 const MyBetsHandicap = styled.span`
   white-space: nowrap;
   color: ${(props) => props.theme.color_A3_8};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A3_8')};
 `
 const MyBetsAtWrapper = styled.span`
   color: ${(props) => props.theme.color_P3_19};
 `
 const MyBetsOdds = styled.span`
   color: ${(props) => props.theme.color_P3_19};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_19')};
 `
 export const MyBetsSelectionTitleWrapper = styled(Flex)`
   justify-content: space-between;
@@ -12849,9 +12015,6 @@ const MyBetsCompetitionEventName = styled(Flex)`
     }
     &:active {
       background: ${(props) => props.theme.color_S4_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S4_Lmin8')};
     }
   }
   ${media.tablet`height:auto;padding-right: 0px;`}
@@ -13863,9 +13026,6 @@ export const PaginationItemWrapper = styled(FlexCenter)`
   margin-right: 8px;
   color: ${(props) => props.theme.color_P3_OP56};
   background: ${(props) => props.theme.color_P4_28};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P4_2', 'color_P3_9_OP64')};
   border: 1px solid ${(props) => props.theme.color_P3_9_OP24};
   @media (min-width: 1024px) {
     &:hover {
@@ -13881,10 +13041,7 @@ export const PaginationItemWrapper = styled(FlexCenter)`
     `
       color: ${props.theme.color_P4_2};
       background:${props.theme.color_P3_OP56}; 
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_2')
-      };
+      
       border: 1px solid ${(props) => props.theme.color_P4_2};
       @media (min-width: 1024px) {
         &:hover{
@@ -14069,16 +13226,11 @@ export const BetHeaderWrapper = styled.div`
   position: relative;
   ${FlexSpaceBetween(48)}
   background: ${(props) => props.theme.color_S4_3};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_S4_3')};
+
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S4_3_Lplus4};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S4_3')};
     }
   }
   ${FlexLeft} {
@@ -14087,9 +13239,6 @@ export const BetHeaderWrapper = styled.div`
     width: 100%;
     &:active {
       background: ${(props) => props.theme.color_S4_3_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S4_3')};
     }
     ${FlexColumn} {
       width: ${(props) =>
@@ -14117,9 +13266,7 @@ export const BetHeaderWrapper = styled.div`
 `
 const BetHeaderSelectionName = styled.span`
   color: ${(props) => props.theme.color_P3_17};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P3_17_OP56')};
+
   border-left: 1px solid ${(props) => props.theme.color_P3_1_OP16};
   padding: 0px 8px;
   &:first-child {
@@ -14129,9 +13276,7 @@ const BetHeaderSelectionName = styled.span`
 `
 const BetHeaderHandicap = styled.span`
   color: ${(props) => props.theme.color_A3_12};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A3_12')};
+
   padding-right: 8px;
 `
 export const BetHeaderDetail = styled.span`
@@ -14160,9 +13305,7 @@ export const BetHeaderCashoutButton = styled(FlexCenterColumn)`
       : props.cashoutSettled
       ? props.theme.color_P3_17_OP64
       : props.theme.color_P4_15};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P4_15', 'color_A1_3')};
+   'color_A1_3')};
   background: ${(props) =>
     props.cashoutLoading ||
     props.cashoutSuccessful ||
@@ -14248,9 +13391,7 @@ export const BetHeaderCashoutButton = styled(FlexCenterColumn)`
         : `${props.theme.color_A1_3_Lmin8};${(props) =>
             props.theme.getColorToHighlight &&
             props.theme.getColorToHighlight('color_A1_3_Lmin8')};`};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1_3')};
+    
   }
   ${Ripple} {
     left: 50%;
@@ -14269,16 +13410,10 @@ export const CashoutCounter = styled(Flex)`
     g {
       fill: ${(props) => props.theme.color_P4_18};
     }
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_18', 'color_S5_2')};
   }
   ${IconWrapper32}:last-child {
     background: ${(props) => props.theme.color_A3_12};
     color: ${(props) => props.theme.color_P4_23};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P4_23', 'color_A3_12')};
   }
   @media (min-width: 1024px) {
     &:hover {
@@ -14299,15 +13434,9 @@ export const CashoutCounter = styled(Flex)`
   &:active {
     ${IconWrapper32}:first-child {
       background: ${(props) => props.theme.color_S5_2_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_S5_2')};
     }
     ${IconWrapper32}:last-child {
       background: ${(props) => props.theme.color_A3_12_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A3_12')};
     }
   }
 `
@@ -14873,9 +14002,7 @@ export const UnsupportedContentWrapper = styled(RelativeWrapper)`
   }
   ${F24} {
     color: ${(props) => props.theme.color_P3_14_OP56};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_14')};
+
     padding-top: 24px;
     padding-bottom: 16px;
     text-align: center;
@@ -14884,17 +14011,12 @@ export const UnsupportedContentWrapper = styled(RelativeWrapper)`
 export const UnsupportedContentPreviousWrapper = styled(RelativeWrapper)`
   ${F12} {
     color: ${(props) => props.theme.color_A12_1};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A12_1')};
+
     text-align: center;
     line-height: 40px;
     cursor: pointer;
     &:active {
       color: ${(props) => props.theme.color_A12_1_Lmin8};
-      ${(props) =>
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A12_1')};
     }
   }
 `
@@ -14903,9 +14025,7 @@ export const UnsupportedContentIconWrapper = styled(FlexCenter)`
   svg {
     margin: 0 12px;
     fill: ${(props) => props.theme.color_P3_11_OP64};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_P3_11_OP64')};
+
     cursor: pointer;
   }
 `
@@ -14931,18 +14051,11 @@ export const UnsupportedContentSubmitButton = styled(FlexCenter)`
   text-align: center;
   cursor: pointer;
   color: ${(props) => props.theme.color_P4_10};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_P4_10')};
+
   background: ${(props) => props.theme.color_A1_2};
-  ${(props) =>
-    props.theme.getColorToHighlight &&
-    props.theme.getColorToHighlight('color_A1_2')};
+
   &:active {
     background: ${(props) => props.theme.color_A1_2_Lmin8};
-    ${(props) =>
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A1_2')};
   }
 `
 export const UnsupportedContentSelectionWrapper = styled(FlexLeft)`
@@ -15234,8 +14347,7 @@ export const WlbRightPanelPopUpTransition = styled(LeftPanelPopUpTransition)`
       ? `transform: translate3d(0%,0,0);`
       : `transform: translate3d(100%,0,0);`};
   /* transition: width 3s ease;
-  ${(props) =>
-    props.show ? `width: 100%;` : `width: 0px;`};  */
+  ${(props) => (props.show ? `width: 100%;` : `width: 0px;`)};  */
   ${media.tablet`width:320px;`}
 `
 export const LogOutButtonWrap = styled.div`

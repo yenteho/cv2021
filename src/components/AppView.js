@@ -9,20 +9,14 @@ import {
   // BrandColorBar,
   // SbkHeader,
 } from './base/common'
-import {
-  ResetStyle,
-  GlobalStyle,
-} from './base/globalStyle'
+import { ResetStyle, GlobalStyle } from './base/globalStyle'
 import Header from './nav/header'
 const AppView = () => {
   return (
-        <>
-          <Header/>
-          <PageContainer>
-
-          </PageContainer>
-        </>
-
+    <>
+      <Header />
+      <PageContainer></PageContainer>
+    </>
   )
 }
 

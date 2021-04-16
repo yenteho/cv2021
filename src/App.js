@@ -1,42 +1,38 @@
-import logo from "./logo.svg";
-import "./App.css";
+import logo from './logo.svg'
+import './App.css'
 import React, { useState, useEffect } from 'react'
-import { FormattedMessage, IntlProvider } from "react-intl";
-import AppView from "./components/AppView";
+import { FormattedMessage, IntlProvider } from 'react-intl'
+import AppView from './components/AppView'
 import { rgba, darken, opacify, adjustHue } from 'polished'
 import styled from 'styled-components'
 import colors from './colors/light.js'
-import {ThemeProvider} from './components/base/common'
-import {
-  ResetStyle,
-  GlobalStyle,
-} from './components/base/globalStyle'
+import { ThemeProvider } from './components/base/common'
+import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 
 const Container = styled.div`
   height: 100vh;
   overflow: scroll;
-  background: ${props => adjustHue('180', `${props.theme.color_P1}`)};
+  background: ${(props) => props.theme.color_Bg};
 `
 function App() {
   const [lang, setLang] = useState('en')
   const [locale, setLocale] = useState(undefined)
 
-  useEffect(async() => {
+  useEffect(async () => {
     const resp = await fetch(`./lang/${lang}.json`)
     const data = await resp.json()
     setLocale(data)
-  },[lang])
+  }, [lang])
 
   return (
-    <IntlProvider 
-      messages={locale}
-    >
-      <ThemeProvider theme={{...colors}}>
+    <IntlProvider messages={locale}>
+      <ThemeProvider theme={{ ...colors }}>
         <ResetStyle />
         <GlobalStyle />
-        <AppView/>
+        <AppView />
         <Container className="App">
           <header className="App-header">
+            <link rel="apple-touch-icon" href="INSERT_FILE_PATH_HERE" />
             <div className="flex-center">
               <img src={logo} className="App-logo" alt="logo" />
             </div>
@@ -44,7 +40,7 @@ function App() {
               <select
                 value={lang}
                 onChange={(evt) => {
-                  setLang(evt.target.value);
+                  setLang(evt.target.value)
                 }}
               >
                 <option value="en">English</option>
@@ -71,7 +67,7 @@ function App() {
         </Container>
       </ThemeProvider>
     </IntlProvider>
-  );
+  )
 }
 
-export default App;
+export default App

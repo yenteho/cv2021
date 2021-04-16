@@ -6,15 +6,15 @@
   height: 40vmin;
   pointer-events: none;
 }
-.translate-wrapper{
-  width:450px;
+.translate-wrapper {
+  width: 450px;
 }
-.translate{
+.translate {
   height: 30vmin;
   pointer-events: none;
   display: inline-block;
 }
-.flex-center{
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
