@@ -27,9 +27,6 @@ const Header = ({
   switchPage,
   headerActive,
   page,
-  lang,
-  setLang,
-  locale
 }) => {
   //   const scrollRef = useDragScrolling()
   const [showDropdownList, setDropdownList] = useState(false)
@@ -38,7 +35,14 @@ const Header = ({
     setDropdownList(!showDropdownList)
   }
   const [tab, setTab] = useState('Main Markets')
+  const [lang, setLang] = useState('en')
+  const [locale, setLocale] = useState(undefined)
 
+  useEffect(async () => {
+    const resp = await fetch(`./lang/${lang}.json`)
+    const data = await resp.json()
+    setLocale(data)
+  }, [lang])
   return (
     <RelativeWrapper>
 
