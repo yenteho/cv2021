@@ -14,7 +14,6 @@ import Header from './nav/header'
 const AppView = () => {
   return (
     <>
-      <Header />
       <PageContainer></PageContainer>
     </>
   )

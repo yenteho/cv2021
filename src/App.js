@@ -8,6 +8,7 @@ import styled from 'styled-components'
 import colors from './colors/light.js'
 import { ThemeProvider } from './components/base/common'
 import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
+import Header from './components/nav/header'
 
 const Container = styled.div`
   height: 100vh;
@@ -26,17 +27,18 @@ function App() {
 
   return (
     <IntlProvider messages={locale}>
-      <ThemeProvider theme={{ ...colors }}>
+      <ThemeProvider theme={{ ...colors}}>
         <ResetStyle />
         <GlobalStyle />
         <AppView />
         <Container className="App">
+          <Header lang={lang}/>
           <header className="App-header">
             <link rel="apple-touch-icon" href="INSERT_FILE_PATH_HERE" />
             <div className="flex-center">
               <img src={logo} className="App-logo" alt="logo" />
             </div>
-            <div>
+            {/* <div>
               <select
                 value={lang}
                 onChange={(evt) => {
@@ -48,7 +50,7 @@ function App() {
                 <option value="fr">Français</option>
                 <option value="jp">日本語</option>
               </select>
-            </div>
+            </div> */}
             <p>
               <FormattedMessage
                 id="app.header"

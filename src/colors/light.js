@@ -22,13 +22,13 @@ import {
   toColorString,
 } from 'polished'
 // const primary = '#1a237e' //900
-// const primary = '#263238' //900
+const primary = '#263238' //900
 // const primary = '#fbc02d' //900
 // const primary = '#ad1457' //800
 // const primary = '#0097a7' //700
 // const primary = '#e53935' //600
 // const primary ='#ffcdd2'; //100
-const primary = '#80cbc4' //200
+// const primary = '#80cbc4' //200
 // const primary = "#7986cb"; //300
 const secondary = `${setHue('42', `${primary}`)}`
 const mixWhite = `${tint(0.2, `${primary}`)}`
