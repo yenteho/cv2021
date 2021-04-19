@@ -2355,9 +2355,6 @@ export const PageHeaderTabWrapper = styled.div`
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A3_3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_3')};
       }
     }
   }
@@ -7823,15 +7820,9 @@ export const LeftSportsItemsWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) =>
       props.active
-        ? `${props.theme.color_P2_1};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P2_1')
-          }`
-        : `${props.theme.color_P4_1_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_1')
-          }
-        `};
+        ? props.theme.color_P2_1
+        : props.theme.color_P4_1_OP64
+        };
   }
   @media (min-width: 1024px) {
     &:hover {
@@ -7854,10 +7845,6 @@ export const LeftSportsItemsWrapper = styled(FlexCenter)`
     ${IconWrapper8}{ 
       g { 
         fill: ${props.theme.color_P2_1};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P2_1')
-        }
       };
       position: absolute;
       top: 0px;
@@ -8628,14 +8615,8 @@ export const FilterItemWrapper = styled(FlexCenter)`
   ${F12}:nth-child(2) {
     color: ${(props) =>
       props.active
-        ? `${props.theme.color_A3_OP56};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_OP56')
-          };`
-        : `${props.theme.color_P3_9_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_9_OP64')
-          };`};
+        ? props.theme.color_A3_OP56
+        : props.theme.color_P3_9_OP64};
     text-transform: capitalize;
     display: none;
     ${media.desktopLarge`display: block;`}
@@ -8644,14 +8625,8 @@ export const FilterItemWrapper = styled(FlexCenter)`
   }
   color: ${(props) =>
     props.active
-      ? `${props.theme.color_A3};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')
-        }`
-      : `${props.theme.color_P3_9_OP64};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_9_OP64')
-        }`};
+      ? props.theme.color_A3
+      : props.theme.color_P3_9_OP64};
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
@@ -8663,9 +8638,6 @@ export const FilterItemWrapper = styled(FlexCenter)`
       }
       g {
         fill: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
     }
   }
@@ -8684,18 +8656,12 @@ export const FilterItemWrapper = styled(FlexCenter)`
   border: 1px solid
     ${(props) =>
       props.active
-        ? `${props.theme.color_A3}; ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }`
+        ? props.theme.color_A3
         : props.theme.color_P3_9_OP32};
   g {
     fill: ${(props) =>
       props.active
-        ? `${props.theme.color_A3};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }`
+        ? props.theme.color_A3
         : props.theme.color_P3_OP40};
   }
   border-radius: 4px;
@@ -8851,10 +8817,7 @@ const MarketLineWrapper = styled(FlexCenterColumn)`
   ${F14} {
     color: ${(props) =>
       props.active
-        ? `${props.theme.color_A3};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }`
+        ? props.theme.color_A3
         : props.priceBoost
         ? props.theme.color_A1
         : props.theme.color_P3_7};
@@ -8919,12 +8882,8 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
   border: 1px solid
     ${(props) =>
       props.active
-        ? `${props.theme.color_A3};
-      `
-        : `${props.theme.color_P3_9_OP32};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_9_OP64')
-          }`};
+        ? props.theme.color_A3
+        : props.theme.color_P3_9_OP32};
   @media (min-width: 1024px) {
     &:hover {
       cursor: pointer;
@@ -8932,15 +8891,9 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
 
       ${F12}:first-child {
         background: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
       ${F12},${F14} {
         color: ${(props) => props.theme.color_A3};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')};
       }
       background: ${(props) => props.allDate && props.theme.color_P4_2};
     }
@@ -8952,14 +8905,8 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
 
     background: ${(props) =>
       props.active
-        ? `${props.theme.color_A3};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }`
-        : `${props.theme.color_P3_5_OP32};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_5')
-          }`};
+        ? props.theme.color_A3
+        : props.theme.color_P3_5_OP32};
     height: 21px;
     width: 54px;
     border-radius: 7px 7px 0px 0px;
@@ -8969,17 +8916,10 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     height: ${(props) => (props.allDate ? '64px' : '43px')};
     color: ${(props) =>
       props.allDate && props.active
-        ? `${props.theme.color_P4_2};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_2')
-          }`
+        ? props.theme.color_P4_2
         : props.active
-        ? `${props.theme.color_A3};
-      `
-        : `${props.theme.color_P3_9_OP64};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_9_OP64')
-          }`};
+        ? props.theme.color_A3
+        : props.theme.color_P3_9_OP64};
     ${F12}, ${F14} {
       height: ${(props) => (props.allDate ? 'auto' : '16px')};
       ${(props) => (props.allDate ? `${Truncate(2)}` : `${Truncate(1)}`)};
@@ -8999,26 +8939,14 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     }
     background: ${(props) =>
       props.allDate
-        ? `
-        ${props.theme.color_A3};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3')
-        }
-         `
-        : `${props.theme.color_P3_1_OP8_1}`};
+        ? props.theme.color_A3
+        : props.theme.color_P3_1_OP8_1};
     ${FlexCenterColumn} {
       ${F12},${F14} {
         color: ${(props) =>
           props.allDate
             ? props.theme.color_P4_2
-            : `
-              ${props.theme.color_A3};
-              ${
-                props.theme.getColorToHighlight &&
-                props.theme.getColorToHighlight('color_A3')
-              }
-            `};
+            : props.theme.color_A3};
       }
     }
   }
@@ -9199,16 +9127,10 @@ const RegionalCouponWrapper = styled(FlexCenter)`
       cursor: pointer;
       ${FlexCenter}, ${IconWrapper32} {
         background: ${(props) => props.theme.color_S1_1_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_S1_1')};
       }
       ${CouponButtonEdgeWrapper} {
         g {
           fill: ${(props) => props.theme.color_S1_1_Lplus4};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_S1_1')};
         }
       }
     }
@@ -9221,9 +9143,6 @@ const RegionalCouponWrapper = styled(FlexCenter)`
       g,
       use {
         fill: ${(props) => props.theme.color_S1_1_Lmin8};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_S1_1')};
       }
     }
   }
@@ -9486,15 +9405,8 @@ export const DropdownListWrapper = styled.div`
 export const DropdownListItemWrapper = styled(FlexLeft)`
   color: ${(props) =>
     props.active
-      ? `${props.theme.color_A3};
-    ${
-      props.theme.getColorToHighlight &&
-      props.theme.getColorToHighlight('color_A3')
-    }`
-      : `${props.theme.color_P3_9_OP64};${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_9_OP64')
-        }`};
+      ? props.theme.color_A3
+      : props.theme.color_P3_9_OP64};
   height: 40px;
   padding: 4px 16px;
   ${F14} {
@@ -9889,11 +9801,7 @@ export const PlaceBetButton = styled(FlexCenterColumn)`
   width: 100%;
   ${(props) =>
     props.placeBetActive
-      ? `  background: ${props.theme.color_A1_2};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A1_2')
-      };
+      ? `background: ${props.theme.color_A1_2};
       @media (min-width: 1024px) {
         &:hover {
           cursor: ${props.loading ? 'default' : 'pointer'};
@@ -9902,29 +9810,17 @@ export const PlaceBetButton = styled(FlexCenterColumn)`
               ? props.theme.color_A1_2
               : props.theme.color_A1_2_Lplus4
           };
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A1_2')
-          };
         }
       }
       &:active {
         background: ${
           props.loading ? props.theme.color_A1_2 : props.theme.color_A1_2_Lmin8
         };
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A1_2')
-        };
       }
       color: ${props.theme.color_P4_10};
       ${F14}:nth-child(2) {
-      color: ${props.theme.color_P4_OP64};
-      ${
-        props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_P4_OP64')
-      };
-    }
+        color: ${props.theme.color_P4_OP64};
+      }
       `
       : props.okText
       ? `background: ${props.theme.color_S1_2};
@@ -9947,13 +9843,8 @@ export const TickboxWrapper = styled.div`
   border: 1px solid
     ${(props) =>
       props.selected
-        ? `${props.theme.color_A1_8}`
-        : `${props.theme.color_P3_22_OP32}`};
-  ${(props) =>
-    props.selected
-      ? props.theme.getColorToHighlight &&
-        props.theme.getColorToHighlight('color_A1_8')
-      : null};
+        ? props.theme.color_A1_8
+        : props.theme.color_P3_22_OP32};
   position: relative;
   @media (min-width: 1024px) {
     &:hover {
@@ -10323,9 +10214,6 @@ const RotateDeviceAlertWrapper = styled(FlexCenterColumn)`
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A12_1_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A12_1')};
       }
     }
     &:active {
@@ -10512,9 +10400,6 @@ export const EachWayTickboxWrapper = styled(FlexLeft)`
               : props.lockEachWay || props.lockBackground
               ? props.theme.color_P3_22_OP32
               : props.theme.color_A1_8};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A1_8')};
       }
     }
   }
@@ -11241,19 +11126,10 @@ const BetReceiptStateWrapper = styled.div`
   ${FlexLeft} {
     color: ${(props) =>
       props.pending
-        ? `${props.theme.color_A3_13};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_13')
-          }`
+        ? props.theme.color_A3_13
         : props.rejected
-        ? `${props.theme.color_A7_5};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A7_5')
-          }`
-        : `${props.theme.color_A1_8};${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A1_8')
-          }`};
+        ? props.theme.color_A7_5
+        : props.theme.color_A1_8};
     ${F14} {
       ${(props) => props.pending && `padding-left: 8px;`};
     }
@@ -11551,9 +11427,6 @@ export const ViewBetDetailWrapper = styled(FlexCenterColumn)`
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A12_1_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A12_1')};
       }
     }
     &:active {
@@ -11714,14 +11587,8 @@ export const CashoutButtonWrapper = styled(FlexCenter)`
             : props.cashoutConfirm
             ? props.theme.color_A3_1_Lplus4
             : props.theme.color_A1_3_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A1_3')};
         g {
           fill: ${(props) => props.theme.color_P4_15};
-          ${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P4_15')};
         }
       }
     }
@@ -11734,9 +11601,6 @@ export const CashoutButtonWrapper = styled(FlexCenter)`
           : props.theme.color_A1_3_Lmin8};
       g {
         fill: ${(props) => props.theme.color_P4_15};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P4_15')};
       }
     }
   }
@@ -12008,9 +11872,6 @@ const MyBetsCompetitionEventName = styled(Flex)`
       &:hover {
         cursor: pointer;
         background: ${(props) => props.theme.color_S4_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_S4_Lplus4')};
       }
     }
     &:active {
@@ -13047,18 +12908,10 @@ export const PaginationItemWrapper = styled(FlexCenter)`
         &:hover{
           cursor: pointer;
           background: ${props.theme.color_P3_OP56};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_P3_OP56')
-          };
         }
       }
       &:active {
         background: ${props.theme.color_P3_OP56};
-        ${
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_OP56')
-        };
       }
     `}
 `
@@ -13247,17 +13100,11 @@ export const BetHeaderWrapper = styled.div`
     ${Flex} {
       &:nth-child(1) {
         color: ${(props) => props.theme.color_P3_17_OP56};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_P3_17_OP56')}
         ${F14} {
           &:nth-child(2) {
             padding-left: 8px;
             margin-left: 8px;
             border-left: 1px solid ${(props) => props.theme.color_P3_17_OP16};
-            ${(props) =>
-              props.theme.getColorToHighlight &&
-              props.theme.getColorToHighlight('color_P3_17')};
           }
         }
       }
@@ -13381,16 +13228,10 @@ export const BetHeaderCashoutButton = styled(FlexCenterColumn)`
       props.cashoutSettled
         ? `transparent`
         : props.cashoutValueChanged
-        ? `${props.theme.color_A7_3_Lmin8};${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A7_3_Lmin8')};`
+        ? props.theme.color_A7_3_Lmin8
         : props.cashoutConfirm
-        ? `${props.theme.color_A3_1_Lmin8};${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3_1_Lmin8')};`
-        : `${props.theme.color_A1_3_Lmin8};${(props) =>
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A1_3_Lmin8')};`};
+        ? props.theme.color_A3_1_Lmin8
+        : props.theme.color_A1_3_Lmin8};
     
   }
   ${Ripple} {
@@ -13419,15 +13260,9 @@ export const CashoutCounter = styled(Flex)`
     &:hover {
       ${IconWrapper32}:first-child {
         background: ${(props) => props.theme.color_S5_2_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_S5_2')};
       }
       ${IconWrapper32}:last-child {
         background: ${(props) => props.theme.color_A3_12_Lplus4};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_12')};
       }
     }
   }
@@ -13860,9 +13695,6 @@ export const BetRadarIconWrapper = styled(FlexCenter)`
       cursor: pointer;
       g {
         fill: ${(props) => props.theme.color_A3_7};
-        ${(props) =>
-          props.theme.getColorToHighlight &&
-          props.theme.getColorToHighlight('color_A3_7')};
       }
     }
   }
@@ -13876,11 +13708,7 @@ export const BetRadarIconWrapper = styled(FlexCenter)`
       props.disabled
         ? props.theme.color_P4_OP64
         : props.active
-        ? `${props.theme.color_A3};
-          ${
-            props.theme.getColorToHighlight &&
-            props.theme.getColorToHighlight('color_A3')
-          }`
+        ? props.theme.color_A3
         : props.theme.color_P3_12_OP64};
   }
 `
