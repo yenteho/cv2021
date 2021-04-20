@@ -2,8 +2,20 @@ import React, { useState, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css, keyframes } from 'styled-components'
 import { F32, F24, F22, F20, F18, F16, F15, F14, F13, F12, F11 } from './font'
+import {
+  IconWrapper80,
+  IconWrapper56,
+  IconWrapper48,
+  IconWrapper32,
+  IconWrapper24,
+  IconWrapper18,
+  IconWrapper16,
+  IconWrapper12,
+  IconWrapper10,
+  IconWrapper8,
+} from './iconWrapper'
 // import Images from '../../img/index'
-import { HiMenu } from 'react-icons/hi'
+import { HiMenu, HiOutlineX } from 'react-icons/hi'
 import { ThemeProvider as BaseThemeProvider } from 'styled-components'
 let Icons = null
 export const ThemeProvider = (props) => {
@@ -457,15 +469,14 @@ export const KeypadTransition = styled.div`
   `}
 `
 export const LeftPanelPopUpTransition = styled.div`
-  background: ${(props) => props.theme.color_P4_2};
+  background: ${(props) => props.theme.color_B2};
   width: 320px;
   ${media.tablet`width:100%;`}
   padding-bottom: 48px;
   transition: transform 0.3s ease;
   position: fixed;
   bottom: 0;
-  top: ${(props) =>
-    props.theme.iframe ? `0` : `${props.theme.headerHeight}px`};
+  top: 0;
   left: 0;
   ${(props) =>
     props.show
@@ -475,10 +486,6 @@ export const LeftPanelPopUpTransition = styled.div`
   ${(props) => (props.show ? `width: 100%;` : `width: 0px;`)};  */
   z-index: 4;
   pointer-events: auto;
-  ${Separator1} {
-    margin-left: ${(props) => (props.freeBet ? null : '8px')};
-    margin-right: ${(props) => (props.freeBet ? null : '8px')};
-  }
 `
 //-------------------- BetSlip Keypad Button  --------------------//
 export const KeypadButtonWrapper = styled(FlexCenter)`
@@ -492,7 +499,7 @@ export const KeypadButtonWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) => props.theme.color_P4_25};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: ${(props) => props.theme.color_P1_Lplus4};
     }
@@ -662,12 +669,9 @@ export const ShadowLine = styled.div`
   height: 8px;
   background: linear-gradient(
     to bottom,
-    ${(props) => props.theme.color_P3_OP40},
+    ${(props) => props.theme.color_Shadow},
     ${(props) => props.theme.color_P1_OP0}
   );
-  position: absolute;
-  left: 0;
-  top: 0;
 `
 //-------------------- ReactSwipe --------------------//
 
@@ -680,7 +684,7 @@ export const Wrapper = styled.div`
     g {
       fill: ${(props) => props.theme.color_P1_OP0};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -699,7 +703,7 @@ export const Dot = styled(Flex)`
   width: 16px;
   height: 4px;
   border-radius: 6px;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_A3};
@@ -741,7 +745,7 @@ export const ButtonLeft = styled.div`
     g {
       fill: ${(props) => props.theme.color_P1_OP0};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -759,7 +763,7 @@ export const ButtonRight = styled.div`
     g {
       fill: ${(props) => props.theme.color_P1_OP0};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -788,75 +792,6 @@ export function GridChild(colstart, colend, rowstart, rowend) {
     grid-row: ${rowstart} / ${rowend};
   `
 }
-
-//-------------------- IconWrapper --------------------//
-export const IconWrapper80 = styled(FlexCenter)`
-  width: 80px;
-  max-width: 80px;
-  min-width: 80px;
-  height: 80px;
-`
-export const IconWrapper56 = styled(FlexCenter)`
-  width: 56px;
-  max-width: 56px;
-  min-width: 56px;
-  height: 56px;
-`
-export const IconWrapper48 = styled(FlexCenter)`
-  width: 48px;
-  max-width: 48px;
-  height: 48px;
-`
-export const IconWrapper32 = styled(FlexCenter)`
-  svg {
-    width: 32px;
-    height: 32px;
-  }
-  width: 32px;
-  max-width: 32px;
-  min-width: 32px;
-  height: 32px;
-`
-export const IconWrapper24 = styled(FlexCenter)`
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-  width: 24px;
-  height: 24px;
-  max-width: 24px;
-  min-width: 24px;
-`
-export const IconWrapper18 = styled(FlexCenter)`
-  svg {
-    width: 18px;
-    height: 18px;
-  }
-`
-export const IconWrapper16 = styled(FlexCenter)`
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-`
-export const IconWrapper12 = styled(FlexCenter)`
-  svg {
-    width: 12px;
-    height: 12px;
-  }
-`
-export const IconWrapper10 = styled(FlexCenter)`
-  svg {
-    width: 10px;
-    height: 10px;
-  }
-`
-export const IconWrapper8 = styled(FlexCenter)`
-  svg {
-    width: 8px;
-    height: 8px;
-  }
-`
 
 //-------------------- Header Background Banner --------------------//
 export const HeaderBg = styled.div`
@@ -1046,7 +981,7 @@ export const SwitchButton = styled.input`
   border-radius: 15px;
   width: 40px;
   height: 24px;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       ~ ${CheckBoxLabel} {
@@ -1094,7 +1029,7 @@ export const RadioButton = styled.input`
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       ~ ${RadioButtonLabel} {
@@ -1219,33 +1154,19 @@ export const CloseButtonWrapper = styled(AbsoluteRightCenter)`
         : props.theme.color_P3_OP64};
   }
   background: ${(props) => props.theme.color_P4_2};
-  ${IconWrapper48} {
-    @media (min-width: 1024px) {
+  ${IconWrapper24} {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
-        g {
-          fill: ${(props) =>
-            props.infoPopUp
-              ? props.theme.color_P3_OP40
-              : props.betSlip
-              ? props.theme.color_P3_22
-              : props.theme.color_P3_1};
-        }
+        color: ${(props) => props.theme.color_T1_hover};
       }
     }
     &:active {
       width: 32px;
       height: 32px;
       margin: 8px;
-      g {
-        fill: ${(props) =>
-          props.infoPopUp
-            ? props.theme.color_P3_OP40
-            : props.betSlip
-            ? props.theme.color_P3_22
-            : props.theme.color_P3_1};
-      }
-      background: ${(props) => props.theme.color_P3_1_OP8_2};
+      color: ${(props) => props.theme.color_T1_active};
+      background: ${(props) => props.theme.color_P1_active};
     }
   }
 `
@@ -1256,9 +1177,9 @@ export const CloseButton = ({ infoPopUp, betSlip, onClick }) => (
     onClick={onClick}
     data-btn-close
   >
-    <IconWrapper48>
-      <Icons.Close />
-    </IconWrapper48>
+    <IconWrapper24>
+      <HiOutlineX />
+    </IconWrapper24>
   </CloseButtonWrapper>
 )
 export const TvWrapper = styled(FlexCenter)`
@@ -1288,7 +1209,7 @@ export const TvWrapper = styled(FlexCenter)`
             : props.theme.color_P3_16_OP64};
       }
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1344,7 +1265,7 @@ export const StatisticsWrapper = styled(FlexCenter)`
       props.active ? props.theme.color_A3 : props.theme.color_P3_16_OP64};
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1433,7 +1354,7 @@ export const InfoIconWrapper = styled(FlexCenter)`
     }
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1486,7 +1407,7 @@ export const InfoPopUpWrapper = styled(RelativeWrapper)`
         margin: 0px;
         background: ${(props) => props.theme.color_P3_1_OP8_1};
       }
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover {
           g {
             fill: ${(props) => props.theme.color_P3_OP100};
@@ -1637,7 +1558,7 @@ export const FavoriteWrapper = styled(FlexCenter)`
         : `${props.theme.color_P3_16_OP64};`};
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1672,7 +1593,7 @@ export const MarketlineIndicator = styled(FlexCenter)`
   g {
     fill: ${(props) => props.theme.color_P3_6_OP64};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       ${F12} {
@@ -1750,7 +1671,7 @@ export const CheckboxWrapper = styled(FlexCenter)`
       props.active ? props.theme.color_A1_1 : props.theme.color_P3_OP64};
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1817,7 +1738,7 @@ export const CompetitionFilterIconWrapper = styled(FavoriteWrapper)`
     }
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1864,7 +1785,7 @@ export const DateFilterIconWrapper = styled(FavoriteWrapper)`
     }
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1900,7 +1821,7 @@ export const BetSettingsIconWrapper = styled(DateFilterIconWrapper)`
     }
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1931,7 +1852,7 @@ export const BackButtonWrapper = styled(IconWrapper48)`
     fill: ${(props) => props.theme.color_P3_1_OP64};
   }
   ${IconWrapper32} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -1983,7 +1904,7 @@ const ChevronLeftRightWrapper = styled(FlexCenter)`
     fill: ${(props) =>
       props.disabled ? props.theme.color_P3_OP24 : props.theme.color_P3_OP56};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) => (props.disabled ? 'unset' : 'pointer')};
       g {
@@ -2104,7 +2025,7 @@ export const ArrowButtonChevronWrapper = styled.div`
         ? props.theme.color_P4_6
         : props.theme.color_P3_OP64};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       g {
         fill: ${(props) =>
@@ -2142,7 +2063,7 @@ export const ArrowButtonWrapper = styled(RelativeWrapper)`
       : props.specialEventBg
       ? props.theme.color_S1_2_Lplus4
       : props.theme.color_A13};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover,
     &:hover:after {
       transition: all 0.3s ease 0s;
@@ -2283,7 +2204,7 @@ export const PageHeaderTitleWrapper = styled.div`
       fill: ${(props) => props.theme.color_A6_5};
     }
     ${IconWrapper32} {
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover {
           g {
             fill: ${(props) => props.theme.color_A6_5_Lplus4};
@@ -2351,7 +2272,7 @@ export const PageHeaderTabWrapper = styled.div`
         `
         : `border-bottom: 2px solid transparent;
           color:${props.theme.color_P3_1_OP64};`};
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A3_3};
@@ -2420,7 +2341,7 @@ const CompetitionTabText = styled(FlexCenter)`
   padding: 12px 8px;
   color: ${(props) =>
     props.active ? props.theme.color_P3_4 : props.theme.color_P3_OP56};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) => (props.tab ? `unset` : `pointer`)};
       color: ${(props) => props.theme.color_P3_2};
@@ -2479,7 +2400,7 @@ export const CompetitionTab = ({
 )
 const CompetitionWrapper = styled.div`
   position: relative;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       width: 100%;
@@ -2606,7 +2527,7 @@ const TooltipSubmitButton = styled(FlexCenter)`
   height: 32px;
   cursor: pointer;
   user-select: none;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: ${(props) => props.theme.color_A6_1_Lplus4};
     }
@@ -2650,7 +2571,7 @@ const MatchesSubmitWrapper = styled(TooltipWrapper)`
   background: ${(props) => props.theme.color_A1_2};
   color: ${(props) => props.theme.color_P4_10};
   margin: 0 auto;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_A1_2_Lplus4};
@@ -2685,7 +2606,7 @@ const PanelHeaderClickableButtonWrapper = styled(RelativeWrapper)`
           ? props.theme.color_P3_OP40
           : props.theme.color_P4_1_OP64};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         g {
@@ -2738,7 +2659,7 @@ const RemoveAllWrapper = styled(FlexCenter)`
   background: ${(props) => props.theme.color_A7_3};
 
   justify-content: center;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_A7_3_Lplus4};
@@ -2753,12 +2674,10 @@ export const PanelHeaderWrapper = styled.div`
   ${FlexSpaceBetween(48)};
   background: ${(props) =>
     props.betDetail ? 'transparent' : props.theme.color_P1};
-  color: ${(props) =>
-    props.betDetail ? props.theme.color_P3_18 : props.theme.color_P4_1};
-   'color_P4_1')};
+  color: ${(props) => props.theme.color_T1};
+  box-shadow: -3px ​4px 8px 1px ${(props) => props.theme.color_Shadow};
   ${F12} {
     color: ${(props) => props.theme.color_A8_1};
-    
   }
   ${FlexLeft} {
     height: 100%;
@@ -2769,13 +2688,6 @@ export const PanelHeaderWrapper = styled.div`
     }
   }
   ${(props) =>
-    (props.betSlip || props.wlbRightPanel) &&
-    `
-      ${FlexLeft}, ${FlexLeft} > ${PanelHeaderClickableButtonWrapper} {
-        &:hover {cursor: pointer;}
-        &:active {background: ${props.theme.color_P1_Lmin8};}
-      `};
-  ${(props) =>
     props.withLeftIcon && `${FlexLeft} > ${F18} {padding-left: 0px;}`};
 `
 const PanelHeaderSeparator = styled.span`
@@ -2785,6 +2697,7 @@ const PanelHeaderSeparator = styled.span`
   margin-left: 8px;
   border-left: 1px solid ${(props) => props.theme.color_P4_1_OP24};
 `
+
 export const PanelHeader = ({
   icon,
   text,
@@ -2917,11 +2830,25 @@ export const PanelHeader = ({
         </>
       ) : betReceipt ? null : (
         <IconWrapper48>
-          <Icons.Close />
+          <HiOutlineX />
         </IconWrapper48>
       )}
     </PanelHeaderClickableButtonWrapper>
   </PanelHeaderWrapper>
+)
+export const MenuPanelHeader = ({ text, closePanel }) => (
+  <>
+    <PanelHeaderWrapper>
+      <IconWrapper24>
+        <HiMenu />
+      </IconWrapper24>
+      <FlexLeft>
+        <F16 uppercase={1}>{text}</F16>
+      </FlexLeft>
+      <CloseButton onClick={closePanel} />
+    </PanelHeaderWrapper>
+    {/* <ShadowLine/> */}
+  </>
 )
 
 export const ViewAllMultipleWrapper = styled(Flex)`
@@ -2932,7 +2859,7 @@ export const ViewAllMultipleWrapper = styled(Flex)`
   ${FlexLeft} {
     padding: 4px 16px 4px 8px;
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_P3_1_OP4_2};
@@ -2992,7 +2919,7 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
   ${FlexSpaceBetween(56)};
   ${FlexLeft} {
     width: 100%;
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -3104,7 +3031,7 @@ const SettingsItemWrapper = styled(FlexLeft)`
   height: 48px;
   margin-left: 16px;
   position: relative;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       ${RadioButtonLabel} {
@@ -3139,7 +3066,7 @@ const EnableQuickBetWrapper = styled.div`
   padding: 0px 16px;
   color: ${(props) => props.theme.color_P3_11_OP64};
   position: relative;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       ${CheckBoxLabel} {
@@ -3292,7 +3219,7 @@ export const OddsWrapper = styled(FlexCenterColumn)`
   g {
     fill: ${(props) => props.theme.color_P3_OP64};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     ${(props) =>
       props.oddsUp
         ? `
@@ -3497,7 +3424,7 @@ export const SelectionTitleTextWrapper = styled(FlexCenter)`
     ${Truncate(2)};
     text-align: center;
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
@@ -3520,7 +3447,7 @@ export const OBTTitleSwitchTabTextWrapper = styled(FlexCenter)`
   padding: 0 8px;
   color: ${(props) =>
     props.active ? props.theme.color_P3_4 : props.theme.color_P3_OP56};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_P3_4};
@@ -3609,7 +3536,7 @@ export const ViewMoreWrapper = styled(FlexCenter)`
         ? `${props.theme.color_P3_OP24}`
         : `${props.theme.color_P3_OP56}`};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -3680,7 +3607,7 @@ export const MarketWrapperT6 = styled.div`
     margin-top: 0px;
   }
   ${SelectionTitleTextWrapper} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: unset;
         color: ${(props) => props.theme.color_P3_4_OP56};
@@ -3708,7 +3635,7 @@ export const OthersT7 = styled.div`
 `
 export const MarketWrapperT7 = styled.div`
   ${SelectionTitleTextWrapper} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: unset;
         color: ${(props) => props.theme.color_P3_4_OP56};
@@ -3816,7 +3743,7 @@ export const MarketWrapperT8 = styled.div`
     ${F12}, ${F14} {
       ${Truncate(1)};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: unset;
         color: ${(props) => props.theme.color_P3_14_OP56};
@@ -3851,7 +3778,7 @@ export const MarketWrapperT9 = styled.div`
     height: 64px;
   }
   ${SelectionTitleTextWrapper} {
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: unset;
         color: ${(props) => props.theme.color_P3_4_OP56};
@@ -4281,7 +4208,7 @@ export const MatchTrackerIconWrapper = styled.div`
     ${AbsoluteCenter}:last-child {
       display: ${(props) => (props.matchTrackerActive ? 'none' : 'block')};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         ${AbsoluteCenter}:first-child {
@@ -4333,7 +4260,7 @@ export const EsportsStatistics = styled(IconWrapper16)`
   g {
     fill: ${(props) => props.theme.color_P4_24_OP64};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
     }
@@ -4379,7 +4306,7 @@ export const PDetailWrapper = styled(Flex)`
   ${(props) => props.secondColumn && `padding-top:8px; padding-bottom: 8px;`}
   ${(props) =>
     props.bottom && `justify-content: space-between; margin-top: 8px;`};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) => props.information && `pointer`};
       ${InfoIconWrapper} {
@@ -4436,7 +4363,7 @@ export const NonPremiumPanelWrapper = styled(RelativeWrapper)`
     ${TeamName} {
       color: ${(props) => props.theme.color_P3_5};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         ${TeamName} {
@@ -4581,7 +4508,7 @@ export const PremiumPanelWrapper = styled(RelativeWrapper)`
           `}
           color: ${(props) => props.theme.color_P3_5};
         }
-        @media (min-width: 1024px) {
+        @media (hover: hover) {
           &:hover {
             cursor: ${(props) => (props.obtPanel ? 'default' : 'pointer')};
             ${TeamName} {
@@ -5910,7 +5837,7 @@ export const OBTOddsTypeWrapper = styled.div`
        border-bottom: 2px solid ${props.theme.color_A3};`
         : `color:${props.theme.color_P3_9_OP64};
         border-bottom: 2px solid transparent;}`};
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A3};
@@ -7457,7 +7384,7 @@ export const SportCarouselItemWrapper = styled(FlexCenterColumn)`
       : `${props.theme.color_P3_1_OP64};
       
       `};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) =>
@@ -7508,7 +7435,7 @@ export const MenuButtonWrapper = styled(FlexCenter)`
     fill: ${(props) =>
       props.active ? `${props.theme.color_P2_1};` : `${props.theme.color_T1};`};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_P1_Lplus4};
@@ -7568,7 +7495,7 @@ export const HeaderItemWrapper = styled(FlexCenter)`
       fill: ${(props) => props.favorite && props.theme.color_P2_1};
     }
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_P2_1};
@@ -7706,7 +7633,7 @@ export const BottomNavItemWrapper = styled(FlexCenterColumn)`
       fill: ${(props) => props.favorite && props.theme.color_P2_1};
     }
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       g {
@@ -7819,12 +7746,9 @@ export const LeftSportsItemsWrapper = styled(FlexCenter)`
   position: relative;
   g {
     fill: ${(props) =>
-      props.active
-        ? props.theme.color_P2_1
-        : props.theme.color_P4_1_OP64
-        };
+      props.active ? props.theme.color_P2_1 : props.theme.color_P4_1_OP64};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       g {
@@ -7934,7 +7858,7 @@ export const InfoContentButtonWrapper = styled(FlexCenter)`
   }
   color: ${(props) => props.theme.color_A12_1};
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A12_1_Lplus4};
@@ -7971,7 +7895,7 @@ export const FantasyMatchInfoWrapper = styled(Flex)`
   }
   color: ${(props) => props.theme.color_A12_1};
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A12_1_Lplus4};
@@ -8396,7 +8320,7 @@ export const HeaderFilterWrapper = styled(Flex)`
   padding-top: ${(props) => props.period && props.score && '2px'};
   padding-bottom: ${(props) => props.period && props.score && '2px'};
   cursor: ${(props) => props.soonSports && 'pointer!important;'};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) => (props.clickable ? 'pointer' : 'default')};
       background: ${(props) =>
@@ -8614,9 +8538,7 @@ export const FilterItemWrapper = styled(FlexCenter)`
   position: relative;
   ${F12}:nth-child(2) {
     color: ${(props) =>
-      props.active
-        ? props.theme.color_A3_OP56
-        : props.theme.color_P3_9_OP64};
+      props.active ? props.theme.color_A3_OP56 : props.theme.color_P3_9_OP64};
     text-transform: capitalize;
     display: none;
     ${media.desktopLarge`display: block;`}
@@ -8624,10 +8546,8 @@ export const FilterItemWrapper = styled(FlexCenter)`
     ${media.tabletLandscape`display: block;`}
   }
   color: ${(props) =>
-    props.active
-      ? props.theme.color_A3
-      : props.theme.color_P3_9_OP64};
-  @media (min-width: 1024px) {
+    props.active ? props.theme.color_A3 : props.theme.color_P3_9_OP64};
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
@@ -8655,14 +8575,10 @@ export const FilterItemWrapper = styled(FlexCenter)`
   }
   border: 1px solid
     ${(props) =>
-      props.active
-        ? props.theme.color_A3
-        : props.theme.color_P3_9_OP32};
+      props.active ? props.theme.color_A3 : props.theme.color_P3_9_OP32};
   g {
     fill: ${(props) =>
-      props.active
-        ? props.theme.color_A3
-        : props.theme.color_P3_OP40};
+      props.active ? props.theme.color_A3 : props.theme.color_P3_OP40};
   }
   border-radius: 4px;
   padding: 0px 16px;
@@ -8802,7 +8718,7 @@ const MarketLineWrapper = styled(FlexCenterColumn)`
   height: 48px;
   text-align: center;
   padding: 0 16px;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       ${(props) =>
         props.toggle
@@ -8881,10 +8797,8 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     props.allDate && props.active && props.theme.color_A3};
   border: 1px solid
     ${(props) =>
-      props.active
-        ? props.theme.color_A3
-        : props.theme.color_P3_9_OP32};
-  @media (min-width: 1024px) {
+      props.active ? props.theme.color_A3 : props.theme.color_P3_9_OP32};
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       border: 1px solid ${(props) => props.theme.color_A3};
@@ -8904,9 +8818,7 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
     color: ${(props) => props.theme.color_P4_12};
 
     background: ${(props) =>
-      props.active
-        ? props.theme.color_A3
-        : props.theme.color_P3_5_OP32};
+      props.active ? props.theme.color_A3 : props.theme.color_P3_5_OP32};
     height: 21px;
     width: 54px;
     border-radius: 7px 7px 0px 0px;
@@ -8938,15 +8850,11 @@ export const DateFilterItemWrapper = styled(FlexCenter)`
       background: ${(props) => props.theme.color_A3};
     }
     background: ${(props) =>
-      props.allDate
-        ? props.theme.color_A3
-        : props.theme.color_P3_1_OP8_1};
+      props.allDate ? props.theme.color_A3 : props.theme.color_P3_1_OP8_1};
     ${FlexCenterColumn} {
       ${F12},${F14} {
         color: ${(props) =>
-          props.allDate
-            ? props.theme.color_P4_2
-            : props.theme.color_A3};
+          props.allDate ? props.theme.color_P4_2 : props.theme.color_A3};
       }
     }
   }
@@ -8987,7 +8895,7 @@ export const ScheduleEventWrapper = styled(FlexLeft)`
   ${F14} {
     ${Truncate(2)}
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -9067,7 +8975,7 @@ export const SpecialEventWrapper = styled(RelativeWrapper)`
 const SpecialEventItemWrapper = styled.div`
   background: ${(props) =>
     props.darkerBg ? props.theme.color_S1_2 : props.theme.color_P4_2_OP4};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S1_2_Lplus4};
@@ -9121,7 +9029,7 @@ const RegionalCouponWrapper = styled(FlexCenter)`
       transform: rotate(180deg);
     }
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       cursor: pointer;
@@ -9369,7 +9277,7 @@ const AllSelectionButtonWrapper = styled(FlexCenter)`
   g {
     fill: ${(props) => props.theme.color_P4_7_OP56};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S3_Lplus4};
@@ -9404,9 +9312,7 @@ export const DropdownListWrapper = styled.div`
 `
 export const DropdownListItemWrapper = styled(FlexLeft)`
   color: ${(props) =>
-    props.active
-      ? props.theme.color_A3
-      : props.theme.color_P3_9_OP64};
+    props.active ? props.theme.color_A3 : props.theme.color_P3_9_OP64};
   height: 40px;
   padding: 4px 16px;
   ${F14} {
@@ -9415,7 +9321,7 @@ export const DropdownListItemWrapper = styled(FlexLeft)`
     width: 100%;
     ${Truncate(2)};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A3};
@@ -9486,7 +9392,7 @@ export const SelectWrapper = styled.select`
   background: ${(props) => props.theme.color_P4_2};
   color: ${(props) => props.theme.color_P3_9_OP64};
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: ${(props) => props.theme.color_P3_1_OP4_1};
     }
@@ -9504,7 +9410,7 @@ export const Option = styled.option`
   white-space: pre;
   width: 100%;
   height: 40px;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: ${(props) => props.theme.color_P3_1_OP4_1};
     }
@@ -9642,7 +9548,7 @@ export const RulesSelectWrapper = styled.div`
   background: ${(props) => props.theme.color_P4_2};
   color: ${(props) => props.theme.color_P3_9_OP64};
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: ${(props) => props.theme.color_P3_1_OP4_1};
     }
@@ -9802,7 +9708,7 @@ export const PlaceBetButton = styled(FlexCenterColumn)`
   ${(props) =>
     props.placeBetActive
       ? `background: ${props.theme.color_A1_2};
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover {
           cursor: ${props.loading ? 'default' : 'pointer'};
           background: ${
@@ -9824,7 +9730,7 @@ export const PlaceBetButton = styled(FlexCenterColumn)`
       `
       : props.okText
       ? `background: ${props.theme.color_S1_2};
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover{
           cursor: pointer;
           background: ${props.theme.color_S1_2_Lplus4};
@@ -9842,11 +9748,9 @@ export const TickboxWrapper = styled.div`
   height: 24px;
   border: 1px solid
     ${(props) =>
-      props.selected
-        ? props.theme.color_A1_8
-        : props.theme.color_P3_22_OP32};
+      props.selected ? props.theme.color_A1_8 : props.theme.color_P3_22_OP32};
   position: relative;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       border: 1px solid ${(props) => props.theme.color_A1_8};
     }
@@ -9919,7 +9823,7 @@ const RememberStakeButton = styled(FlexLeft)`
       &::after {content: ''};
     }
   `}
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S4_2_Lplus4};
@@ -9945,7 +9849,7 @@ const AddtoBetSlipButton = styled(FlexCenter)`
   background: ${(props) => props.theme.color_S4_2};
 
   color: ${(props) => props.theme.color_P3_10_OP64};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) => (props.loading ? 'default' : 'pointer')};
       background: ${(props) =>
@@ -9979,7 +9883,7 @@ export const ControlBarWrapper = styled(Flex)`
       props.quickBetslip &&
       `border-right: 1px solid ${props.theme.color_P4_25}`};
 
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: ${(props) => (props.loading ? 'default' : 'pointer')};
         background: ${(props) =>
@@ -10210,7 +10114,7 @@ const RotateDeviceAlertWrapper = styled(FlexCenterColumn)`
   ${F14}:last-child {
     height: 16px;
     color: ${(props) => props.theme.color_A12};
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A12_1_Lplus4};
@@ -10283,7 +10187,7 @@ const InputWrapper = styled(FlexColumn)`
       color: ${(props) => props.theme.color_P3_22_OP24};
       font-weight: normal;
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         border: 1px solid
           ${(props) =>
@@ -10324,7 +10228,7 @@ const MaxBetButtonWrapper = styled(FlexColumn)`
 const MaxBetTextWrapper = styled.div`
   color: ${(props) => props.theme.color_A12};
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_A12_Lplus4};
@@ -10389,7 +10293,7 @@ export const EachWayTickboxWrapper = styled(FlexLeft)`
   ${F14} {
     white-space: nowrap;
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) => (props.lockEachWay ? 'default' : 'pointer')};
       ${TickboxWrapper} {
@@ -10457,7 +10361,7 @@ const EachWayFreeBetWrapper = styled(RelativeWrapper)`
     padding: 8px 8px 8px 16px;
     width: 100%;
     height: 100%;
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         background: ${(props) => props.theme.color_P3_1_OP4_2};
@@ -10485,7 +10389,7 @@ const EachWayFreeBetWrapper = styled(RelativeWrapper)`
       color: ${props.theme.color_P3_22_OP24};
     }
     ${FlexLeftColumn}{
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover {
           cursor: default;
           background: transparent;
@@ -10561,7 +10465,7 @@ const EachWayWrapper = styled(RelativeWrapper)`
     ${F14} {
       ${Truncate(2)};
     }
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         g {
           fill: ${(props) => props.theme.color_A6_4_Lplus4};
@@ -11326,7 +11230,7 @@ export const BetErrorsMessageWrapper = styled.div`
     width: 100%;
     height: 100%;
     padding: 0px 16px 8px 16px;
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         background: ${(props) =>
           props.removeClosedSelectionsText && props.theme.color_P3_1_OP4_2};
@@ -11423,7 +11327,7 @@ export const ViewBetDetailWrapper = styled(FlexCenterColumn)`
     line-height: 16px;
     color: ${(props) => props.theme.color_A12_1};
 
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         color: ${(props) => props.theme.color_A12_1_Lplus4};
@@ -11459,7 +11363,7 @@ export const CashoutButtonTextWrapper = styled(FlexCenterColumn)`
       : props.cashoutUnavailable
       ? props.theme.color_P3_OP64
       : props.theme.color_P4_15};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) =>
         props.cashoutLoading ||
@@ -11578,7 +11482,7 @@ export const CashoutButtonWrapper = styled(FlexCenter)`
     margin-left: auto;
     pointer-events: auto;
     border-radius: 0px 4px 4px 0px;
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         background: ${(props) =>
@@ -11740,7 +11644,7 @@ const BetAgainWrapper = styled.div`
     user-select: none;
   }
   fill: ${(props) => props.theme.color_A3_12};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       ${F16} {
         color: ${(props) => props.theme.color_P4_23};
@@ -11868,7 +11772,7 @@ const MyBetsCompetitionEventName = styled(Flex)`
   ${F14} {
     font-weight: ${(props) => props.active && `bold`};
     ${Truncate(2)};
-    @media (min-width: 1024px) {
+    @media (hover: hover) {
       &:hover {
         cursor: pointer;
         background: ${(props) => props.theme.color_S4_Lplus4};
@@ -12871,7 +12775,7 @@ export const PaginationWrapper = styled(FlexCenter)`
       g {
         fill: ${(props) => props.theme.color_P3_OP56};
       }
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover {
           cursor: pointer;
           background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -12888,7 +12792,7 @@ export const PaginationItemWrapper = styled(FlexCenter)`
   color: ${(props) => props.theme.color_P3_OP56};
   background: ${(props) => props.theme.color_P4_28};
   border: 1px solid ${(props) => props.theme.color_P3_9_OP24};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_P3_1_OP4_1};
@@ -12904,7 +12808,7 @@ export const PaginationItemWrapper = styled(FlexCenter)`
       background:${props.theme.color_P3_OP56}; 
       
       border: 1px solid ${(props) => props.theme.color_P4_2};
-      @media (min-width: 1024px) {
+      @media (hover: hover) {
         &:hover{
           cursor: pointer;
           background: ${props.theme.color_P3_OP56};
@@ -13080,7 +12984,7 @@ export const BetHeaderWrapper = styled.div`
   ${FlexSpaceBetween(48)}
   background: ${(props) => props.theme.color_S4_3};
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       background: ${(props) => props.theme.color_S4_3_Lplus4};
@@ -13198,7 +13102,7 @@ export const BetHeaderCashoutButton = styled(FlexCenterColumn)`
           `
         : null};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: ${(props) =>
         props.cashoutLoading ||
@@ -13256,7 +13160,7 @@ export const CashoutCounter = styled(Flex)`
     background: ${(props) => props.theme.color_A3_12};
     color: ${(props) => props.theme.color_P4_23};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       ${IconWrapper32}:first-child {
         background: ${(props) => props.theme.color_S5_2_Lplus4};
@@ -13644,7 +13548,7 @@ export const MatchTrackerItemWrapper = styled(FlexCenter)`
   padding: 0px 8px;
   color: ${(props) =>
     props.active ? props.theme.color_P2_5 : props.theme.color_P4_16_OP64};
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       color: ${(props) => props.theme.color_P2_5};
@@ -13690,7 +13594,7 @@ export const BetRadarItemContainer = styled(FlexScrollWrapper)`
 
 export const BetRadarIconWrapper = styled(FlexCenter)`
   min-width: 48px;
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       cursor: pointer;
       g {
@@ -14395,7 +14299,7 @@ export const ConditionsDetailsTextWrapper = styled(F14)`
   &:nth-last-child(1) {
     ${(props) => props.clickable && 'padding-bottom: 0;'};
   }
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       ${(props) =>
         props.clickable && `color: ${props.theme.color_A12_1_Lplus4};`};

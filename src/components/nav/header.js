@@ -21,12 +21,14 @@ import {
 } from '../base/common'
 
 const Header = ({
-  toggleMenuPanel,
   icons,
   HeaderItems,
   switchPage,
   headerActive,
   page,
+  lang,
+  setLang,
+  toggleMenuPanel,
 }) => {
   //   const scrollRef = useDragScrolling()
   const [showDropdownList, setDropdownList] = useState(false)
@@ -35,21 +37,10 @@ const Header = ({
     setDropdownList(!showDropdownList)
   }
   const [tab, setTab] = useState('Main Markets')
-  const [lang, setLang] = useState('en')
-  const [locale, setLocale] = useState(undefined)
-
-  useEffect(async () => {
-    const resp = await fetch(`./lang/${lang}.json`)
-    const data = await resp.json()
-    setLocale(data)
-  }, [lang])
   return (
     <RelativeWrapper>
-
       <HeaderWrapper>
-        <MenuButton
-        // toggleMenuPanel={() => toggleMenuPanel()}
-        />
+        <MenuButton toggleMenuPanel={() => toggleMenuPanel()} />
         {/* <ArrowButtonRight darkBg />
           <ArrowButtonLeft darkBg /> */}
         <HeaderItemContainer
