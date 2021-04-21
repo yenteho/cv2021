@@ -12,11 +12,7 @@ import {
 // import { MenuPanelSportData } from '../../Data/menuPanelSportData'
 // import { MenuPanelInfoData } from '../../Data/menuPanelInfoData'
 
-export function MenuPanel({
-  toggleMenuPanel,
-  showMenuPanel,
-  switchPage
-}) {
+export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
   return (
     <>
       <LeftPanelPopUpTransition show={showMenuPanel}>

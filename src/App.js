@@ -10,6 +10,9 @@ import { ThemeProvider } from './components/base/common'
 import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 import Header from './components/nav/header'
 import { MenuPanel } from './components/panel/menuPanel'
+import fetchJsonp from 'fetch-jsonp'
+import Behance from './components/pages/behance'
+import Medium from './components/pages/medium'
 
 const Container = styled.div`
   height: 100vh;
@@ -28,6 +31,22 @@ function App() {
   const toggleMenuPanel = () => {
     setMenuPanel(!showMenuPanel)
   }
+  const [page, switchPage] = useState('Behance')
+  const getCurrentPage = () => {
+    switch (page) {
+      case 'Behance':
+        return <Behance />
+      case 'Medium':
+        return <Medium />
+      case 'LinkedIn':
+        return <></>
+      case 'Home':
+        return <></>
+      default:
+        return 'Home'
+    }
+  }
+  const currentPage = getCurrentPage()
   return (
     <IntlProvider messages={locale}>
       <ThemeProvider theme={{ ...colors }}>
@@ -44,6 +63,8 @@ function App() {
             setLang={setLang}
             toggleMenuPanel={toggleMenuPanel}
             showMenuPanel={showMenuPanel}
+            switchPage={switchPage}
+            page={page}
           />
           <header className="App-header">
             <link rel="apple-touch-icon" href="INSERT_FILE_PATH_HERE" />
@@ -65,6 +86,7 @@ function App() {
               <FormattedMessage id="app.content" defaultMessage="Learn React" />
             </a>
           </header>
+          {currentPage}
         </Container>
       </ThemeProvider>
     </IntlProvider>

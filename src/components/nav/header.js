@@ -36,7 +36,6 @@ const Header = ({
     console.log('TCL: showDropdownList', showDropdownList)
     setDropdownList(!showDropdownList)
   }
-  const [tab, setTab] = useState('Main Markets')
   return (
     <RelativeWrapper>
       <HeaderWrapper>
@@ -67,14 +66,14 @@ const Header = ({
           <FlexRight>
             <HeaderItem
               competition={'Schedule'}
-              active={headerActive === 'Schedule'}
-              switchPage={() => switchPage('Schedule')}
+              active={page === 'Behance'}
+              switchPage={() => switchPage('Behance')}
             />
             <HeaderItem
               competition={'My Bets'}
-              // active={headerActive === 'My Bets'}
-              active
-              switchPage={() => switchPage('My Bets')}
+              active={page === 'Medium'}
+              // active
+              switchPage={() => switchPage('Medium')}
               counter={'99+'}
             />
             <div>
