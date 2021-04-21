@@ -15,10 +15,7 @@ import {
 export function MenuPanel({
   toggleMenuPanel,
   showMenuPanel,
-  toggleSettingsPanel,
-  toggleFreeBetsPanel,
-  switchPage,
-  closeMenuPanel,
+  switchPage
 }) {
   return (
     <>
@@ -89,7 +86,7 @@ export function MenuPanel({
           })} */}
         </ContentScrollWrapper>
       </LeftPanelPopUpTransition>
-      {showMenuPanel && <GreyOut />}
+      {/* {showMenuPanel && <GreyOut />} */}
     </>
   )
 }

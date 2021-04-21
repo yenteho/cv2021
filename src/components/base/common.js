@@ -7456,6 +7456,7 @@ export const HeaderWrapper = styled(FlexScrollWrapper)`
   position: sticky;
   top: 0;
   background: ${(props) => props.theme.color_P1};
+  color: ${(props) => props.theme.color_T1};
   ${ArrowButtonLeftWrapper} {
     left: 64px;
   }
