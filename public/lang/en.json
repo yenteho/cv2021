@@ -1,4 +1,29 @@
 {
   "app.header": "Edit src/App.js and save to reload.",
-  "app.content": "Learn React"
+  "app.content": "Learn React",
+  "resume.name": "Edit src/App.js and save to reload.",
+  "resume.email":" contact@angelho.design",
+  "resume.phone": "+886-958-941-898 ",
+  "resume.LinkedIn":"www.linkedin.com/in/angel-yente-ho",
+  "resume.Medium":"https://medium.com/@yente_ho ",
+  "resume.Behance":"https://www.behance.net/yente_ho ",
+  "resume.Github":"https://github.com/yenteho ",
+  "resume.Website":"http://angelho.design",
+  "xuenn.company":"Xuenn Pte Ltd. – Online digital gaming company ",
+  "xuenn.title":"IT Consultant – Sports UI Designer",
+  "xuenn.work":{
+    "line1":"Introduced React Styled Components in React to instead of SASS for avoiding CSS class duplication, overlap, misspellings or pollution. ",
+    "line2":"Imported React Context API to build expandable, flexible and automatic color system. ",
+    "line3":"Developed Theme Generator for automatic color customization. ",
+    "line4":"Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  ",
+    "line5":"Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. ",
+    "line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
+    "line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time."  
+  }
 }
+
+
+
+
+
+

@@ -21,7 +21,7 @@ import {
   transparentize,
   toColorString,
 } from 'polished'
-// const primary = '#263238' //900
+// // const primary = '#263238' //900
 const primary = '#0A365E' // > professional blue
 // const primary ='#0A3331';// > professional Green (10,51,49)
 // const primary = '#1F052C'// > luxury purple

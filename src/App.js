@@ -1,7 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
 import React, { useState, useEffect } from 'react'
-import { FormattedMessage, IntlProvider } from 'react-intl'
 import AppView from './components/AppView'
 import { rgba, darken, opacify, adjustHue } from 'polished'
 import styled from 'styled-components'
@@ -11,6 +10,7 @@ import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 import Header from './components/nav/header'
 import { MenuPanel } from './components/panel/menuPanel'
 import fetchJsonp from 'fetch-jsonp'
+import Resume from './components/pages/resume'
 import Behance from './components/pages/behance'
 import Medium from './components/pages/medium'
 
@@ -31,65 +31,43 @@ function App() {
   const toggleMenuPanel = () => {
     setMenuPanel(!showMenuPanel)
   }
-  const [page, switchPage] = useState('Behance')
+  const [page, switchPage] = useState('Angel Ho')
   const getCurrentPage = () => {
     switch (page) {
-      case 'Behance':
-        return <Behance />
-      case 'Medium':
+      case 'Angel Ho':
+        return <Resume locale={locale}/>
+      case 'Portfolio':
+        return <Behance lang={lang} locale={locale}/>
+      case 'Technical Notes':
         return <Medium />
       case 'LinkedIn':
         return <></>
-      case 'Home':
-        return <></>
       default:
-        return 'Home'
+        return 'Angel Ho'
     }
   }
   const currentPage = getCurrentPage()
   return (
-    <IntlProvider messages={locale}>
-      <ThemeProvider theme={{ ...colors }}>
-        <ResetStyle />
-        <GlobalStyle />
-        <AppView />
-        <Container className="App">
-          <MenuPanel
-            showMenuPanel={showMenuPanel}
-            toggleMenuPanel={toggleMenuPanel}
-          />
-          <Header
-            lang={lang}
-            setLang={setLang}
-            toggleMenuPanel={toggleMenuPanel}
-            showMenuPanel={showMenuPanel}
-            switchPage={switchPage}
-            page={page}
-          />
-          <header className="App-header">
-            <link rel="apple-touch-icon" href="INSERT_FILE_PATH_HERE" />
-            <div className="flex-center">
-              <img src={logo} className="App-logo" alt="logo" />
-            </div>
-            <p>
-              <FormattedMessage
-                id="app.header"
-                defaultMessage="Edit src/App.js and save to reload."
-              />
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FormattedMessage id="app.content" defaultMessage="Learn React" />
-            </a>
-          </header>
-          {currentPage}
-        </Container>
-      </ThemeProvider>
-    </IntlProvider>
+    <ThemeProvider theme={{ ...colors }}>
+      <ResetStyle />
+      <GlobalStyle />
+      <AppView />
+      <Container className="App">
+        <MenuPanel
+          showMenuPanel={showMenuPanel}
+          toggleMenuPanel={toggleMenuPanel}
+        />
+        <Header
+          lang={lang}
+          setLang={setLang}
+          toggleMenuPanel={toggleMenuPanel}
+          showMenuPanel={showMenuPanel}
+          switchPage={switchPage}
+          page={page}
+        />
+        {currentPage}
+      </Container>
+    </ThemeProvider>
   )
 }
 

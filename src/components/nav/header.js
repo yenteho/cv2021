@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { IntlProvider } from 'react-intl'
+import { headerData } from '../data/headerData'
 import {
   FlexRight,
   FlexLeft,
@@ -29,6 +31,7 @@ const Header = ({
   lang,
   setLang,
   toggleMenuPanel,
+  locale,
 }) => {
   //   const scrollRef = useDragScrolling()
   const [showDropdownList, setDropdownList] = useState(false)
@@ -37,66 +40,62 @@ const Header = ({
     setDropdownList(!showDropdownList)
   }
   return (
-    <RelativeWrapper>
-      <HeaderWrapper>
-        <MenuButton toggleMenuPanel={() => toggleMenuPanel()} />
-        {/* <ArrowButtonRight darkBg />
-          <ArrowButtonLeft darkBg /> */}
-        <HeaderItemContainer
-        // ref={scrollRef}
-        >
-          <Shadow
-            fromColor={(props) => props.theme.color_P1}
-            toColor={(props) => props.theme.color_P1_OP0}
-            fromLeft={'left: 64px;'}
-            withWidth={'16px;'}
-          />
-          <FlexLeft onClick={() => console.log('>')}>
-            {icons}
-            {/* {HeaderItems.map((item, index) => (
+    <IntlProvider messages={locale}>
+      <RelativeWrapper>
+        <HeaderWrapper>
+          <MenuButton toggleMenuPanel={() => toggleMenuPanel()} />
+          {/* <ArrowButtonRight darkBg />
+            <ArrowButtonLeft darkBg /> */}
+          <HeaderItemContainer
+          // ref={scrollRef}
+          >
+            <Shadow
+              fromColor={(props) => props.theme.color_P1}
+              toColor={(props) => props.theme.color_P1_OP0}
+              fromLeft={'left: 64px;'}
+              withWidth={'16px;'}
+            />
+            <FlexLeft onClick={() => console.log('>')}>
+              {icons}
+              <HeaderItem
+                competition={'Angel Ho'}
+                active={page === 'Angel Ho'}
+                switchPage={() => switchPage('Angel Ho')}
+              />
+            </FlexLeft>
+            <FlexRight>
+              {headerData.map(({ item, counter, ...rest }, index) => (
                 <HeaderItem
                   switchPage={() => switchPage(item)}
-                  active={headerActive === item}
+                  active={page === item}
                   key={`headerItem_${index}`}
                   competition={item}
                   withBadge={item === 'My Events'}
-                ></HeaderItem>
-              ))} */}
-          </FlexLeft>
-          <FlexRight>
-            <HeaderItem
-              competition={'Schedule'}
-              active={page === 'Behance'}
-              switchPage={() => switchPage('Behance')}
-            />
-            <HeaderItem
-              competition={'My Bets'}
-              active={page === 'Medium'}
-              // active
-              switchPage={() => switchPage('Medium')}
-              counter={'99+'}
-            />
-            <div>
-              <select
-                value={lang}
-                onChange={(evt) => {
-                  setLang(evt.target.value)
-                }}
-              >
-                <option value="en">English</option>
-                <option value="cn">中文</option>
-                <option value="fr">Français</option>
-                <option value="jp">日本語</option>
-              </select>
-            </div>
-          </FlexRight>
-        </HeaderItemContainer>
-        <Shadow
-          fromColor={(props) => props.theme.color_P1_OP0}
-          toColor={(props) => props.theme.color_P1}
-        />
-      </HeaderWrapper>
-    </RelativeWrapper>
+                  counter={counter}
+                />
+              ))}
+              <div>
+                <select
+                  value={lang}
+                  onChange={(evt) => {
+                    setLang(evt.target.value)
+                  }}
+                >
+                  <option value="en">English</option>
+                  <option value="cn">中文</option>
+                  <option value="fr">Français</option>
+                  <option value="jp">日本語</option>
+                </select>
+              </div>
+            </FlexRight>
+          </HeaderItemContainer>
+          <Shadow
+            fromColor={(props) => props.theme.color_P1_OP0}
+            toColor={(props) => props.theme.color_P1}
+          />
+        </HeaderWrapper>
+      </RelativeWrapper>
+    </IntlProvider>
   )
 }
 export default Header
