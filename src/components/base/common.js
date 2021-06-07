@@ -14,7 +14,7 @@ import {
   IconWrapper10,
   IconWrapper8,
 } from './iconWrapper'
-// import Images from '../../img/index'
+import './animation.css'
 import { HiMenu, HiOutlineX } from 'react-icons/hi'
 import { ThemeProvider as BaseThemeProvider } from 'styled-components'
 let Icons = null
@@ -1010,6 +1010,67 @@ export const SwitchButton = styled.input`
     }
   `};
 `
+//-------------------- Resume --------------------//
+export const Photo = styled.div`
+  background: ${(props) =>
+    props.img && `url(${props.img}) center center no-repeat`};
+  background-size: cover;
+  width: 500px;
+  height: 800px;
+  border-radius: 3vmin;
+  box-shadow: 0 0 6vmin rgba(0, 0, 0, 0.25);
+`
+export const ResumeWrapper = styled(Flex)`
+  z-index: 1;
+`
+export const Link = styled.a`
+  color: ${(props) => props.theme.color_T1};
+`
+const ContactWrapper = styled(Flex)`
+  ${IconWrapper32} {
+    top: calc(50% - 10vmin);
+    left: calc(50% - 10vmin);
+    width: 64px;
+    height: 64px;
+    border-radius: 2vmin;
+    box-shadow: 0 0 6vmin var(--shadow);
+    animation: boxMove 4s linear infinite;
+  }
+  ${Link} {
+    display: none;
+    width: 0;
+  }
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      ${Link} {
+        display: block;
+      }
+    }
+  }
+`
+export const Contact = ({ link, icon, href }) => (
+  <ContactWrapper>
+    <IconWrapper32>{icon}</IconWrapper32>
+    <Link href={href}>{link}</Link>
+  </ContactWrapper>
+)
+export const AnimationBackground = () => (
+  <>
+    <div class="box box10"></div>
+    <div class="box box9"></div>
+    <div class="box box8"></div>
+    <div class="box box7"></div>
+    <div class="box box6"></div>
+    <div class="box box5"></div>
+    <div class="box box4"></div>
+    <div class="box box3"></div>
+    <div class="box box2"></div>
+    <div class="box box1"></div>
+    <div class="box box0"></div>
+  </>
+)
+
 //-------------------- Radio Button --------------------//
 export const RadioButtonLabel = styled.label`
   position: absolute;
@@ -7453,6 +7514,7 @@ export const MenuButton = ({ toggleMenuPanel }) => (
   </MenuButtonWrapper>
 )
 export const HeaderWrapper = styled(FlexScrollWrapper)`
+  z-index: 1;
   position: sticky;
   top: 0;
   background: ${(props) => props.theme.color_P1};

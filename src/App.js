@@ -1,8 +1,6 @@
-import logo from './logo.svg'
 import './App.css'
 import React, { useState, useEffect } from 'react'
 import AppView from './components/AppView'
-import { rgba, darken, opacify, adjustHue } from 'polished'
 import styled from 'styled-components'
 import colors from './colors/light.js'
 import { ThemeProvider } from './components/base/common'
@@ -27,7 +25,7 @@ function App() {
     const data = await resp.json()
     setLocale(data)
   }, [lang])
-  const [showMenuPanel, setMenuPanel] = useState(true)
+  const [showMenuPanel, setMenuPanel] = useState(false)
   const toggleMenuPanel = () => {
     setMenuPanel(!showMenuPanel)
   }
@@ -35,9 +33,9 @@ function App() {
   const getCurrentPage = () => {
     switch (page) {
       case 'Angel Ho':
-        return <Resume locale={locale}/>
+        return <Resume locale={locale} />
       case 'Portfolio':
-        return <Behance lang={lang} locale={locale}/>
+        return <Behance lang={lang} locale={locale} />
       case 'Technical Notes':
         return <Medium />
       case 'LinkedIn':
