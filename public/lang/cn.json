@@ -1,10 +1,10 @@
 {
   "app.header": "編輯src / App.js並保存以重新加載。",
   "app.content": "學習 React",
-  "resume.name": "何妍德",
+  "resume.name": "Say Hello! 我是妍德",
   "resume.email":" contact@angelho.design",
   "resume.phone": "+886-958-941-898 ",
-  "resume.LinkedIn":"www.linkedin.com/in/angel-yente-ho",
+"resume.LinkedIn":"https://www.linkedin.com/in/angel-yente-ho",
   "resume.Medium":"https://medium.com/@yente_ho ",
   "resume.Behance":"https://www.behance.net/yente_ho ",
   "resume.Github":"https://github.com/yenteho ",
@@ -15,6 +15,6 @@
     "line1":"2021 Euro Cup 運彩項目產品的前端網站大型重構，在與確認資訊架構後，於設計端製作 Design System，定義嚴謹的設計架構，規範包括色彩、字體、RWD Grids等各類基本組件。使用 React Styled Components 製作 Storybook，使用 private NPM 工具，針對公司內部產品客製化可互動、模組化的 UI Library，提供開發團隊迅速有效率的 UI 迭代模式，讓開發前的互動設計得到完整的測試，以確保RWD網頁在不同裝置上的跨瀏覽器兼容性，方便開發快速銜接前端資料的串接。 ",
     "line2":"建構可橫跨 Web、iOS App、Android App 的色彩代碼運算系統，使客戶能快速客製化專屬介面，商業面提供更多元的選擇。Icon 全面改 SVG 以 Webpack、 Babel 編譯工具打包，以提供更輕量化且保留變更色彩之彈性。 ",
     "line3":"開發維護跨平台跨瀏覽器優化及支援四大線上188bet, TouTou, Rich88, V9BET平台運動娛樂產品網站，長期作為窗口對菲律賓及印尼商開團隊進行設計上的協調合作，透過Figma、Sketch、Zeplin 和 InVision轉譯商業語言為設計圖面，確認需求及功能，進一步進行可行性評估後，才將需求提供給開發團隊。",
-    "line4":"2018 World Cup前重構100多種的主要下注頁面為RWD自適應網頁設計，增強代碼的重用性，並整合Bet Radar 和 Scoreboards兩套新舊系統的即時資訊更新介面，提供可客製化抽換的CSS色彩配置及架構，讓不同品牌能靈活轉換外觀，項目包括足球，籃球，網球，冰球，橄欖球，飛鏢，棒球，板球，通用體育活動，並從原本的網站將直播電視獨立出來，為用戶提供客製化的可能性。建立icon-fonts系統，為4個品牌客製化套用，以替換先前的Sprite Image系統。並至菲律賓出差，與用戶討論規劃新項目開發。",
+    "line4":"2018 World Cup前重構100多種的主要下注頁面為RWD自適應網頁設計，增強代碼的重用性，並整合Bet Radar 和 Scoreboards兩套新舊系統的即時資訊更新介面，提供可客製化抽換的CSS色彩配置及架構，讓不同品牌能靈活轉換外觀，項目包括足球，籃球，網球，冰球，橄欖球，飛鏢，棒球，板球，通用體育活動，並從原本的網站將直播電視獨立出來，為用戶提供客製化的可能性。建立icon-fonts系統，為4個品牌客製化套用，以替換先前的Sprite Image系統。並至菲律賓出差，與用戶討論規劃新項目開發。"
   }
 }
