@@ -21,7 +21,8 @@ import {
   transparentize,
   toColorString,
 } from 'polished'
-
+const color_White = '#ffffff'
+const color_Black = '#000000'
 const primary = '#302E44' // > Luxury Purple
 
 // // const primary = '#263238' //900
@@ -149,4 +150,6 @@ export default {
   color_B1,
   color_B2,
   color_Shadow,
+  color_White,
+  color_Black,
 }

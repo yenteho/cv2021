@@ -1111,6 +1111,36 @@ export const AnimationBackground = () => (
   </AnimationBackgroundWrapper>
 )
 
+//-------------------- Timeline --------------------//
+export const VerticalElementContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  .vertical-timeline-element-content {
+    box-shadow: 0 0 6vmin rgba(0, 0, 0, 0.25);
+    background: transparent;
+  }
+  .vertical-timeline-element-content-arrow {
+    border-right: 7px solid ${(props) => props.theme.color_T1};
+  }
+  .vertical-timeline-element-icon {
+    background: ${(props) => props.theme.color_P1};
+    color: ${(props) => props.theme.color_T1};
+  }
+`
+export const TimelineContentWrapoer = styled.div`
+  width: 100%;
+  height: 100%;
+  ${F18}, ${F14} {
+    color: ${(props) => props.theme.color_T1};
+  }
+`
+export const TimelineContent = ({ company, position }) => (
+  <TimelineContentWrapoer>
+    <F18 bold>{company}</F18>
+    <F14>{position}</F14>
+  </TimelineContentWrapoer>
+)
+
 //-------------------- Radio Button --------------------//
 export const RadioButtonLabel = styled.label`
   position: absolute;

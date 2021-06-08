@@ -10,18 +10,21 @@ import {
 } from '../base/common'
 import Images from '../../images/index'
 import ContactInfo from '../panel/contactInfo'
-import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
+import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
+import Timeline from '../panel/timeline'
 const Resume = ({ locale }) => {
   return (
     <IntlProvider messages={locale}>
       <ParallaxProvider>
-
         <ResumeContainer>
           <ResumeWrapper>
             <RelativeWrapper>
               <Intro
                 text={
-                  <FormattedMessage id="resume.name" defaultMessage="Angel Ho" />
+                  <FormattedMessage
+                    id="resume.name"
+                    defaultMessage="Angel Ho"
+                  />
                 }
               />
               <ContactInfo />
@@ -29,37 +32,26 @@ const Resume = ({ locale }) => {
             <Photo img={Images.Photo} />
           </ResumeWrapper>
           <AnimationBackground />
-          <div>
-            <RelativeWrapper>
-              <FormattedMessage
-                id="xuenn.company"
-                defaultMessage="Xuenn Pte Ltd. – Online digital gaming company "
-              />
-              <FormattedMessage
-                id="xuenn.title"
-                defaultMessage="IT Consultant – Sports UI Designer"
-              />
-            </RelativeWrapper>
-          </div>
         </ResumeContainer>
         <ParallaxBanner
           className="your-class"
           layers={[
-              // {
-              //     image: `${Images.Photo}`,
-              //     amount: 0.1,
-              // },
-              {
-                  image: `${Images.Working}`,
-                  amount: 0.8,
-              },
+            // {
+            //     image: `${Images.Photo}`,
+            //     amount: 0.1,
+            // },
+            {
+              image: `${Images.Working}`,
+              amount: 0.8,
+            },
           ]}
           style={{
-              height: '400px',
+            height: '400px',
           }}
-      >
+        >
           <h1>Banner Children</h1>
-      </ParallaxBanner>
+        </ParallaxBanner>
+        <Timeline />
       </ParallaxProvider>
     </IntlProvider>
   )
