@@ -101,7 +101,7 @@ const color_Shadow = `${readableColor(
 const color_T1 = `${readableColor(
   `${primary}`,
   `${pDarken04}`,
-  `${textDarkBg}`,
+  `${pTint06}`,
   false
 )}`
 const color_T1_hover = `${readableColor(

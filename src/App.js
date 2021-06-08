@@ -11,7 +11,6 @@ import Resume from './components/pages/resume'
 import Behance from './components/pages/behance'
 import Medium from './components/pages/medium'
 
-
 function App() {
   const [lang, setLang] = useState('en')
   const [locale, setLocale] = useState(undefined)

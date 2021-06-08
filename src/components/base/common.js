@@ -1017,10 +1017,15 @@ export const Photo = styled.div`
     props.img && `url(${props.img}) center center no-repeat`};
   background-size: cover;
   width: 100%;
+  max-height: 80vh;
   border-radius: 3vmin;
   box-shadow: 0 0 6vmin rgba(0, 0, 0, 0.25);
 `
-export const ResumeWrapper = styled(RelativeWrapper)`
+export const ResumeContainer = styled(FlexCenterColumn)`
+  overflow: hidden;
+  height: 100vh;
+`
+export const ResumeWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr minmax(200px, 500px);
   height: 80vh;
@@ -1028,7 +1033,23 @@ export const ResumeWrapper = styled(RelativeWrapper)`
   padding: 0 48px;
   z-index: 1;
 `
-export const Link = styled.a``
+export const Link = styled.a`
+  color: ${(props) => props.theme.color_T1};
+`
+export const IntroWrapper = styled.div`
+  position: absolute;
+
+  color: ${(props) => props.theme.color_T1};
+`
+export const Intro = ({ text }) => (
+  <IntroWrapper>
+    <F32>{text}</F32>
+  </IntroWrapper>
+)
+
+export const ContactContainer = styled(FlexEndWrapper)`
+  height: 100%;
+`
 const ContactWrapper = styled.div`
   ${FlexSpaceBetween(64)}
   ${Link} {
@@ -1044,6 +1065,7 @@ const ContactWrapper = styled.div`
     border-radius: 2vmin;
     box-shadow: 0 0 6vmin var(--shadow);
     animation: boxMove 4s linear infinite;
+    color: ${(props) => props.theme.color_T1};
   }
   @media (hover: hover) {
     &:hover {
@@ -1053,7 +1075,6 @@ const ContactWrapper = styled.div`
       }
       ${Link} {
         opacity: 1;
-        color: ${(props) => props.theme.color_T1_hover};
         display: block;
       }
     }
@@ -1062,10 +1083,12 @@ const ContactWrapper = styled.div`
     color: ${(props) => props.theme.color_T1_active};
   }
 `
-export const Contact = ({ link, icon, href }) => (
+export const Contact = ({ text, icon, href }) => (
   <ContactWrapper>
     <div />
-    <Link href={href}>{link}</Link>
+    <Link href={href}>
+      <F18>{text}</F18>
+    </Link>
     <IconWrapper32>{icon}</IconWrapper32>
   </ContactWrapper>
 )
