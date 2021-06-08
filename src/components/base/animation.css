@@ -10,11 +10,6 @@
     
   }
   
-  html, body {
-    overflow: hidden;
-    background: #ce749e;
-  }
-  
   @keyframes boxMove {
     0% { transform: scale(var(--initialScale)) rotate(var(--initialAngle)); }
     100% { transform: scale(var(--endScale)) rotate(var(--endAngle)); } 

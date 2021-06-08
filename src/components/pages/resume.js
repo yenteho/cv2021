@@ -2,29 +2,46 @@ import React, { useState, useEffect } from 'react'
 import { FormattedMessage, IntlProvider } from 'react-intl'
 import {
   ResumeWrapper,
-  FlexCenterColumn,
+  FlexEndWrapper,
   Photo,
   Contact,
   AnimationBackground,
+  PanelHeader,
+  FlexLeftColumn,
 } from '../base/common'
 import Images from '../../images/index'
 import { FaLinkedinIn, FaMediumM, FaBehance, FaGithub } from 'react-icons/fa'
 import { CgProfile } from 'react-icons/cg'
+import { MdPhoneIphone, MdMailOutline } from 'react-icons/md'
 const Resume = ({ locale }) => {
   return (
     <IntlProvider messages={locale}>
-      <header className="App-header">
-        <link rel="apple-touch-icon" href="INSERT_FILE_PATH_HERE" />
         <ResumeWrapper>
-          <FlexCenterColumn>
-            <FormattedMessage id="resume.name" defaultMessage="Angel Ho" />
-            <FormattedMessage
-              id="resume.email"
-              defaultMessage=" contact@angelho.design"
+          <FlexEndWrapper>
+            {/* <FormattedMessage id="resume.name" defaultMessage="Angel Ho" /> */}
+            <Contact
+              href="mailto:contact@angelho.design"
+              target="_blank"
+              rel="Phone"
+              icon={<MdMailOutline />}
+              link={
+                <FormattedMessage
+                  id="resume.email"
+                  defaultMessage=" contact@angelho.design"
+                />
+              }
             />
-            <FormattedMessage
-              id="resume.phone"
-              defaultMessage="+886-958-941-898 "
+            <Contact
+              href="tel:+886-958-941-898"
+              target="_blank"
+              rel="Phone"
+              icon={<MdPhoneIphone />}
+              link={
+                <FormattedMessage
+                  id="resume.phone"
+                  defaultMessage="+886-958-941-898 "
+                />
+              }
             />
             <Contact
               href="https://www.linkedin.com/in/angel-yente-ho/"
@@ -86,6 +103,9 @@ const Resume = ({ locale }) => {
                 />
               }
             />
+          </FlexEndWrapper>
+
+          {/* <FlexEndWrapper>
             <FormattedMessage
               id="xuenn.company"
               defaultMessage="Xuenn Pte Ltd. – Online digital gaming company "
@@ -94,11 +114,9 @@ const Resume = ({ locale }) => {
               id="xuenn.title"
               defaultMessage="IT Consultant – Sports UI Designer"
             />
-            <FormattedMessage id="app.content" defaultMessage="Learn React" />
-          </FlexCenterColumn>
+          </FlexEndWrapper> */}
           <Photo img={Images.Photo} />
         </ResumeWrapper>
-      </header>
       <AnimationBackground />
     </IntlProvider>
   )

@@ -50,14 +50,15 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 }, {})
 
 export const Container = styled.div`
-  ${media.desktopLarge`background: ${(props) => props.theme.color_P4_2};`}
-  ${media.desktopMedium`background: ${(props) => props.theme.color_P4_2};`}
-  ${media.desktop`background: ${(props) => props.theme.color_P4_2};`}
+  overflow: scroll;
+  ${media.desktopLarge`background: ${(props) => props.theme.color_B1};`}
+  ${media.desktopMedium`background: ${(props) => props.theme.color_B1};`}
+  ${media.desktop`background: ${(props) => props.theme.color_B1};`}
   ${media.tabletLandscape`${(props) =>
     props.disableScroll && `position: fixed; width:100%; `}
-    background: ${(props) => props.theme.color_P4_2};`}
-  ${media.tablet`background: ${(props) => props.theme.color_P4_2};`}
-  ${media.mobile`background: ${(props) => props.theme.color_P4_2};`}
+    background: ${(props) => props.theme.color_B1};`}
+  ${media.tablet`background: ${(props) => props.theme.color_B1};`}
+  ${media.mobile`background: ${(props) => props.theme.color_B1};`}
 `
 //-------------------- Contextfiy --------------------//
 export const ContxtCss = styled.div.attrs({ className: '' })`
@@ -1015,48 +1016,64 @@ export const Photo = styled.div`
   background: ${(props) =>
     props.img && `url(${props.img}) center center no-repeat`};
   background-size: cover;
-  width: 500px;
-  height: 800px;
+  width: 100%;
   border-radius: 3vmin;
   box-shadow: 0 0 6vmin rgba(0, 0, 0, 0.25);
 `
-export const ResumeWrapper = styled(Flex)`
+export const ResumeWrapper = styled(RelativeWrapper)`
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 500px);
+  height: 80vh;
+  width: 100%;
+  padding: 0 48px;
   z-index: 1;
 `
-export const Link = styled.a`
-  color: ${(props) => props.theme.color_T1};
-`
-const ContactWrapper = styled(Flex)`
+export const Link = styled.a``
+const ContactWrapper = styled.div`
+  ${FlexSpaceBetween(64)}
+  ${Link} {
+    display: none;
+  }
   ${IconWrapper32} {
     top: calc(50% - 10vmin);
     left: calc(50% - 10vmin);
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
+    margin-top: 8px;
+    margin-right: 16px;
     border-radius: 2vmin;
     box-shadow: 0 0 6vmin var(--shadow);
     animation: boxMove 4s linear infinite;
   }
-  ${Link} {
-    display: none;
-    width: 0;
-  }
   @media (hover: hover) {
     &:hover {
       cursor: pointer;
+      ${IconWrapper32} {
+        background-color: ${(props) => props.theme.color_T1_hover};
+      }
       ${Link} {
+        opacity: 1;
+        color: ${(props) => props.theme.color_T1_hover};
         display: block;
       }
     }
   }
+  &:active {
+    color: ${(props) => props.theme.color_T1_active};
+  }
 `
 export const Contact = ({ link, icon, href }) => (
   <ContactWrapper>
-    <IconWrapper32>{icon}</IconWrapper32>
+    <div />
     <Link href={href}>{link}</Link>
+    <IconWrapper32>{icon}</IconWrapper32>
   </ContactWrapper>
 )
+const AnimationBackgroundWrapper = styled.div`
+  overflow: hidden;
+`
 export const AnimationBackground = () => (
-  <>
+  <AnimationBackgroundWrapper>
     <div class="box box10"></div>
     <div class="box box9"></div>
     <div class="box box8"></div>
@@ -1068,7 +1085,7 @@ export const AnimationBackground = () => (
     <div class="box box2"></div>
     <div class="box box1"></div>
     <div class="box box0"></div>
-  </>
+  </AnimationBackgroundWrapper>
 )
 
 //-------------------- Radio Button --------------------//

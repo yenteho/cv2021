@@ -1,9 +1,8 @@
 import './App.css'
 import React, { useState, useEffect } from 'react'
 import AppView from './components/AppView'
-import styled from 'styled-components'
 import colors from './colors/light.js'
-import { ThemeProvider } from './components/base/common'
+import { ThemeProvider, Container } from './components/base/common'
 import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 import Header from './components/nav/header'
 import { MenuPanel } from './components/panel/menuPanel'
@@ -12,11 +11,7 @@ import Resume from './components/pages/resume'
 import Behance from './components/pages/behance'
 import Medium from './components/pages/medium'
 
-const Container = styled.div`
-  height: 100vh;
-  overflow: scroll;
-  background: ${(props) => props.theme.color_B1};
-`
+
 function App() {
   const [lang, setLang] = useState('en')
   const [locale, setLocale] = useState(undefined)
@@ -50,7 +45,7 @@ function App() {
       <ResetStyle />
       <GlobalStyle />
       <AppView />
-      <Container className="App">
+      <Container>
         <MenuPanel
           showMenuPanel={showMenuPanel}
           toggleMenuPanel={toggleMenuPanel}
