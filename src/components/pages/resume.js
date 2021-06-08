@@ -23,24 +23,21 @@ const Resume = ({ locale }) => {
   return (
     <IntlProvider messages={locale}>
       {/* <PageContainer> */}
-        <ResumeContainer>
-          <ResumeWrapper>
-            <RelativeWrapper>
-              <Intro
-                text={
-                  <FormattedMessage
-                    id="resume.name"
-                    defaultMessage="Angel Ho"
-                  />
-                }
-              />
-              <ContactInfo />
-            </RelativeWrapper>
-            <Photo img={Images.Photo} />
-          </ResumeWrapper>
-          <AnimationBackground />
-        </ResumeContainer>
-        {/* <div>
+      <ResumeContainer>
+        <ResumeWrapper>
+          <RelativeWrapper>
+            <Intro
+              text={
+                <FormattedMessage id="resume.name" defaultMessage="Angel Ho" />
+              }
+            />
+            <ContactInfo />
+          </RelativeWrapper>
+          <Photo img={Images.Photo} />
+        </ResumeWrapper>
+        <AnimationBackground />
+      </ResumeContainer>
+      {/* <div>
           <RelativeWrapper>
             <FormattedMessage
               id="xuenn.company"
