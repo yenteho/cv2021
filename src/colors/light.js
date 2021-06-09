@@ -54,6 +54,7 @@ const pTint02 = `${tint(0.2, `${primary}`)}`
 const pTint04 = `${tint(0.4, `${primary}`)}`
 const pTint06 = `${tint(0.6, `${primary}`)}`
 const pTint08 = `${tint(0.8, `${primary}`)}`
+const pTint10 = `${tint(1.0, `${primary}`)}`
 // lighten
 const pLighten02 = `${lighten(0.1, `${primary}`)}`
 // darken
@@ -102,19 +103,19 @@ const color_Shadow = `${readableColor(
 const color_T1 = `${readableColor(
   `${primary}`,
   `${pDarken04}`,
-  `${pTint06}`,
+  `${pTint08}`,
   false
 )}`
 const color_T1_hover = `${readableColor(
   `${primary}`,
   `${pDarken06}`,
-  `${pTint08}`,
+  `${pTint10}`,
   false
 )}`
 const color_T1_active = `${readableColor(
   `${primary}`,
   `${pDarken06}`,
-  `${pTint08}`,
+  `${pTint10}`,
   false
 )}`
 const color_T2 = `${readableColor(
