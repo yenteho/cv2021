@@ -51,14 +51,15 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 
 export const Container = styled.div`
   overflow: scroll;
-  ${media.desktopLarge`background: ${(props) => props.theme.color_B1};`}
-  ${media.desktopMedium`background: ${(props) => props.theme.color_B1};`}
-  ${media.desktop`background: ${(props) => props.theme.color_B1};`}
+  background: ${(props) => props.theme.color_B1};
+  ${media.desktopLarge``}
+  ${media.desktopMedium``}
+  ${media.desktop``}
   ${media.tabletLandscape`${(props) =>
     props.disableScroll && `position: fixed; width:100%; `}
-    background: ${(props) => props.theme.color_B1};`}
-  ${media.tablet`background: ${(props) => props.theme.color_B1};`}
-  ${media.mobile`background: ${(props) => props.theme.color_B1};`}
+    `}
+  ${media.tablet``}
+  ${media.mobile``}
 `
 //-------------------- Contextfiy --------------------//
 export const ContxtCss = styled.div.attrs({ className: '' })`
@@ -1035,7 +1036,40 @@ export const ResumeWrapper = styled.div`
 `
 export const Link = styled.a`
   color: ${(props) => props.theme.color_T1};
+  padding-right: 16px;
+  display: none;
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `
+export const ContactIconWrapper = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border-radius: 2vmin;
+  box-shadow: 0 0 6vmin var(--shadow);
+  animation: boxMove 4s linear infinite;
+  color: ${(props) => props.theme.color_T1};
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background-color: ${(props) => props.theme.color_T1_hover};
+      ${Link} {
+        display: block;
+      }
+    }
+  }
+  &:active {
+    color: ${(props) => props.theme.color_T1_active};
+  }
+`
+
 export const IntroWrapper = styled.div`
   position: absolute;
 
@@ -1052,44 +1086,27 @@ export const ContactContainer = styled(FlexEndWrapper)`
 `
 const ContactWrapper = styled.div`
   ${FlexSpaceBetween(64)}
-  ${Link} {
-    display: none;
-  }
-  ${IconWrapper32} {
-    top: calc(50% - 10vmin);
-    left: calc(50% - 10vmin);
-    width: 56px;
-    height: 56px;
-    margin-top: 8px;
-    margin-right: 16px;
-    border-radius: 2vmin;
-    box-shadow: 0 0 6vmin var(--shadow);
-    animation: boxMove 4s linear infinite;
-    color: ${(props) => props.theme.color_T1};
-  }
-  @media (hover: hover) {
-    &:hover {
-      cursor: pointer;
-      ${IconWrapper32} {
-        background-color: ${(props) => props.theme.color_T1_hover};
-      }
-      ${Link} {
-        opacity: 1;
-        display: block;
+  ${FlexLeft} {
+    @media (hover: hover) {
+      &:hover {
+        ${Link} {
+          display: block;
+        }
       }
     }
-  }
-  &:active {
-    color: ${(props) => props.theme.color_T1_active};
   }
 `
 export const Contact = ({ text, icon, href }) => (
   <ContactWrapper>
     <div />
-    <Link href={href}>
-      <F18>{text}</F18>
-    </Link>
-    <IconWrapper32>{icon}</IconWrapper32>
+    <FlexLeft>
+      <Link href={href}>
+        <F18>{text}</F18>
+      </Link>
+      <ContactIconWrapper href={href}>
+        <IconWrapper32>{icon}</IconWrapper32>
+      </ContactIconWrapper>
+    </FlexLeft>
   </ContactWrapper>
 )
 const AnimationBackgroundWrapper = styled.div`
@@ -1126,18 +1143,32 @@ export const VerticalElementContainer = styled.div`
     background: ${(props) => props.theme.color_P1};
     color: ${(props) => props.theme.color_T1};
   }
+  @media only screen and (min-width: 768px) .vertical-timeline-element-content h2 {
+    font-size: 20px;
+  }
 `
-export const TimelineContentWrapoer = styled.div`
-  width: 100%;
-  height: 100%;
-  ${F18}, ${F14} {
+export const TimeLineDetailWrapper = styled.div`
+  ${F14}, ${F12} {
     color: ${(props) => props.theme.color_T1};
   }
 `
-export const TimelineContent = ({ company, position }) => (
+export const TimeLineDetail = ({ date, location }) => (
+  <TimeLineDetailWrapper>
+    <F14>{date}</F14>
+    <F12>{location}</F12>
+  </TimeLineDetailWrapper>
+)
+export const TimelineContentWrapoer = styled.div`
+  width: 100%;
+  height: 100%;
+  ${F16}, ${F14} {
+    color: ${(props) => props.theme.color_T1};
+  }
+`
+export const TimelineContent = ({ title, content }) => (
   <TimelineContentWrapoer>
-    <F18 bold>{company}</F18>
-    <F14>{position}</F14>
+    <F16 bold>{title}</F16>
+    <F14>{content}</F14>
   </TimelineContentWrapoer>
 )
 

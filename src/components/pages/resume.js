@@ -33,7 +33,7 @@ const Resume = ({ locale }) => {
           </ResumeWrapper>
           <AnimationBackground />
         </ResumeContainer>
-        <ParallaxBanner
+        {/* <ParallaxBanner
           className="your-class"
           layers={[
             // {
@@ -42,7 +42,7 @@ const Resume = ({ locale }) => {
             // },
             {
               image: `${Images.Working}`,
-              amount: 0.8,
+              amount: 0.2,
             },
           ]}
           style={{
@@ -50,7 +50,7 @@ const Resume = ({ locale }) => {
           }}
         >
           <h1>Banner Children</h1>
-        </ParallaxBanner>
+        </ParallaxBanner> */}
         <Timeline />
       </ParallaxProvider>
     </IntlProvider>

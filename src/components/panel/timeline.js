@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { FormattedMessage } from 'react-intl'
-import { VerticalElementContainer, TimelineContent } from '../base/common'
+import {
+  VerticalElementContainer,
+  TimelineContent,
+  TimeLineDetail,
+} from '../base/common'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -14,14 +18,14 @@ const Timeline = () => {
     <VerticalTimeline>
       <VerticalElementContainer>
         {timelineData.map(
-          ({ company, position, date, icon, iconStyle }, index) => (
+          ({ title, content, date, location, icon, iconStyle }, index) => (
             <Fragment key={`VerticalElementContainer_${index}`}>
               <VerticalTimelineElement
-                date={<F12>{date}</F12>}
+                date={<TimeLineDetail date={date} location={location} />}
                 icon={icon}
                 iconStyle={iconStyle}
               >
-                <TimelineContent company={company} position={position} />
+                <TimelineContent title={title} content={content} />
               </VerticalTimelineElement>
             </Fragment>
           )
