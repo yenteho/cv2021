@@ -43,9 +43,7 @@ const Header = ({
     <IntlProvider messages={locale}>
       <RelativeWrapper>
         <HeaderWrapper>
-          <MenuButton toggleMenuPanel={() => toggleMenuPanel()} />
-          {/* <ArrowButtonRight darkBg />
-            <ArrowButtonLeft darkBg /> */}
+          {/* <MenuButton toggleMenuPanel={() => toggleMenuPanel()} /> */}
           <HeaderItemContainer
           // ref={scrollRef}
           >
@@ -64,7 +62,7 @@ const Header = ({
               />
             </FlexLeft>
             <FlexRight>
-              {headerData.map(({ item, counter, ...rest }, index) => (
+              {/* {headerData.map(({ item, counter, ...rest }, index) => (
                 <HeaderItem
                   switchPage={() => switchPage(item)}
                   active={page === item}
@@ -73,7 +71,7 @@ const Header = ({
                   withBadge={item === 'My Events'}
                   counter={counter}
                 />
-              ))}
+              ))} */}
               <div>
                 <select
                   value={lang}
@@ -83,8 +81,8 @@ const Header = ({
                 >
                   <option value="en">English</option>
                   <option value="cn">中文</option>
-                  <option value="fr">Français</option>
-                  <option value="jp">日本語</option>
+                  {/* <option value="fr">Français</option>
+                  <option value="jp">日本語</option> */}
                 </select>
               </div>
             </FlexRight>
