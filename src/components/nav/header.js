@@ -41,28 +41,27 @@ const Header = ({
   }
   return (
     <IntlProvider messages={locale}>
-      <RelativeWrapper>
-        <HeaderWrapper>
-          {/* <MenuButton toggleMenuPanel={() => toggleMenuPanel()} /> */}
-          <HeaderItemContainer
-          // ref={scrollRef}
-          >
-            <Shadow
-              fromColor={(props) => props.theme.color_P1}
-              toColor={(props) => props.theme.color_P1_OP0}
-              fromLeft={'left: 64px;'}
-              withWidth={'16px;'}
+      <HeaderWrapper>
+        {/* <MenuButton toggleMenuPanel={() => toggleMenuPanel()} /> */}
+        <HeaderItemContainer
+        // ref={scrollRef}
+        >
+          <Shadow
+            fromColor={(props) => props.theme.color_P1}
+            toColor={(props) => props.theme.color_P1_OP0}
+            fromLeft={'left: 64px;'}
+            withWidth={'16px;'}
+          />
+          <FlexLeft onClick={() => console.log('>')}>
+            {icons}
+            <HeaderItem
+              competition={'Angel Ho'}
+              active={page === 'Angel Ho'}
+              switchPage={() => switchPage('Angel Ho')}
             />
-            <FlexLeft onClick={() => console.log('>')}>
-              {icons}
-              <HeaderItem
-                competition={'Angel Ho'}
-                active={page === 'Angel Ho'}
-                switchPage={() => switchPage('Angel Ho')}
-              />
-            </FlexLeft>
-            <FlexRight>
-              {/* {headerData.map(({ item, counter, ...rest }, index) => (
+          </FlexLeft>
+          <FlexRight>
+            {/* {headerData.map(({ item, counter, ...rest }, index) => (
                 <HeaderItem
                   switchPage={() => switchPage(item)}
                   active={page === item}
@@ -72,27 +71,26 @@ const Header = ({
                   counter={counter}
                 />
               ))} */}
-              <div>
-                <select
-                  value={lang}
-                  onChange={(evt) => {
-                    setLang(evt.target.value)
-                  }}
-                >
-                  <option value="en">English</option>
-                  <option value="cn">中文</option>
-                  {/* <option value="fr">Français</option>
+            <div>
+              <select
+                value={lang}
+                onChange={(evt) => {
+                  setLang(evt.target.value)
+                }}
+              >
+                <option value="en">English</option>
+                <option value="cn">中文</option>
+                {/* <option value="fr">Français</option>
                   <option value="jp">日本語</option> */}
-                </select>
-              </div>
-            </FlexRight>
-          </HeaderItemContainer>
-          <Shadow
-            fromColor={(props) => props.theme.color_P1_OP0}
-            toColor={(props) => props.theme.color_P1}
-          />
-        </HeaderWrapper>
-      </RelativeWrapper>
+              </select>
+            </div>
+          </FlexRight>
+        </HeaderItemContainer>
+        <Shadow
+          fromColor={(props) => props.theme.color_P1_OP0}
+          toColor={(props) => props.theme.color_P1}
+        />
+      </HeaderWrapper>
     </IntlProvider>
   )
 }

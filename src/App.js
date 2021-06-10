@@ -43,7 +43,6 @@ function App() {
     <ThemeProvider theme={{ ...colors }}>
       <ResetStyle />
       <GlobalStyle />
-      <AppView />
       <Container>
         <MenuPanel
           showMenuPanel={showMenuPanel}
@@ -59,6 +58,7 @@ function App() {
         />
         {currentPage}
       </Container>
+      <AppView />
     </ThemeProvider>
   )
 }
