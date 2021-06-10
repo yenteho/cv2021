@@ -6,7 +6,6 @@ import {
   Photo,
   AnimationBackground,
   ResumeContainer,
-  Intro,
   RelativeWrapper,
   GradientBorder,
 } from '../base/common'
@@ -14,7 +13,7 @@ import Images from '../../images/index'
 import ContactInfo from '../panel/contactInfo'
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 import Timeline from '../panel/timeline'
-import { F24 } from '../base/font'
+import SayHi from '../panel/sayhi'
 const Resume = ({ locale }) => {
   const [count, setCount] = useState(1)
   useEffect(() => {
@@ -36,33 +35,7 @@ const Resume = ({ locale }) => {
                   />
                 }
               /> */}
-              {count && (
-                <Intro
-                  text={
-                    <GradientBorder>
-                      <Typist
-                        avgTypingDelay={50}
-                        onTypingDone={() => setCount(0)}
-                      >
-                        <span>Say Hello!</span>
-                        <Typist.Delay ms={1000} />
-                        <br />
-                        <br />
-                        <span> I'm Angel Ho. </span>
-                        <Typist.Delay ms={1000} />
-                        <br />
-                        <br />
-                        <span> I'm a UI UX Designer </span>
-                        <Typist.Delay ms={1000} />
-                        <Typist.Backspace count={17} delay={800} />
-                        <span> a Full Stack Designer... </span>
-                        <Typist.Delay ms={5000} />
-                        <br />
-                      </Typist>
-                    </GradientBorder>
-                  }
-                />
-              )}
+              <SayHi />
               <ContactInfo />
             </RelativeWrapper>
             <Photo img={Images.Photo} />
