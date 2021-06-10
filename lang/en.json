@@ -1,0 +1,81 @@
+{
+  "app.header": "Edit src/App.js and save to reload.",
+  "app.content": "Learn React",
+  "resume.name": "Hi! I'm Angel Ho",
+  "resume.email":" contact@angelho.design",
+  "resume.phone": "+886-958-941-898 ",
+  "resume.LinkedIn":"https://www.linkedin.com/in/angel-yente-ho/",
+  "resume.Medium":"https://medium.com/@yente_ho ",
+  "resume.Behance":"https://www.behance.net/yente_ho ",
+  "resume.Github":"https://github.com/yenteho ",
+  "resume.Website":"http://angelho.design",
+  "xuenn.company":"Xuenn Pte Ltd. – Online digital gaming company ",
+  "xuenn.title":"IT Consultant – Sports UI Designer",
+  "xuenn.locate":"Taipei, Taiwan",
+  "xuenn.date":"JUL 2017 - Present Taipei, Taiwan ",
+  "xuenn.work":{
+    "line1":"Introduced React Styled Components in React to instead of SASS for avoiding CSS class duplication, overlap, misspellings or pollution. ",
+    "line2":"Imported React Context API to build expandable, flexible and automatic color system. ",
+    "line3":"Developed Theme Generator for automatic color customization. ",
+    "line4":"Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  ",
+    "line5":"Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. ",
+    "line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
+    "line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time."  
+  },
+  "rapaq.company":"Frontend Engineer",
+  "rapaq.title":"RapaQ Co., Ltd., – E-commerce and social media for design professionals",
+  "rapaq.date":"MAR 2017 - JUN 2017",
+  "rapaq.locate":"Taipei, Taiwan",
+  "yolomoto.company":"Web Designer / Graphic Designer / Industrial Designer/ Animation Designer",
+  "yolomoto.title":"Yolomoto Co., Ltd.  – Tire manufacturing startup company",
+  "yolomoto.date":"SPE 2016 - FEB 2017",
+  "yolomoto.locate":"Taipei, Taiwan",
+  "boehmert.company":"Patent Engineer Intern",
+  "boehmert.title":"BOEHMERT & BOEHMERT",
+  "boehmert.date":"MAY 2016 - JUN 2016",
+  "boehmert.locate":"Munich, Germany",
+
+
+  "school.master":"M.A., Graduate Institute of Patent, College of Intellectual Property Studies",
+  "school.master.department":"National Taiwan University of Science and Technology",
+  "school.master.gpa":"(GPA 4.0/4.0)",
+  "school.master.date":"SPE 2014 - JUN 2016",
+  "school.master.locate":"Taipei, Taiwan",
+
+
+  "school.bachelor":"B.A., Department of Industrial Design, Furniture and Interior Design Major",
+  "school.bachelor.department":"National Taipei University of Technology",
+  "school.bachelor.gpa":"(GPA 3.3/4.0）",
+  "school.bachelor.date":"SPE 2010 - JUN 2014",
+  "school.bachelor.locate":"Taipei, Taiwan",
+  "school.bachelor.award.taitung":"2014 Taiwan Design Exhibitions",
+  "school.bachelor.award.rank.taitung":"Invited Exhibition - Reported on Central News Agencys",
+  "school.bachelor.award.date.taitung":"JUN 2014 Taitung Taiwans",
+  "school.bachelor.award.yilan":"Yilan Heyi The Exhibition of Cultural and Creative Industrys",
+  "school.bachelor.award.rank.yilan":"Invited Exhibitions",
+  "school.bachelor.award.date.yilan":"MAY 2014 Yilan Taiwans",
+  "school.bachelor.award.yodex":"Young Designers' Exhibition (YODEX) - Craft Designs",
+  "school.bachelor.award.rank.yodex":"Excellence Awards",
+  "school.bachelor.award.date.yodex":"APR 2014 Taipei Taiwans",
+  "school.bachelor.award.permanent":"Taitung County 'Permanent Public Toilets' Competitions",
+  "school.bachelor.award.rank.permanent":"Bronze Award Winners",
+  "school.bachelor.award.date.permanent":"APR 2014",
+  "school.bachelor.award.nonresidentail":"Non-residential Space Interior Designs",
+  "school.bachelor.award.rank.nonresidentail":"Winners",
+  "school.bachelor.award.date.nonresidentail":"APR 2013",
+
+  "school.juniorhigh":"Taipei Municipal Jinhua Junior High School",
+  "school.juniorhigh.department":"Art Gifted and Talented Class",
+  "school.juniorhigh.date":"SEP 2003 - JUN 2006",
+  "school.juniorhigh.locate":"Taipei, Taiwan",
+  "school.juniorhigh.award":"National Student Art Competition",
+  "school.juniorhigh.award.rank":"Graphic Design/ Engraving Double Champion",
+  "school.juniorhigh.award.date":"APR 2006",
+  "birth":"Dec 1990",
+  "birth.locate":"Taipei, Taiwan"
+}
+
+
+
+
+
