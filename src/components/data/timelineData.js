@@ -104,7 +104,7 @@ export const timelineData = [
         defaultMessage="Taipei, Taiwan"
       />
     ),
-    iconStyle: { background: '#49445E' },
+    iconStyle: { background: '#A56F52' },
     title: (
       <FormattedMessage
         id="school.master"
@@ -138,7 +138,7 @@ export const timelineData = [
         defaultMessage="Taipei, Taiwan"
       />
     ),
-    iconStyle: { background: '#49445E' },
+    iconStyle: { background: '#A56F52' },
     title: (
       <FormattedMessage
         id="school.bachelor"
@@ -283,7 +283,7 @@ export const timelineData = [
         defaultMessage="Taipei, Taiwan"
       />
     ),
-    iconStyle: { background: '#49445E' },
+    iconStyle: { background: '#A56F52' },
     title: (
       <FormattedMessage
         id="school.juniorhigh"
