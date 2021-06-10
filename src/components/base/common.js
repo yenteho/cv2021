@@ -1042,8 +1042,12 @@ export const Photo = styled.div`
   border-radius: 3vmin;
   box-shadow: 0 0 6vmin rgba(0, 0, 0, 0.25);
 `
-export const ResumeContainer = styled(FlexCenterColumn)`
+export const ResumePageWrapper = styled(FlexCenterColumn)`
   overflow: hidden;
+  height: 100%;
+`
+export const ResumeContainer = styled(FlexCenterColumn)`
+  position: relative;
   height: 100vh;
 `
 export const ResumeWrapper = styled.div`
@@ -1053,6 +1057,7 @@ export const ResumeWrapper = styled.div`
   width: 100%;
   padding: 0 48px;
   z-index: 1;
+  ${media.tablet`padding: 0 16px;`}
 `
 export const Link = styled.a`
   color: ${(props) => props.theme.color_T1};
@@ -1101,8 +1106,9 @@ export const GradientBorder = styled.div`
     font-size: 2.5rem;
   }
   padding: 16px;
+  ${media.tablet`padding: 8px;`}
   --borderWidth: 3px;
-  background: #302e44;
+  background: ${(props) => props.theme.color_P1_OP90};
   position: relative;
   border-radius: var(--borderWidth);
 
@@ -1132,13 +1138,21 @@ export const GradientBorder = styled.div`
 `
 
 export const IntroWrapper = styled.div`
+  z-index: 2;
   position: absolute;
+  top: calc(20vh - 45px);
+  left: 48px;
+  ${media.tablet`left: 16px;`}
   font-weight: 200;
   color: ${(props) => props.theme.color_T1};
+  span {
+    font-size: 32px;
+    ${media.tablet`font-size: 12px;`}
+  }
 `
 export const Intro = ({ text }) => (
   <IntroWrapper>
-    <F32>{text}</F32>
+    <GradientBorder>{text}</GradientBorder>
   </IntroWrapper>
 )
 

@@ -7,7 +7,7 @@ import {
   AnimationBackground,
   ResumeContainer,
   RelativeWrapper,
-  GradientBorder,
+  ResumePageWrapper,
 } from '../base/common'
 import Images from '../../images/index'
 import ContactInfo from '../panel/contactInfo'
@@ -24,10 +24,12 @@ const Resume = ({ locale }) => {
   return (
     <IntlProvider messages={locale}>
       <ParallaxProvider>
-        <ResumeContainer>
-          <ResumeWrapper>
-            <RelativeWrapper>
-              {/* <Intro
+        <ResumePageWrapper>
+          <SayHi />
+          <ResumeContainer>
+            <ResumeWrapper>
+              <RelativeWrapper>
+                {/* <Intro
                 text={
                   <FormattedMessage
                     id="resume.name"
@@ -35,14 +37,14 @@ const Resume = ({ locale }) => {
                   />
                 }
               /> */}
-              <SayHi />
-              <ContactInfo />
-            </RelativeWrapper>
-            <Photo img={Images.Photo} />
-          </ResumeWrapper>
+
+                <ContactInfo />
+              </RelativeWrapper>
+              <Photo img={Images.Photo} />
+            </ResumeWrapper>
+          </ResumeContainer>
           <AnimationBackground />
-        </ResumeContainer>
-        {/* <ParallaxBanner
+          {/* <ParallaxBanner
           className="your-class"
           layers={[
             // {
@@ -60,7 +62,8 @@ const Resume = ({ locale }) => {
         >
           <h1>Banner Children</h1>
         </ParallaxBanner> */}
-        <Timeline />
+          <Timeline />
+        </ResumePageWrapper>
       </ParallaxProvider>
     </IntlProvider>
   )

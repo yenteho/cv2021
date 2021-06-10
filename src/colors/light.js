@@ -91,7 +91,8 @@ const shadowDark = `${mix(0.8, `${primary}`, '#000')}`
 const color_P1 = `${primary}`
 const color_P1_hover = `${pTint02}`
 const color_P1_active = `${mixBlack10}`
-const color_P1_OP80 = `${transparentize(0.8, `${primary}`)}`
+const color_P1_OP80 = `${transparentize(0.2, `${primary}`)}`
+const color_P1_OP90 = `${transparentize(0.1, `${primary}`)}`
 const color_P1_OP0 = `${transparentize(1, `${primary}`)}`
 const color_P2 = `${darken(0.1, `${invert(`${primary}`)}`)}`
 const color_Shadow = `${readableColor(
@@ -152,6 +153,7 @@ export default {
   color_P1_hover,
   color_P1_active,
   color_P1_OP80,
+  color_P1_OP90,
   color_P1_OP0,
   color_P2,
   color_B1,
