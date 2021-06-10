@@ -195,6 +195,7 @@ html {
   padding: 0;
   box-sizing: inherit;
   text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 body {
   line-height: 1;
