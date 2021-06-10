@@ -52,6 +52,7 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 export const Container = styled.div`
   overflow: scroll;
   background: ${(props) => props.theme.color_B1};
+  background: linear-gradient(180deg, ${(props) => props.theme.color_B3} 0%, ${(props) => props.theme.color_B2} 25%, ${(props) => props.theme.color_B1} 75%, ${(props) => props.theme.color_B3} 100%);
   ${media.desktopLarge``}
   ${media.desktopMedium``}
   ${media.desktop``}
@@ -1172,7 +1173,7 @@ export const AnimationBackground = () => (
     <div class="box box9"></div>
     <div class="box box8"></div>
     <div class="box box7"></div>
-    <div class="box box6"></div>
+    <div class="box box6"></div> 
     <div class="box box5"></div>
     <div class="box box4"></div>
     <div class="box box3"></div>
