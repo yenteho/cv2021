@@ -97,7 +97,7 @@ const color_P2 = `${darken(0.1, `${invert(`${primary}`)}`)}`
 const color_Shadow = `${readableColor(
   `${primary}`,
   `${shadowDark}`,
-  `${shadowLight}`,
+  `rgba(0, 0, 0, 0.25)`,
   false
 )}`
 const color_T1 = `${readableColor(
@@ -127,15 +127,22 @@ const color_T2 = `${readableColor(
 const color_B1 = `${readableColor(
   `${primary}`,
   `${mixWhite80}`,
-  `${mixBlack60}`,
+  `#504B69`,
   false
 )}`
 const color_B2 = `${readableColor(
   `${primary}`,
   `${pTint04}`,
-  `${pDesaturate01}`,
+  `#BFB9C5`,
   false
 )}`
+const color_B3 = `${readableColor(
+  `${primary}`,
+  `${pTint04}`,
+  `#27263A`,
+  false
+)}`
+
 
 export default {
   color_T1,
@@ -150,6 +157,7 @@ export default {
   color_P2,
   color_B1,
   color_B2,
+  color_B3,
   color_Shadow,
   color_White,
   color_Black,
