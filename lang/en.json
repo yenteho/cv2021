@@ -13,15 +13,14 @@
   "xuenn.title":"IT Consultant – Sports UI Designer",
   "xuenn.locate":"Taipei, Taiwan",
   "xuenn.date":"JUL 2017 - Present Taipei, Taiwan ",
-  "xuenn.work":{
-    "line1":"Introduced React Styled Components in React to instead of SASS for avoiding CSS class duplication, overlap, misspellings or pollution. ",
-    "line2":"Imported React Context API to build expandable, flexible and automatic color system. ",
-    "line3":"Developed Theme Generator for automatic color customization. ",
-    "line4":"Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  ",
-    "line5":"Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. ",
-    "line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
-    "line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time."  
-  },
+  "xuenn.eu.line1":"Introduced React Styled Components in React to instead of SASS for avoiding CSS class duplication, overlap, misspellings or pollution. ",
+  "xuenn.eu.line2":"Imported React Context API to build expandable, flexible and automatic color system. ",
+  "xuenn.eu.line3":"Developed Theme Generator for automatic color customization. ",
+  "xuenn.eu.line4":"Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  ",
+  "xuenn.eu.line5":"Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. ",
+  "xuenn.eu.line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
+  "xuenn.eu.line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time.",
+  "xuenn.wc":"",
   "rapaq.company":"Frontend Engineer",
   "rapaq.title":"RapaQ Co., Ltd., – E-commerce and social media for design professionals",
   "rapaq.date":"MAR 2017 - JUN 2017",
@@ -72,7 +71,9 @@
   "school.juniorhigh.award.rank":"Graphic Design/ Engraving Double Champion",
   "school.juniorhigh.award.date":"APR 2006",
   "birth":"Dec 1990",
-  "birth.locate":"Taipei, Taiwan"
+  "birth.locate":"Taipei, Taiwan",
+  "birth.family":"Art Family in Taipei",
+  "birth.learing":"Start learing sketch, watercolor, traditional Chinese painting, calligraphy and print since 5 years old"
 }
 
 
