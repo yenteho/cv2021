@@ -34,25 +34,26 @@ const Resume = ({ locale }) => {
             </ResumeWrapper>
           </ResumeContainer>
           <AnimationBackground />
+
+          <ParallaxBanner
+            className="your-class"
+            layers={[
+              // {
+              //     image: `${Images.Photo}`,
+              //     amount: 0.1,
+              // },
+              {
+                image: `${Images.Working}`,
+                amount: 0.3,
+              },
+            ]}
+            style={{
+              height: '350px',
+            }}
+          >
+            {/* <h1>Banner Children</h1> */}
+          </ParallaxBanner>
           <Skillset />
-          {/* <ParallaxBanner
-          className="your-class"
-          layers={[
-            // {
-            //     image: `${Images.Photo}`,
-            //     amount: 0.1,
-            // },
-            {
-              image: `${Images.Working}`,
-              amount: 0.2,
-            },
-          ]}
-          style={{
-            height: '400px',
-          }}
-        >
-          <h1>Banner Children</h1>
-        </ParallaxBanner> */}
           <Timeline />
         </ResumePageWrapper>
       </ParallaxProvider>

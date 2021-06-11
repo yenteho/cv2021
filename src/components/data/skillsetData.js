@@ -1,11 +1,11 @@
-import { SiAdobephotoshop, SiAdobexd,SiAdobeillustrator } from 'react-icons/si'
+import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
 import { AiOutlineSketch } from 'react-icons/ai'
 
 export const skillsetData = [
   {
     icon: <AiOutlineSketch />,
     move: '50px',
-    bounceDuration: '1500ms',
+    bounceDuration: '1000ms',
     ballSize: '90px',
     bounceHeight: 'calc(300px - 100vh)',
   },

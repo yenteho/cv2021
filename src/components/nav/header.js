@@ -62,15 +62,15 @@ const Header = ({
           </FlexLeft>
           <FlexRight>
             {headerData.map(({ item, counter, ...rest }, index) => (
-                <HeaderItem
-                  switchPage={() => switchPage(item)}
-                  active={page === item}
-                  key={`headerItem_${index}`}
-                  competition={item}
-                  withBadge={item === 'My Events'}
-                  counter={counter}
-                />
-              ))}
+              <HeaderItem
+                switchPage={() => switchPage(item)}
+                active={page === item}
+                key={`headerItem_${index}`}
+                competition={item}
+                withBadge={item === 'My Events'}
+                counter={counter}
+              />
+            ))}
             <div>
               <select
                 value={lang}

@@ -1336,10 +1336,11 @@ export const AnimationBackground = () => (
 )
 //-------------------- Skill Set --------------------//
 export const SkillSetContainer = styled(RelativeWrapper)`
-  height: 50vh;
+  height: 80vh;
 `
 const BounceBallWrapper = styled(RelativeWrapper)`
-  max-width: 50px;
+  // max-width: 50px;
+  width: 100%;
 `
 export const Suport = styled.div`
   position: absolute;
