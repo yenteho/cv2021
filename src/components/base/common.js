@@ -1032,6 +1032,138 @@ export const SwitchButton = styled.input`
     }
   `};
 `
+//-------------------- Counter --------------------//
+export const CounterWrapper = styled.div`
+  position: absolute;
+  top: 4px;
+  right: 50%;
+  transform: translate3d(120%, 0, 0);
+  font-size: 11px;
+  line-height: 13px;
+  height: 14px;
+  line-height: 14px;
+  padding: 0 2% 0 4px;
+  min-width: 14px;
+  max-width: 25px;
+  text-align: left;
+  display: block;
+  border-radius: 8px;
+  letter-spacing: 0px;
+  background: ${(props) => props.theme.color_A1_3};
+  color: ${(props) => props.theme.color_P4_15};
+`
+export const Counter = ({ counter }) => (
+  <CounterWrapper data-txt-count>{counter}</CounterWrapper>
+)
+//-------------------- Resume Header --------------------//
+
+export const MenuButtonWrapper = styled(FlexCenter)`
+  width: 64px;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  background: ${(props) => props.theme.color_P1};
+  g {
+    fill: ${(props) =>
+      props.active ? `${props.theme.color_P2_1};` : `${props.theme.color_T1};`};
+  }
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      background: ${(props) => props.theme.color_P1_Lplus4};
+    }
+  }
+  &:active {
+    background: ${(props) => props.theme.color_P1_Lmin8};
+  }
+`
+export const MenuButton = ({ toggleMenuPanel }) => (
+  <MenuButtonWrapper onClick={toggleMenuPanel}>
+    <IconWrapper24>
+      <HiMenu />
+    </IconWrapper24>
+  </MenuButtonWrapper>
+)
+
+export const HeaderItemContainer = styled(FlexScrollWrapper)`
+  margin-left: 64px;
+  margin-right: 22px;
+  ${FlexSpaceBetween(48)}
+  position: relative;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+`
+
+export const HeaderItemWrapper = styled(FlexCenter)`
+  position: relative;
+  padding: 0 8px;
+  height: 48px;
+  margin-right: 8px;
+  white-space: nowrap;
+  padding-right: ${(props) => props.counter && '20px'};
+  ${CounterWrapper} {
+    top: 6px;
+    right: 20px;
+    transform: translate3d(100%, 0, 0);
+    padding: 0px 4%;
+  }
+  /* background: ${(props) =>
+    props.active ? `${props.theme.color_P2};` : 'transparent'}; */
+  color: ${(props) =>
+    props.active ? `${props.theme.color_T2};` : `${props.theme.color_T1};`};
+  ${AbsoluteRightCenter} {
+    top: ${(props) => props.favorite && '25%'};
+    g {
+      fill: ${(props) => props.favorite && props.theme.color_P2_1};
+    }
+  }
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      color: ${(props) => props.theme.color_P2_1};
+    }
+  }
+  &:active {
+    background: ${(props) => props.theme.color_P1_Lmin8};
+  }
+  &:before {
+    content: ${(props) => props.withBadge && `''`};
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: ${(props) => props.theme.color_A5_1};
+    position: absolute;
+    top: 10px;
+    right: -2px;
+  }
+`
+export const HeaderItem = ({
+  competition,
+  active,
+  switchPage,
+  counter,
+  withBadge,
+  favorite,
+}) => (
+  <HeaderItemWrapper
+    active={active}
+    onClick={switchPage}
+    counter={counter}
+    data-btn-competition={`${competition}`}
+    withBadge={withBadge}
+    favorite={favorite}
+  >
+    <F14 uppercase={1}>{competition}</F14>
+    {counter && <Counter counter={counter} />}
+    {favorite && (
+      <AbsoluteRightCenter>
+        <IconWrapper8>
+          <Icons.Favorite_event_active />
+        </IconWrapper8>
+      </AbsoluteRightCenter>
+    )}
+  </HeaderItemWrapper>
+)
 //-------------------- Resume --------------------//
 export const Photo = styled.div`
   background: ${(props) =>
@@ -1288,28 +1420,7 @@ export const RadioButton = styled.input`
     }
   }
 `
-export const Counter = ({ counter }) => (
-  <CounterWrapper data-txt-count>{counter}</CounterWrapper>
-)
-export const CounterWrapper = styled.div`
-  position: absolute;
-  top: 4px;
-  right: 50%;
-  transform: translate3d(120%, 0, 0);
-  font-size: 11px;
-  line-height: 13px;
-  height: 14px;
-  line-height: 14px;
-  padding: 0 2% 0 4px;
-  min-width: 14px;
-  max-width: 25px;
-  text-align: left;
-  display: block;
-  border-radius: 8px;
-  letter-spacing: 0px;
-  background: ${(props) => props.theme.color_A1_3};
-  color: ${(props) => props.theme.color_P4_15};
-`
+
 //-------------------- Icons --------------------//
 export const GenericLoadingWrapper = styled.div`
   ${(props) => props.theme.icons.generic_loading} svg {
@@ -7662,35 +7773,8 @@ export const SportCarouselItem = ({
   </SportCarouselItemWrapper>
 )
 
-export const MenuButtonWrapper = styled(FlexCenter)`
-  width: 64px;
-  position: absolute;
-  height: 100%;
-  left: 0;
-  background: ${(props) => props.theme.color_P1};
-  g {
-    fill: ${(props) =>
-      props.active ? `${props.theme.color_P2_1};` : `${props.theme.color_T1};`};
-  }
-  @media (hover: hover) {
-    &:hover {
-      cursor: pointer;
-      background: ${(props) => props.theme.color_P1_Lplus4};
-    }
-  }
-  &:active {
-    background: ${(props) => props.theme.color_P1_Lmin8};
-  }
-`
-export const MenuButton = ({ toggleMenuPanel }) => (
-  <MenuButtonWrapper onClick={toggleMenuPanel}>
-    <IconWrapper24>
-      <HiMenu />
-    </IconWrapper24>
-  </MenuButtonWrapper>
-)
 export const HeaderWrapper = styled(FlexScrollWrapper)`
-  z-index: 2;
+  z-index: 3;
   position: sticky;
   top: 0;
   background: ${(props) => props.theme.color_P1};
@@ -7699,88 +7783,11 @@ export const HeaderWrapper = styled(FlexScrollWrapper)`
     left: 64px;
   }
   ${Shadow} {
-    display: none;
+    display: block;
   }
-  ${media.desktop`${FlexRight}{display:none;} ${Shadow}{display:block;}`}
+  ${media.desktop`${HeaderItemWrapper}{display:none;}`}
 `
-export const HeaderItemContainer = styled(FlexScrollWrapper)`
-  margin-left: 64px;
-  margin-right: 22px;
-  ${FlexSpaceBetween(48)}
-  position: relative;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-`
-export const HeaderItemWrapper = styled(FlexCenter)`
-  position: relative;
-  padding: 0 8px;
-  height: 48px;
-  margin-right: 8px;
-  white-space: nowrap;
-  padding-right: ${(props) => props.counter && '20px'};
-  ${CounterWrapper} {
-    top: 6px;
-    right: 20px;
-    transform: translate3d(100%, 0, 0);
-    padding: 0px 4%;
-  }
-  /* background: ${(props) =>
-    props.active ? `${props.theme.color_P2};` : 'transparent'}; */
-  color: ${(props) =>
-    props.active ? `${props.theme.color_T2};` : `${props.theme.color_T1};`};
-  ${AbsoluteRightCenter} {
-    top: ${(props) => props.favorite && '25%'};
-    g {
-      fill: ${(props) => props.favorite && props.theme.color_P2_1};
-    }
-  }
-  @media (hover: hover) {
-    &:hover {
-      cursor: pointer;
-      color: ${(props) => props.theme.color_P2_1};
-    }
-  }
-  &:active {
-    background: ${(props) => props.theme.color_P1_Lmin8};
-  }
-  &:before {
-    content: ${(props) => props.withBadge && `''`};
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: ${(props) => props.theme.color_A5_1};
-    position: absolute;
-    top: 10px;
-    right: -2px;
-  }
-`
-export const HeaderItem = ({
-  competition,
-  active,
-  switchPage,
-  counter,
-  withBadge,
-  favorite,
-}) => (
-  <HeaderItemWrapper
-    active={active}
-    onClick={switchPage}
-    counter={counter}
-    data-btn-competition={`${competition}`}
-    withBadge={withBadge}
-    favorite={favorite}
-  >
-    <F14 uppercase={1}>{competition}</F14>
-    {counter && <Counter counter={counter} />}
-    {favorite && (
-      <AbsoluteRightCenter>
-        <IconWrapper8>
-          <Icons.Favorite_event_active />
-        </IconWrapper8>
-      </AbsoluteRightCenter>
-    )}
-  </HeaderItemWrapper>
-)
+
 export const BottomNavWrapper = styled(Flex)`
   position: fixed;
   width: 100%;

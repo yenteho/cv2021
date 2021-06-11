@@ -1,7 +1,8 @@
-import { FormattedMessage } from 'react-intl'
 import colors from '../../colors/light.js'
+import { FormattedMessage } from 'react-intl'
 import { CgWorkAlt } from 'react-icons/cg'
 import { IoSchoolSharp, IoStarSharp, IoTrophySharp } from 'react-icons/io5'
+import { FaBaby } from 'react-icons/fa'
 export const timelineData = [
   {
     icon: <CgWorkAlt />,
@@ -324,22 +325,22 @@ export const timelineData = [
   },
 
   {
-    icon: <IoStarSharp />,
+    icon: <FaBaby />,
     date: <FormattedMessage id="birth" defaultMessage="Dec 1990" />,
     location: (
       <FormattedMessage id="birth.locate" defaultMessage="Taipei, Taiwan" />
     ),
-    iconStyle: { background: 'rgb(16, 204, 82)' },
+    iconStyle: { background: '#D1988C' },
     title: (
       <FormattedMessage
-        id="xuenn.company"
-        defaultMessage="Xuenn Pte Ltd. – Online digital gaming company "
+        id="birth.family"
+        defaultMessage="Art Family in Taipei"
       />
     ),
     content: (
       <FormattedMessage
-        id="xuenn.title"
-        defaultMessage="IT Consultant – Sports UI Designer"
+        id="birth.learing"
+        defaultMessage="Start learing sketch, watercolor, traditional Chinese painting, print and calligraphy since 5 years old"
       />
     ),
   },
