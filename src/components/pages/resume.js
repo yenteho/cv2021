@@ -14,6 +14,7 @@ import ContactInfo from '../panel/contactInfo'
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 import Timeline from '../panel/timeline'
 import SayHi from '../panel/sayhi'
+import Skillset from '../panel/skillset'
 const Resume = ({ locale }) => {
   const [count, setCount] = useState(1)
   useEffect(() => {
@@ -28,22 +29,12 @@ const Resume = ({ locale }) => {
           <SayHi />
           <ResumeContainer>
             <ResumeWrapper>
-              <RelativeWrapper>
-                {/* <Intro
-                text={
-                  <FormattedMessage
-                    id="resume.name"
-                    defaultMessage="Angel Ho"
-                  />
-                }
-              /> */}
-
-                <ContactInfo />
-              </RelativeWrapper>
+              <ContactInfo />
               <Photo img={Images.Photo} />
             </ResumeWrapper>
           </ResumeContainer>
           <AnimationBackground />
+          <Skillset />
           {/* <ParallaxBanner
           className="your-class"
           layers={[

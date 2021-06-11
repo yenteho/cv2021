@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { FormattedMessage } from 'react-intl'
 import {
   VerticalElementContainer,
   TimelineContent,
@@ -10,7 +9,6 @@ import {
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
-import { F12 } from '../base/font'
 import { Fragment } from 'react'
 import { timelineData } from '../data/timelineData'
 const Timeline = () => {
@@ -34,5 +32,4 @@ const Timeline = () => {
     </VerticalTimeline>
   )
 }
-
 export default Timeline

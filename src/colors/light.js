@@ -25,6 +25,12 @@ const color_White = '#ffffff'
 const color_Black = '#000000'
 const primary = '#302E44' // > Luxury Purple
 
+const color_B1 = `#504B69`
+const color_B2 = `#BFB9C5`
+const color_B2_OP50 = `${transparentize(0.5, `${color_B2}`)}`
+const color_B2_OP70 = `${transparentize(0.3, `${color_B2}`)}`
+const color_B3 = `#27263A`
+
 // // const primary = '#263238' //900
 // const primary = '#0A365E' // > professional blue
 // const primary ='#0A3331';// > professional Green (10,51,49)
@@ -91,6 +97,8 @@ const shadowDark = `${mix(0.8, `${primary}`, '#000')}`
 const color_P1 = `${primary}`
 const color_P1_hover = `${pTint02}`
 const color_P1_active = `${mixBlack10}`
+const color_P1_OP50 = `${transparentize(0.5, `${primary}`)}`
+const color_P1_OP70 = `${transparentize(0.3, `${primary}`)}`
 const color_P1_OP80 = `${transparentize(0.2, `${primary}`)}`
 const color_P1_OP90 = `${transparentize(0.1, `${primary}`)}`
 const color_P1_OP0 = `${transparentize(1, `${primary}`)}`
@@ -125,24 +133,6 @@ const color_T2 = `${readableColor(
   `${textDarkBgActive}`,
   false
 )}`
-const color_B1 = `${readableColor(
-  `${primary}`,
-  `${mixWhite80}`,
-  `#504B69`,
-  false
-)}`
-const color_B2 = `${readableColor(
-  `${primary}`,
-  `${pTint04}`,
-  `#BFB9C5`,
-  false
-)}`
-const color_B3 = `${readableColor(
-  `${primary}`,
-  `${pTint04}`,
-  `#27263A`,
-  false
-)}`
 
 export default {
   color_T1,
@@ -152,11 +142,15 @@ export default {
   color_P1,
   color_P1_hover,
   color_P1_active,
+  color_P1_OP50,
+  color_P1_OP70,
   color_P1_OP80,
   color_P1_OP90,
   color_P1_OP0,
   color_P2,
   color_B1,
+  color_B2_OP50,
+  color_B2_OP70,
   color_B2,
   color_B3,
   color_Shadow,
