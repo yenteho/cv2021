@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {
   Separator1,
   GreyOut,
@@ -6,81 +6,93 @@ import {
   MenuPanelTitle,
   MenuPanelHeader,
   LeftPanelPopUpTransition,
-  ContentScrollWrapper,
   BalanceButton,
+  MenuPanelWrapper,
+  MenuPanelItemListWrapper,
 } from '../base/common'
-// import { MenuPanelSportData } from '../../Data/menuPanelSportData'
+import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
+import { AiOutlineSketch } from 'react-icons/ai'
+import { MdWeb, MdSlowMotionVideo, MdOndemandVideo } from 'react-icons/md'
+import { WebDesignData, GraphicDesignData } from '../data/menuPanelData'
 // import { MenuPanelInfoData } from '../../Data/menuPanelInfoData'
 
 export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
+  const [showList, setList] = useState(false)
+  const toggleList = () => {
+    console.log('TCL: showList', showList)
+    setList(!showList)
+  }
   return (
     <>
       <LeftPanelPopUpTransition show={showMenuPanel}>
         <MenuPanelHeader
-          text={'Menu'}
+          text={'Portfolio'}
           closePanel={toggleMenuPanel}
           debug={() => console.log('debug')}
         />
-        <ContentScrollWrapper>
+        <MenuPanelWrapper>
           {/* <BalanceButton text={'1,340,000,000.00 RMB'} genericLoading={false} /> */}
-          {/* <MenuPanelItem
-            icon={<Icons.Left_panel_in_play_indicator />}
-            text={'In-play'}
-            active
-          />
-          <MenuPanelItem
-            icon={<Icons.Left_panel_price_boost />}
-            priceBoost
-            text={'Price Boosts'}
-          />
-          <MenuPanelItem
-            icon={<Icons.Left_panel_special_events_normal />}
-            text={
-              'Special Event long Longest Long Long Long Long Long Long Long Long Nam...'
-            }
-          />
-          <MenuPanelItem icon={<Icons.Euro />} text={'UEFA Euro 2020'} />
-          <MenuPanelItem icon={<Icons.Olympics />} text={'Olympics'} />
-          <MenuPanelItem
-            icon={<Icons.Freebets />}
-            // multiColorIcon
-            text={'Free Bets'}
-            counter={'99+'}
-            enterMenuItem={() => toggleFreeBetsPanel()}
-          /> */}
-          {/* <Separator1 /> */}
-          {/* {MenuPanelSportData.map(({ image, sport, ...rest }, index) => (
-            <MenuPanelItem
-              key={index}
-              icon={image}
-              text={sport}
-              favorite
-              {...rest}
-              enterMenuItem={() => {
-                closeMenuPanel()
-                switchPage(sport)
-              }}
-            />
-          ))} */}
-          {/* <MenuPanelTitle menuPanelTitle={'Sports A-Z'} />
-          <Separator1 />
-          <MenuPanelItem
-            // icon={<Icons.Left_panel_settings />}
-            text={'Settings'}
-            enterMenuItem={() => toggleSettingsPanel()}
-          />
-          <Separator1 />
-          <MenuPanelTitle menuPanelTitle={'Info Centre'} /> */}
-          {/* {MenuPanelInfoData.map(({ InfoIcon, Info }, index) => {
-            return (
+          <MenuPanelTitle menuPanelTitle={'UI UX Web Design'} />
+          {WebDesignData.map(
+            ({ icon, item, type, favorite, ...rest }, index) => (
               <MenuPanelItem
-                key={`MenuPanelItem_${index}`}
-                icon={InfoIcon}
-                text={Info}
+                key={index}
+                icon={icon}
+                text={item}
+                subText={type}
+                {...rest}
+                enterMenuItem={() => {
+                  // closeMenuPanel()
+                  // switchPage(item)
+                }}
               />
             )
-          })} */}
-        </ContentScrollWrapper>
+          )}
+
+          <MenuPanelTitle menuPanelTitle={'Animation'} />
+          {GraphicDesignData.map(
+            ({ icon, item, type, favorite, ...rest }, index) => (
+              <MenuPanelItem
+                key={index}
+                icon={icon}
+                text={item}
+                subText={type}
+                {...rest}
+                enterMenuItem={() => {
+                  // closeMenuPanel()
+                  // switchPage(item)
+                }}
+              />
+            )
+          )}
+          <MenuPanelTitle menuPanelTitle={'Graphic Design'} />
+          {GraphicDesignData.map(
+            ({ icon, item, type, favorite, ...rest }, index) => (
+              <MenuPanelItem
+                key={index}
+                icon={icon}
+                text={item}
+                subText={type}
+                {...rest}
+                enterMenuItem={() => {
+                  // closeMenuPanel()
+                  // switchPage(item)
+                }}
+              />
+            )
+          )}
+          <Separator1 />
+          <MenuPanelItem
+            // icon={<AiOutlineSketch />}
+            text={'Settings'}
+            enterMenuItem={() => toggleList()}
+          />
+          {showList && <MenuPanelItemListWrapper>
+Test Panel
+          </MenuPanelItemListWrapper>}
+          <Separator1 />
+
+        </MenuPanelWrapper>
       </LeftPanelPopUpTransition>
       {/* {showMenuPanel && <GreyOut />} */}
     </>

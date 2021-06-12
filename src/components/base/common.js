@@ -16,6 +16,12 @@ import {
 } from './iconWrapper'
 import './animation.css'
 import { HiMenu, HiOutlineX } from 'react-icons/hi'
+import {
+  IoSchoolSharp,
+  IoStarSharp,
+  IoStarOutline,
+  IoTrophySharp,
+} from 'react-icons/io5'
 import { ThemeProvider as BaseThemeProvider } from 'styled-components'
 let Icons = null
 export const ThemeProvider = (props) => {
@@ -322,7 +328,7 @@ export const ContentScrollWrapper = styled.div`
 export const ContentScrollContainer = styled.div``
 //-------------------- Separator --------------------//
 export const Separator1 = styled.div`
-  border-top: 1px solid ${(props) => props.theme.color_A4};
+  border-top: 1px solid ${(props) => props.theme.color_B1};
   border-style: ${(props) =>
     props.dashed ? 'dashed' : props.dotted ? 'dotted' : ''};
 `
@@ -490,11 +496,14 @@ export const KeypadTransition = styled.div`
         : `transform: translate3d(0,100%,0);`};
   `}
 `
-export const LeftPanelPopUpTransition = styled.div`
+export const MenuPanelWrapper = styled(ContentScrollWrapper)`
   background: ${(props) => props.theme.color_B2};
   width: 320px;
   ${media.tablet`width:100%;`}
+`
+export const LeftPanelPopUpTransition = styled.div`
   padding-bottom: 48px;
+  padding-top: 16px;
   transition: transform 0.3s ease;
   position: fixed;
   bottom: 0;
@@ -1158,7 +1167,7 @@ export const HeaderItem = ({
     {favorite && (
       <AbsoluteRightCenter>
         <IconWrapper8>
-          <Icons.Favorite_event_active />
+          <IoStarSharp />
         </IconWrapper8>
       </AbsoluteRightCenter>
     )}
@@ -2080,22 +2089,22 @@ export const Favorite = ({
             <FavoriteActiveWrapper
               addFavorite={active || mopPanelActive || menuPanelActive}
             >
-              <Icons.Favorite_event_active />
+              <IoStarSharp />
             </FavoriteActiveWrapper>
           ) : (
             <FavoriteNormalWrapper
               addFavorite={active || mopPanelActive || menuPanelActive}
             >
-              <Icons.Favorite_event />
+              <IoStarOutline />
             </FavoriteNormalWrapper>
           )
         ) : (
           <>
             <FavoriteActiveWrapper addFavorite={inSideFavoriteActive}>
-              <Icons.Favorite_event_active />
+              <IoStarSharp />
             </FavoriteActiveWrapper>
             <FavoriteNormalWrapper addFavorite={inSideFavoriteActive}>
-              <Icons.Favorite_event />
+              <IoStarOutline />
             </FavoriteNormalWrapper>
           </>
         )}
@@ -3327,22 +3336,11 @@ export const ViewAllMultiple = ({ toggleViewAllMultiple, chevronUp, text }) => (
   </ViewAllMultipleWrapper>
 )
 //-------------------- Menu Panel --------------------//
-export const MenuPanelWrapper = styled(ContentContainer)`
-  width: 320px;
-  overflow: auto;
-  background: ${(props) => props.theme.color_P4_2};
-  margin-bottom: 48px;
-  ${ContentScrollWrapper} {
-    height: calc(100vh - 48px);
-  }
-  ${media.tablet`width:100%;`}
-  ${TooltipContainer} {
-    display: block;
-  }
-`
-export const SettingsPanelWrapper = styled(MenuPanelWrapper)``
+
 export const MenuPanelTitleWrapper = styled(FlexLeft)`
+  user-select: none;
   height: 56px;
+  margin-top: 8px;
   ${F16} {
     padding: 4px 16px;
     color: ${(props) => props.theme.color_P3_4};
@@ -3359,11 +3357,14 @@ export const MenuPanelTitle = ({ menuPanelTitle }) => (
 export const MenuPanelItemWrapper = styled(RelativeWrapper)`
   ${FlexSpaceBetween(56)};
   ${FlexLeft} {
+    padding-right: 16px;
+    padding-left: ${(props) => props.icon ?'0px':'16px'};
     width: 100%;
+    height: 100%;
     @media (hover: hover) {
       &:hover {
         cursor: pointer;
-        background: ${(props) => props.theme.color_P3_1_OP4_1};
+        background: ${(props) => props.theme.color_B2_hover};
         ${F14} {
           color: ${(props) => props.theme.color_A3};
         }
@@ -3390,12 +3391,13 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
   ${AbsoluteRightCenter} {
     margin-right: 8px;
   }
-  ${IconWrapper56} {
+  ${IconWrapper24} {
+    min-width: 48px;
     position: relative;
     g {
       fill: ${(props) =>
         props.active
-          ? `${props.theme.color_A3};`
+          ? `${props.theme.color_B3};`
           : props.priceBoost
           ? `${props.theme.color_A1};`
           : props.multiColorIcon
@@ -3410,8 +3412,7 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
     ${Truncate(1)}
     color: ${(props) => props.theme.color_A3};
   }
-  ${F14} {
-    padding-right: ${(props) => props.favorite && `48px`};
+  ${F14} { 
     ${Truncate(2)}
     color: ${(props) =>
       props.active
@@ -3428,8 +3429,7 @@ export const MenuPanelItem = ({
   priceBoost,
   addFavorite,
   favoriteActive,
-  enterMenuItem,
-  row2,
+  expandMenuItem,
   multiColorIcon,
   counter,
 }) => (
@@ -3439,14 +3439,17 @@ export const MenuPanelItem = ({
       priceBoost={priceBoost}
       multiColorIcon={multiColorIcon}
       favorite={favorite}
+      icon={icon}
     >
-      <FlexLeft onClick={enterMenuItem}>
-        <IconWrapper56>
-          {icon}
-          {counter && <Counter counter={counter} />}
-        </IconWrapper56>
+      <FlexLeft onClick={expandMenuItem}>
+        {icon && (
+          <IconWrapper24>
+            {icon}
+            {counter && <Counter counter={counter} />}
+          </IconWrapper24>
+        )}
 
-        {row2 ? (
+        {subText ? (
           <FlexColumn>
             <F14 uppercase={1}>{text}</F14>
             <F12>{subText}</F12>
@@ -3467,6 +3470,11 @@ export const MenuPanelItem = ({
     </MenuPanelItemWrapper>
   </>
 )
+
+export const MenuPanelItemListWrapper = styled(RelativeWrapper)``
+
+export const MenuPanelContainer= styled(RelativeWrapper)``
+
 //-------------------- Settings Panel --------------------//
 const SettingsItemWrapper = styled(FlexLeft)`
   height: 48px;
@@ -8041,7 +8049,7 @@ export const BottomNavItem = ({
     {favorite && (
       <AbsoluteRightCenter>
         <IconWrapper8>
-          <Icons.Favorite_event_active />
+          <IoStarSharp />
         </IconWrapper8>
       </AbsoluteRightCenter>
     )}
@@ -8131,7 +8139,7 @@ export const LeftSportsItems = ({
     {sportIcon}
     {favorite && (
       <IconWrapper8>
-        <Icons.Favorite_event_active />
+        <IoStarSharp />
       </IconWrapper8>
     )}
   </LeftSportsItemsWrapper>
