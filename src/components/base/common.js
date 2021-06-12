@@ -3358,7 +3358,7 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
   ${FlexSpaceBetween(56)};
   ${FlexLeft} {
     padding-right: 16px;
-    padding-left: ${(props) => props.icon ?'0px':'16px'};
+    padding-left: ${(props) => (props.icon ? '0px' : '16px')};
     width: 100%;
     height: 100%;
     @media (hover: hover) {
@@ -3412,7 +3412,7 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
     ${Truncate(1)}
     color: ${(props) => props.theme.color_A3};
   }
-  ${F14} { 
+  ${F14} {
     ${Truncate(2)}
     color: ${(props) =>
       props.active
@@ -3429,7 +3429,7 @@ export const MenuPanelItem = ({
   priceBoost,
   addFavorite,
   favoriteActive,
-  expandMenuItem,
+  enterMenuItem,
   multiColorIcon,
   counter,
 }) => (
@@ -3441,7 +3441,7 @@ export const MenuPanelItem = ({
       favorite={favorite}
       icon={icon}
     >
-      <FlexLeft onClick={expandMenuItem}>
+      <FlexLeft onClick={enterMenuItem}>
         {icon && (
           <IconWrapper24>
             {icon}
@@ -3473,7 +3473,7 @@ export const MenuPanelItem = ({
 
 export const MenuPanelItemListWrapper = styled(RelativeWrapper)``
 
-export const MenuPanelContainer= styled(RelativeWrapper)``
+export const MenuPanelContainer = styled(RelativeWrapper)``
 
 //-------------------- Settings Panel --------------------//
 const SettingsItemWrapper = styled(FlexLeft)`

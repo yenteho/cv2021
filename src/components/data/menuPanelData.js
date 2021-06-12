@@ -10,7 +10,7 @@ export const WebDesignData = [
     type: 'Web Design & Frontend Developement',
     // icon: <FaReact/>,
     // favoriteActive: true,
-    // addFavorite: () => console.log('click'),
+    // addFavorite: () => toggleList(),
   },
   {
     item: 'World Cup Sports Bet Product ',
@@ -27,37 +27,20 @@ export const WebDesignData = [
   {
     item: 'CV 2017',
     type: 'Web Design & Frontend Developement',
-  }
+  },
 ]
 export const AnimationDesignData = [
-    {
-      item: 'ZION GROTTA ROAD TIRE',
-      icon: <AiOutlineSketch />,
-    },
-    {
-      item: 'Cryptocurrency Company Business Cards',
-      type: 'Graphic Design',
-      icon: <AiOutlineSketch />,
-    },
-    {
-      item: 'Xuenn Digital Gaming Innovators',
-      type: 'Graphic Design',
-      icon: <AiOutlineSketch />,
-    },
-  ]
+  {
+    item: 'ZION GROTTA ROAD TIRE',
+  },
+]
 export const GraphicDesignData = [
-    {
-      item: 'ZION GROTTA ROAD TIRE',
-      icon: <AiOutlineSketch />,
-    },
-    {
-      item: 'Cryptocurrency Company Business Cards',
-      type: 'Graphic Design',
-      icon: <AiOutlineSketch />,
-    },
-    {
-      item: 'Xuenn Digital Gaming Innovators',
-      type: 'Graphic Design',
-      icon: <AiOutlineSketch />,
-    },
-  ]
+  {
+    item: 'Cryptocurrency Company Business Cards',
+    type: 'Name Card Design',
+  },
+  {
+    item: 'Xuenn Digital Gaming Innovators',
+    type: 'Name Card Design',
+  },
+]

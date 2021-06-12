@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import {
   Separator1,
   GreyOut,
@@ -19,7 +19,7 @@ import { WebDesignData, GraphicDesignData } from '../data/menuPanelData'
 export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
   const [showList, setList] = useState(false)
   const toggleList = () => {
-    console.log('TCL: showList', showList)
+    // console.log('TCL: showList', showList)
     setList(!showList)
   }
   return (
@@ -87,11 +87,10 @@ export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
             text={'Settings'}
             enterMenuItem={() => toggleList()}
           />
-          {showList && <MenuPanelItemListWrapper>
-Test Panel
-          </MenuPanelItemListWrapper>}
+          {showList && (
+            <MenuPanelItemListWrapper>Test Panel</MenuPanelItemListWrapper>
+          )}
           <Separator1 />
-
         </MenuPanelWrapper>
       </LeftPanelPopUpTransition>
       {/* {showMenuPanel && <GreyOut />} */}
