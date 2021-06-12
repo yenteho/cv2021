@@ -9,6 +9,7 @@
   "resume.Behance":"https://www.behance.net/yente_ho ",
   "resume.Github":"https://github.com/yenteho ",
   "resume.Website":"http://angelho.design",
+
   "xuenn.company":"Xuenn Pte Ltd. – Online digital gaming company ",
   "xuenn.title":"IT Consultant – Sports UI Designer",
   "xuenn.locate":"Taipei, Taiwan",
@@ -21,19 +22,37 @@
   "xuenn.eu.line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
   "xuenn.eu.line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time.",
   "xuenn.wc":"",
+
   "rapaq.company":"Frontend Engineer",
   "rapaq.title":"RapaQ Co., Ltd., – E-commerce and social media for design professionals",
   "rapaq.date":"MAR 2017 - JUN 2017",
   "rapaq.locate":"Taipei, Taiwan",
+
+
   "yolomoto.company":"Web Designer / Graphic Designer / Industrial Designer/ Animation Designer",
   "yolomoto.title":"Yolomoto Co., Ltd.  – Tire manufacturing startup company",
   "yolomoto.date":"SPE 2016 - FEB 2017",
   "yolomoto.locate":"Taipei, Taiwan",
+
+
   "boehmert.company":"Patent Engineer Intern",
   "boehmert.title":"BOEHMERT & BOEHMERT",
   "boehmert.date":"MAY 2016 - JUN 2016",
   "boehmert.locate":"Munich, Germany",
-
+  "boehmert.project.epo":"Received specialized training in patent searching, analysis and drafting of EPO",
+  "boehmert.project.claim":"Compared the prior art with written description and claim language mentioned by examiner carefully ",
+  "boehmert.project.unity":"Discussed with clients to consider the best solution to solve the Unity / Novelty / Inventive problems",
+  "boehmert.project.draft":"Drafted EPO Office Action reply including novelty and inventive steps under the European Patent Convention",
+  
+  "pypat.company":"PyPat IP Services Co., Ltd.",
+  "pypat.title":"Intern",
+  "pypat.date":"JUL 2015 - JAN 2016",
+  "pypat.locate":"Taipei, Taiwan",
+  "pypat.translate":"Translated technical documents from and into English and Chinese",
+  "pypat.data":"Utilized variety of global patent databases effectively to develop an new patent research system",
+  "pypat.design":"Designed the user interface of the patent searching system",
+  "pypat.communicate":"Communicated with clients to optimize IP strategies",
+  "pypat.forecast":"Provided the technology/function matrix for technology forecasting",
 
   "school.master":"M.A., Graduate Institute of Patent, College of Intellectual Property Studies",
   "school.master.department":"National Taiwan University of Science and Technology",
@@ -41,6 +60,29 @@
   "school.master.date":"SPE 2014 - JUN 2016",
   "school.master.locate":"Taipei, Taiwan",
 
+  "association.nmun":"New York Model United Nations",
+  "association.nmun.conf":"Attended UNEP conference and acted as a delegate of Seychelles",
+  "association.nmun.topic":"On the topic of “Promoting Resource Efficiency in Urban Development”",
+  "association.nmun.date":"APR 2015",
+  "association.nmun.locate":"New York, USA",
+  "association.pamun":"Pan Asia Model United Nations",
+  "association.pamun.conf":"Attended UNODC conference and acted as a delegate of Kuwait",
+  "association.pamun.topic":"On the topic of “Substance abuse treatment and care for women”",
+  "association.pamun.date":"NOV 2014",
+  "association.pamun.locate":"Taipei, Taiwan",
+  "association.jade":"Mt. Jade Mountain Climbing ｜ 3952 meters high ",
+  "association.jade.date":"APR 2016",
+  "association.cycleing":"Cycling around Taiwan ｜ 9 days / 590 miles",
+  "association.cycleing.date":"AUG 2015",
+  "association.swim":"31th International Massive Swimming across Sun Moon Lake activity ｜ 3000 meters",
+  "association.swim.date":"AUG 2014",
+
+  "school.master.ta":"NationalTaiwan University of Science and Technology",
+  "school.master.ta.title":"Teaching Assistant",
+  "school.master.ta.uspatent":"US Patent Practice / Patent Litigation",
+  "school.master.ta.uspatent.date":"SPE 2015 - JAN  2016",
+  "school.master.ta.claim":"Claim Interpretation of Patents",
+  "school.master.ta.claim.date":"FEB 2015 - JUN  2015  ",
 
   "school.bachelor":"B.A., Department of Industrial Design, Furniture and Interior Design Major",
   "school.bachelor.department":"National Taipei University of Technology",
@@ -63,6 +105,15 @@
   "school.bachelor.award.rank.nonresidentail":"Winners",
   "school.bachelor.award.date.nonresidentail":"APR 2013",
 
+  "school.kaplan":"Kaplan International",
+  "school.kaplan.department":"Advanced TOEFL and Academic English Program",
+  "school.kaplan.date":"SPE 2011 - FEB 2012",
+  "school.kaplan.locate":"New York, USA",
+  
+  "school.seniorhigh":"Taipei Municipal Song Shan Senior High School",
+  "school.seniorhigh.date":"SPE 2006 - JUN 2009",
+  "school.seniorhigh.locate":"Taipei, Taiwan",
+
   "school.juniorhigh":"Taipei Municipal Jinhua Junior High School",
   "school.juniorhigh.department":"Art Gifted and Talented Class",
   "school.juniorhigh.date":"SEP 2003 - JUN 2006",
@@ -70,6 +121,13 @@
   "school.juniorhigh.award":"National Student Art Competition",
   "school.juniorhigh.award.rank":"Graphic Design/ Engraving Double Champion",
   "school.juniorhigh.award.date":"APR 2006",
+
+  "school.elementary":"Taipei Municipal Gu Ting Elementary School",
+  "school.elementary.department":"Music Gifted and Talented Class",
+  "school.elementary.locate":"Taipei, Taiwan",
+  "school.elementary.date":"SPE 1999 - JUN 2003",
+
+
   "birth":"Dec 1990",
   "birth.locate":"Taipei, Taiwan",
   "birth.family":"Art Family in Taipei",
