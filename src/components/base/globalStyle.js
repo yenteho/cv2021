@@ -200,6 +200,9 @@ body {
   line-height: 1;
   position:relative;
 }
+html, body {
+  touch-action: manipulation;
+}
 a {
   text-decoration: none;
   cursor: pointer;
