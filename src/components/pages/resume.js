@@ -34,8 +34,7 @@ const Resume = ({ locale }) => {
             </ResumeWrapper>
           </ResumeContainer>
           <AnimationBackground />
-
-          <ParallaxBanner
+          {/* <ParallaxBanner
             className="your-class"
             layers={[
               // {
@@ -51,9 +50,9 @@ const Resume = ({ locale }) => {
               height: '350px',
             }}
           >
-            {/* <h1>Banner Children</h1> */}
-          </ParallaxBanner>
-          <Skillset />
+            <h1>Banner Children</h1>
+          </ParallaxBanner> */}
+          {/* <Skillset /> */}
           <Timeline />
         </ResumePageWrapper>
       </ParallaxProvider>

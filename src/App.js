@@ -19,7 +19,7 @@ function App() {
     const data = await resp.json()
     setLocale(data)
   }, [lang])
-  const [showMenuPanel, setMenuPanel] = useState(false)
+  const [showMenuPanel, setMenuPanel] = useState(true)
   const toggleMenuPanel = () => {
     setMenuPanel(!showMenuPanel)
   }
