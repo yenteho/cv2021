@@ -496,8 +496,10 @@ export const KeypadTransition = styled.div`
         : `transform: translate3d(0,100%,0);`};
   `}
 `
-export const LeftPanelPopUpTransition = styled.div`
+export const MenuPanelWrapper = styled(ContentScrollWrapper)`
   background: ${(props) => props.theme.color_B2};
+`
+export const LeftPanelPopUpTransition = styled.div`
   width: 320px;
   ${media.tablet`width:100%;`}
   transition: transform 0.3s ease;

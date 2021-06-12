@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import fetchJsonp from 'fetch-jsonp'
 
-import {Img} from '../base/common'
+import { Img } from '../base/common'
 const itemsTask = async () => {
   try {
     const res = await fetchJsonp(

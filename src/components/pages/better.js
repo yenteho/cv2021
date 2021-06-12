@@ -13,7 +13,7 @@ const coversTask = async () => {
     return []
   }
 }
-import {Img} from '../base/common'
+import { Img } from '../base/common'
 const itemsTask = async () => {
   try {
     const res = await fetchJsonp(
