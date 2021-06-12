@@ -74,7 +74,7 @@ class App extends Component {
           <ul>
             {items.map((item) => (
               <li key={item.id}>
-                <img src={item.src} />
+                <Img src={item.src} />
               </li>
             ))}
           </ul>

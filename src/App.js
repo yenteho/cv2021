@@ -36,9 +36,9 @@ function App() {
       case 'Portfolio':
         return <Behance lang={lang} locale={locale} />
       case 'Euro Cup 188 Bet Sports Book':
-        return <Behance lang={lang} locale={locale} />
+        return <Resume lang={lang} locale={locale} />
       case 'World Cup 188 / V9 / TT / R88 Bet Sports Book':
-        return <Behance lang={lang} locale={locale} />
+        return <Resume lang={lang} locale={locale} />
       case 'CoinOf Cryptocurrency Investment Advisor':
         return <Coinof lang={lang} locale={locale} />
       case 'CV 2017':

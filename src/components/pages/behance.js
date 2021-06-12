@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import fetchJsonp from 'fetch-jsonp'
-
+import {Img} from '../base/common'
 const coversTask = async () => {
   try {
     const res = await fetchJsonp(
@@ -13,6 +13,7 @@ const coversTask = async () => {
     return []
   }
 }
+
 const itemsTask = async () => {
   try {
     const res = await fetchJsonp(
@@ -100,7 +101,7 @@ const Behance = () => {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            <img src={item.src} />
+            <Img src={item.src} />
           </li>
         ))}
       </ul>

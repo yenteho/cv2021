@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import fetchJsonp from 'fetch-jsonp'
-
+import {Img} from '../base/common'
 const itemsTask = async () => {
   try {
     const res = await fetchJsonp(
@@ -32,7 +32,7 @@ const Pingxi = () => {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            <img src={item.src} />
+            <Img src={item.src} />
           </li>
         ))}
       </ul>

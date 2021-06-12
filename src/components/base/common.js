@@ -1522,6 +1522,11 @@ export const RadioButton = styled.input`
     }
   }
 `
+//-------------------- Portfolio --------------------//
+
+export const Img = styled.img`
+  max-width: 100vw;
+`
 
 //-------------------- Icons --------------------//
 export const GenericLoadingWrapper = styled.div`

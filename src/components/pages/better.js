@@ -13,6 +13,7 @@ const coversTask = async () => {
     return []
   }
 }
+import {Img} from '../base/common'
 const itemsTask = async () => {
   try {
     const res = await fetchJsonp(
@@ -64,7 +65,7 @@ const App = () => {
       <ul>
         {items.map((item) => (
           <li key={item.id}>
-            <img src={item.src} />
+            <Img src={item.src} />
           </li>
         ))}
       </ul>
