@@ -6,14 +6,14 @@ import { FaReact, FaSass } from 'react-icons/fa'
 
 export const WebDesignData = [
   {
-    item: 'Euro Cup Sports Bet Product',
+    item: 'Euro Cup 188 Bet Sports Book',
     type: 'Web Design & Frontend Developement',
     // icon: <FaReact/>,
     // favoriteActive: true,
     // addFavorite: () => toggleList(),
   },
   {
-    item: 'World Cup Sports Bet Product ',
+    item: 'World Cup 188 / V9 / TT / R88 Bet Sports Book',
     type: 'Frontend Developement',
     // icon: <FaSass />,
     // favoriteActive: true,
@@ -36,11 +36,19 @@ export const AnimationDesignData = [
 ]
 export const GraphicDesignData = [
   {
+    item: 'Pypat IP Services Company',
+    type: 'DM / Name Card Design',
+  },
+  {
     item: 'Cryptocurrency Company Business Cards',
     type: 'Name Card Design',
   },
   {
     item: 'Xuenn Digital Gaming Innovators',
+    type: 'Name Card Design',
+  },
+  {
+    item: 'Pingxi Travellers Lodge',
     type: 'Name Card Design',
   },
 ]

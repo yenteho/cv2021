@@ -13,10 +13,19 @@ import {
 import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
 import { AiOutlineSketch } from 'react-icons/ai'
 import { MdWeb, MdSlowMotionVideo, MdOndemandVideo } from 'react-icons/md'
-import { WebDesignData, GraphicDesignData } from '../data/menuPanelData'
+import {
+  WebDesignData,
+  GraphicDesignData,
+  AnimationDesignData,
+} from '../data/menuPanelData'
 // import { MenuPanelInfoData } from '../../Data/menuPanelInfoData'
 
-export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
+export function MenuPanel({
+  switchPage,
+  page,
+  toggleMenuPanel,
+  showMenuPanel,
+}) {
   const [showList, setList] = useState(false)
   const toggleList = () => {
     // console.log('TCL: showList', showList)
@@ -41,16 +50,17 @@ export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
                 text={item}
                 subText={type}
                 {...rest}
+                active={page === item}
                 enterMenuItem={() => {
                   // closeMenuPanel()
-                  // switchPage(item)
+                  switchPage(item)
                 }}
               />
             )
           )}
 
           <MenuPanelTitle menuPanelTitle={'Animation'} />
-          {GraphicDesignData.map(
+          {AnimationDesignData.map(
             ({ icon, item, type, favorite, ...rest }, index) => (
               <MenuPanelItem
                 key={index}
@@ -60,7 +70,7 @@ export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
                 {...rest}
                 enterMenuItem={() => {
                   // closeMenuPanel()
-                  // switchPage(item)
+                  switchPage(item)
                 }}
               />
             )
@@ -76,21 +86,20 @@ export function MenuPanel({ toggleMenuPanel, showMenuPanel, switchPage }) {
                 {...rest}
                 enterMenuItem={() => {
                   // closeMenuPanel()
-                  // switchPage(item)
+                  switchPage(item)
                 }}
               />
             )
           )}
-          <Separator1 />
-          <MenuPanelItem
-            // icon={<AiOutlineSketch />}
+          {/* <Separator1 /> */}
+          {/* <MenuPanelItem
             text={'Settings'}
             enterMenuItem={() => toggleList()}
           />
           {showList && (
             <MenuPanelItemListWrapper>Test Panel</MenuPanelItemListWrapper>
-          )}
-          <Separator1 />
+          )} */}
+          {/* <Separator1 /> */}
         </MenuPanelWrapper>
       </LeftPanelPopUpTransition>
       {/* {showMenuPanel && <GreyOut />} */}

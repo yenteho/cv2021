@@ -6,10 +6,15 @@ import { ThemeProvider, Container } from './components/base/common'
 import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 import Header from './components/nav/header'
 import { MenuPanel } from './components/panel/menuPanel'
-import fetchJsonp from 'fetch-jsonp'
 import Resume from './components/pages/resume'
 import Behance from './components/pages/behance'
 import Medium from './components/pages/medium'
+import Zion from './components/pages/zion'
+import Coinof from './components/pages/coinof'
+import NcCrypto from './components/pages/ncCrypto'
+import NcXuenn from './components/pages/ncXuenn'
+import Pypat from './components/pages/pypat'
+import Pingxi from './components/pages/pingxi'
 
 function App() {
   const [lang, setLang] = useState('en')
@@ -30,6 +35,24 @@ function App() {
         return <Resume locale={locale} />
       case 'Portfolio':
         return <Behance lang={lang} locale={locale} />
+      case 'Euro Cup 188 Bet Sports Book':
+        return <Behance lang={lang} locale={locale} />
+      case 'World Cup 188 / V9 / TT / R88 Bet Sports Book':
+        return <Behance lang={lang} locale={locale} />
+      case 'CoinOf Cryptocurrency Investment Advisor':
+        return <Coinof lang={lang} locale={locale} />
+      case 'CV 2017':
+        return <Behance lang={lang} locale={locale} />
+      case 'ZION GROTTA ROAD TIRE':
+        return <Zion lang={lang} locale={locale} />
+      case 'Pypat IP Services Company':
+        return <Pypat />
+      case 'Cryptocurrency Company Business Cards':
+        return <NcCrypto />
+      case 'Xuenn Digital Gaming Innovators':
+        return <NcXuenn />
+      case 'Pingxi Travellers Lodge':
+        return <Pingxi />
       case 'Technical Notes':
         return <Medium />
       case 'LinkedIn':
@@ -47,6 +70,8 @@ function App() {
         <MenuPanel
           showMenuPanel={showMenuPanel}
           toggleMenuPanel={toggleMenuPanel}
+          switchPage={switchPage}
+          page={page}
         />
         <Header
           lang={lang}
