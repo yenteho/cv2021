@@ -53,12 +53,17 @@
   "pypat.design":"Designed the user interface of the patent searching system",
   "pypat.communicate":"Communicated with clients to optimize IP strategies",
   "pypat.forecast":"Provided the technology/function matrix for technology forecasting",
+  
+  
+  
 
   "school.master":"M.A., Graduate Institute of Patent, College of Intellectual Property Studies",
   "school.master.department":"National Taiwan University of Science and Technology",
   "school.master.gpa":"(GPA 4.0/4.0)",
   "school.master.date":"SPE 2014 - JUN 2016",
   "school.master.locate":"Taipei, Taiwan",
+
+
 
   "association.nmun":"New York Model United Nations",
   "association.nmun.conf":"Attended UNEP conference and acted as a delegate of Seychelles",
@@ -131,8 +136,36 @@
   "birth":"Dec 1990",
   "birth.locate":"Taipei, Taiwan",
   "birth.family":"Art Family in Taipei",
-  "birth.learing":"Start learing sketch, watercolor, traditional Chinese painting, calligraphy and print since 5 years old"
+  "birth.learing":"Start learing sketch, watercolor, traditional Chinese painting, calligraphy and print since 5 years old",
+  
+  "coinof":"CoinOf Cryptocurrency Investment Advisor",
+  "coinof.company":"CoinOf Co., Ltd.",
+  "coinof.design":"Website",
+  "coinof.date":"May 2018",
+  "zion.animation":"Zion Grotto Road Tire",
+  "zion.animation.detail":"The Zion Grotto Road Tire combines an innovative tread pattern with a tubeless casing to create an excellent tubeless tire, which maximizes rider safety under all-conditions. Graphene technology is incorporated into the center tread area to unlock the greatest possible improvements on rolling resistance. The hexagonal lattice silica-enhanced rubber compounds further decreases rolling resistance while increasing grip, and is used to replace the traditional fillers, such as petroleum oils and carbon black. The two reflective tread shoulder rings incorporate highly reflective material rated at 1,000 candlepower for safety warning.",
+  "zion.namecard.design":"Product Design, 3D Animation, 3D Modeling, 3D Redering, Branding ",
+  "zion.namecard.date":"Jan 2017",
+  "pypat.web":"PyPat IP Services Firm",
+  "pypat.web.design":"Brand Identity, Tri-fold Brochure, DM, Envelope, User Interface",
+  "pypat.web.date":"Oct 2015",
+  "ntust.conf":"Asian Patent Attorneys Association x National Taiwan University of Science and Technology",
+  "ntust.conf.design":"Poster, Brochure, Banner, Manual",
+  "ntust.conf.date":"Feb 2016",
+  "raistone.namecard":"Rai Stone Co., Ltd.",
+  "raistone.namecard.design":"Cryptocurrency Company Business Cards",
+  "raistone.namecard.date":"Feb 2018",
+  "xuenn.namecard":"Xuenn Private Co., Ltd.",
+  "xuenn.namecard.design":"Xuenn Digital Gaming Innovators Business Cards",
+  "xuenn.namecard.date":"Nov 2017",
+  "pingxie.namecard":"Pingxi Travellers Lodge Co., Ltd.",
+  "pingxie.namecard.design":"Business Card, Coaster",
+  "pingxie.namecard.date":"Feb 2016"
 }
+
+
+
+
 
 
 

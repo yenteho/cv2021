@@ -27,7 +27,6 @@
   "yolomoto.date":"2016 九月 - 2017 二月",
   "yolomoto.locate":"台北, 台灣",
 
-
   "boehmert.company":"BOEHMERT & BOEHMERT",
   "boehmert.title":"專利工程師",
   "boehmert.date":"2016 五月 - 2016 六月",
@@ -47,11 +46,13 @@
   "pypat.communicate":"與客戶溝通優惠專利策略",
   "pypat.forecast":"透過功效矩陣製作進行技術預測",
 
+
   "school.master":"國立臺灣科技大學",
   "school.master.department":"智慧財產學院 ｜ 專利研究所",
   "school.master.gpa":"（GPA: 4.0/4.0)",
   "school.master.date":"2014 九月 -  2016 六月",
   "school.master.locate":"台北, 台灣",
+
 
   "association.nmun":"紐約模擬聯合國 New York Model United Nations",
   "association.nmun.conf":"參加聯合國環境衛生署會議並擔任塞席爾共和國代表",
@@ -123,7 +124,31 @@
   "birth":"1990 十二月",
   "birth.locate":"台北, 台灣",
   "birth.family":"藝術世家",
-  "birth.learing":"從五歲開始學習素描、水彩、國畫、書法、版畫"
+  "birth.learing":"從五歲開始學習素描、水彩、國畫、書法、版畫",
+
+  "coinof":"CoinOf 虛擬幣投資顧問",
+  "coinof.company":"CoinOf Co., Ltd.",
+  "coinof.design":"網頁",
+  "coinof.date":"2018 五月",
+  "zion.animation":"Zion Grotto 公路腳踏車輪胎",
+  "zion.animation.detail":"Zion Grotto 公路腳踏車輪胎，將創新的胎面花紋與無內胎胎體相結合，打造出出色的無內胎輪胎，可在所有情況下大幅地提高騎士的安全性。中央胎面區域採用石墨烯技術，最大限度地提高滾動阻力。六方晶格二氧化矽增強橡膠化合物在增加抓地力，同時進一步降低滾動阻力，用於替代傳統的填料，如石油和炭黑。兩個反光胎面肩環採用高反光材料，額定值為 1,000 燭光，高於安全要求。",
+  "zion.namecard.design":"產品設計、3D 動畫、3D 建模、3D 渲染、品牌設計",
+  "zion.namecard.date":"2017 一月",
+  "pypat.web":"PyPat 專利顧問公司專案",
+  "pypat.web.design":"品牌標識、三折手冊、DM、信封、網頁用戶界面",
+  "pypat.web.date":"Oct 2015",
+  "ntust.conf":"亞洲專利代理人協會x臺灣科技大學 專利實務發展與因應對策研討會",
+  "ntust.conf.design":"海報、小卡橫幅、手冊",
+  "ntust.conf.date":"2016 二月",
+  "raistone.namecard":"Rai Stone Co., Ltd.",
+  "raistone.namecard.design":"虛擬幣公司名片設計",
+  "raistone.namecard.date":"2018 二月",
+  "xuenn.namecard":"軒昂股份有限公司",
+  "xuenn.namecard.design":"名片設計",
+  "xuenn.namecard.date":"2017 十一月",
+  "pingxie.namecard":"平溪十分旅人名宿",
+  "pingxie.namecard.design":"名片、杯墊",
+  "pingxie.namecard.date":"2016 二月"
 
 }
 
