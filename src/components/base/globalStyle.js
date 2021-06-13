@@ -222,10 +222,10 @@ export const GlobalStyle = createGlobalStyle`
           height: 0px;
       }
       &::-webkit-scrollbar-track {
-          background-color:${props => props.theme.color_B2};
+          background-color:${(props) => props.theme.color_B2};
       }
       &::-webkit-scrollbar-thumb {
-          background-color:${props => props.theme.color_B2_active};
+          background-color:${(props) => props.theme.color_B2_active};
           border-radius: 6px;
       }
     }
