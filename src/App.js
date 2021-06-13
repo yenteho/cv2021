@@ -15,6 +15,7 @@ import NcCrypto from './components/pages/ncCrypto'
 import NcXuenn from './components/pages/ncXuenn'
 import Pypat from './components/pages/pypat'
 import Pingxi from './components/pages/pingxi'
+import NtustPatentConf from './components/pages/ntustPatentConf'
 
 function App() {
   const [lang, setLang] = useState('en')
@@ -24,15 +25,15 @@ function App() {
     const data = await resp.json()
     setLocale(data)
   }, [lang])
-  const [showMenuPanel, setMenuPanel] = useState(false)
+  const [showMenuPanel, setMenuPanel] = useState(true)
   const toggleMenuPanel = () => {
     setMenuPanel(!showMenuPanel)
   }
   const isDisableScroll = showMenuPanel
-  const [page, switchPage] = useState('Angel Ho')
+  const [page, switchPage] = useState('Resume')
   const getCurrentPage = () => {
     switch (page) {
-      case 'Angel Ho':
+      case 'Resume':
         return <Resume locale={locale} showMenuPanel={showMenuPanel} />
       case 'Portfolio':
         return <Behance lang={lang} locale={locale} />
@@ -48,6 +49,8 @@ function App() {
         return <Zion lang={lang} locale={locale} />
       case 'Pypat IP Services Company':
         return <Pypat />
+      case 'Asian Patent Attorneys Association':
+        return <NtustPatentConf />
       case 'Cryptocurrency Company Business Cards':
         return <NcCrypto />
       case 'Xuenn Digital Gaming Innovators':
