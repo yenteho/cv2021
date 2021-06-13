@@ -1589,7 +1589,7 @@ export const PortfolioFooterWrapper = styled(RelativeWrapper)`
     }
   }
 `
-export const PortfolioFooter = ({ list, color, onClick }) => {
+export const Footer = ({ list, color, onClick }) => {
   return (
     <PortfolioFooterWrapper color={color}>
       <FlexCenterColumn>
@@ -3478,8 +3478,11 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
       &:hover {
         cursor: pointer;
         background: ${(props) => props.theme.color_B2_hover};
-        ${F14}, ${F12} {
+        ${F14} {
           color: ${(props) => props.theme.color_T2_hover};
+        }
+        ${F12} {
+          color: ${(props) => props.theme.color_T2s_hover};
         }
         g {
           fill: ${(props) =>
@@ -3523,9 +3526,13 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
   }
   ${F12} {
     ${Truncate(1)}
-    color: ${(props) => props.theme.color_A3};
+    color: ${(props) => props.theme.color_T2s};
+    ${(props) =>
+      props.active
+        ? `color: ${props.theme.color_T2s_active};`
+        : `color: ${props.theme.color_T2s};`}
   }
-  ${F14}, ${F12} {
+  ${F14} {
     ${Truncate(2)}
     ${(props) =>
       props.active

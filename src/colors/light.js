@@ -72,6 +72,9 @@ const color_T1_active = `${tint(1.0, `${primary}`)}`
 const color_T2 = `${primary}`
 const color_T2_hover = `${mix(0.2, '#000', `${primary}`)}`
 const color_T2_active = `${mix(0.5, '#000', `${primary}`)}`
+const color_T2s = `${tint(0.4, `${color_T2}`)}`
+const color_T2s_hover = `${mix(0.2, '#000', `${color_T2s}`)}`
+const color_T2s_active = `${mix(0.5, '#000', `${color_T2s}`)}`
 const color_TH = `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`
 const color_TH_hover = `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`
 const color_TH_active = `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`
@@ -114,6 +117,9 @@ export default {
   color_T2,
   color_T2_hover,
   color_T2_active,
+  color_T2s,
+  color_T2s_hover,
+  color_T2s_active,
   color_TH,
   color_TH_hover,
   color_TH_active,

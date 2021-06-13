@@ -8,7 +8,7 @@ import {
   PortfolioWrapper,
   ContentHeader,
   PortfolioDetail,
-  PortfolioFooter,
+  Footer,
 } from '../base/common'
 import { contactData } from '../data/contactData'
 const itemsTask = async () => {
@@ -24,12 +24,6 @@ const itemsTask = async () => {
   }
 }
 
-const layers = [
-  {
-    image: `${Images.Pypat_Web}`,
-    amount: 0.5,
-  },
-]
 const Pypat = ({ locale }) => {
   const [items, setItems] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
@@ -45,48 +39,45 @@ const Pypat = ({ locale }) => {
 
   return (
     <IntlProvider messages={locale}>
-      <ParallaxProvider>
-        <PortfolioWrapper
-          gradientColor0={'#DDDDDD'}
-          gradientColor25={'#C6C6C6'}
-          gradientColor75={'#E2E2E2'}
-          gradientColor100={'#858585'}
-        >
-          {/* <ContentHeader
-            layers={layers}
-            img={Images.Pypat_Web}
-            alt="Football"
-            eventPeriod={
-              <FormattedMessage
-                id="pypat.company"
-              />
-            }
-            competition={
-              'Brand Identity, Tri-fold Brochure, DM, Envelope, User Interface'
-            }
-          /> */}
-          <PortfolioDetail
-            color="#696969"
-            item="PyPat IP Services Firm"
-            type="Brand Identity, Tri-fold Brochure, DM, Envelope, User Interface"
-            bu={
-              <FormattedMessage
-                id="pypat.company"
-                defaultMessage="PyPat IP Services Co., Ltd."
-              />
-            }
-            date={<FormattedMessage id="pypat.date" />}
-          />
-          <ul>
-            {items.map((item) => (
-              <li key={item.id}>
-                <Img src={item.src} />
-              </li>
-            ))}
-          </ul>
-          <PortfolioFooter color="#696969" list={contactData} />
-        </PortfolioWrapper>
-      </ParallaxProvider>
+      <PortfolioWrapper
+        gradientColor0={'#DDDDDD'}
+        gradientColor25={'#DDDDDD'}
+        gradientColor75={'#E2E2E2'}
+        gradientColor100={'#858585'}
+      >
+        <PortfolioDetail
+          color="#696969"
+          item={
+            <FormattedMessage
+              id="pypat.web"
+              defaultMessage="PyPat IP Services Firm"
+            />
+          }
+          type={
+            <FormattedMessage
+              id="pypat.web.design"
+              defaultMessage="Brand Identity, Tri-fold Brochure, DM, Envelope, User Interface"
+            />
+          }
+          bu={
+            <FormattedMessage
+              id="pypat.company"
+              defaultMessage="PyPat IP Services Co., Ltd."
+            />
+          }
+          date={
+            <FormattedMessage id="pypat.web.date" defaultMessage="Oct 2015" />
+          }
+        />
+        <ul>
+          {items.map((item) => (
+            <li key={item.id}>
+              <Img src={item.src} />
+            </li>
+          ))}
+        </ul>
+        <Footer color="#696969" list={contactData} />
+      </PortfolioWrapper>
     </IntlProvider>
   )
 }

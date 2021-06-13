@@ -1,6 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import fetchJsonp from 'fetch-jsonp'
-import { Img } from '../base/common'
+import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
+import { FormattedMessage, IntlProvider } from 'react-intl'
+import Images from '../../images/index'
+import {
+  Img,
+  PortfolioWrapper,
+  ContentHeader,
+  PortfolioDetail,
+  Footer,
+} from '../base/common'
+import { contactData } from '../data/contactData'
 const itemsTask = async () => {
   try {
     const res = await fetchJsonp(
@@ -14,7 +24,7 @@ const itemsTask = async () => {
   }
 }
 
-const Pingxi = () => {
+const Pingxi = ({ locale }) => {
   const [items, setItems] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
 
@@ -28,15 +38,44 @@ const Pingxi = () => {
   if (!isLoaded) return <div>Loading...</div>
 
   return (
-    <div className="App">
-      <ul>
-        {items.map((item) => (
-          <li key={item.id}>
-            <Img src={item.src} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <IntlProvider messages={locale}>
+      <PortfolioWrapper
+        gradientColor0={'#D8D3CF'}
+        gradientColor25={'#D0CAC6'}
+        gradientColor75={'#CDC7C2'}
+        gradientColor100={'#CDC7C2'}
+      >
+        <PortfolioDetail
+          color="#696969"
+          item={
+            <FormattedMessage
+              id="pingxie.namecard"
+              defaultMessage="Rai Stone Co., Ltd."
+            />
+          }
+          type={
+            <FormattedMessage
+              id="pingxie.namecard.design"
+              defaultMessage="Cryptocurrency Company Business Cards"
+            />
+          }
+          date={
+            <FormattedMessage
+              id="pingxie.namecard.date"
+              defaultMessage="Feb 2018"
+            />
+          }
+        />
+        <ul>
+          {items.map((item) => (
+            <li key={item.id}>
+              <Img src={item.src} />
+            </li>
+          ))}
+        </ul>
+        <Footer color="#696969" list={contactData} />
+      </PortfolioWrapper>
+    </IntlProvider>
   )
 }
 

@@ -2,7 +2,12 @@ import './App.css'
 import React, { useState, useEffect } from 'react'
 import AppView from './components/AppView'
 import colors from './colors/light.js'
-import { ThemeProvider, Container, PageWrapper } from './components/base/common'
+import {
+  ThemeProvider,
+  Container,
+  PageWrapper,
+  Footer,
+} from './components/base/common'
 import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 import Header from './components/nav/header'
 import { MenuPanel } from './components/panel/menuPanel'
@@ -16,7 +21,16 @@ import NcXuenn from './components/pages/ncXuenn'
 import Pypat from './components/pages/pypat'
 import Pingxi from './components/pages/pingxi'
 import NtustPatentConf from './components/pages/ntustPatentConf'
-
+import { contactData } from './components/data/contactData'
+import Portfolio from './components/pages/portfolio'
+import {
+  pypatData,
+  xuennData,
+  raistoneData,
+  pingxiData,
+  ntustconfData,
+  zionData,
+} from './components/data/portfolioData'
 function App() {
   const [lang, setLang] = useState('en')
   const [locale, setLocale] = useState(undefined)
@@ -41,38 +55,62 @@ function App() {
         return <Resume lang={lang} locale={locale} />
       case 'World Cup 188 / V9 / TT / R88 Bet Sports Book':
         return <Resume lang={lang} locale={locale} />
-      case 'CoinOf Cryptocurrency Investment Advisor':
-        return <Coinof lang={lang} locale={locale} />
-      case 'CV 2017':
-        return <Behance lang={lang} locale={locale} />
-      case 'ZION GROTTA ROAD TIRE':
-        return <Zion lang={lang} locale={locale} />
-      case 'Pypat IP Services Company':
-        return <Pypat locale={locale} />
-      case 'Asian Patent Attorneys Association':
-        return <NtustPatentConf />
-      case 'Cryptocurrency Company Business Cards':
-        return <NcCrypto />
-      case 'Xuenn Digital Gaming Innovators':
-        return <NcXuenn />
-      case 'Pingxi Travellers Lodge':
-        return <Pingxi />
       // case 'CoinOf Cryptocurrency Investment Advisor':
-      //   return <Portfolio locale={locale} id={73184365}/>
+      //   return <Coinof locale={locale} />
       // case 'CV 2017':
-      //   return <Portfolio locale={locale} id={72853469}/>
+      //   return <Behance locale={locale} />
       // case 'ZION GROTTA ROAD TIRE':
-      //   return <Portfolio locale={locale} id={73068935}/>
+      //   return <Zion locale={locale} />
       // case 'Pypat IP Services Company':
-      //   return <Portfolio locale={locale} id={72853469}/>
+      //   return <Pypat locale={locale} />
       // case 'Asian Patent Attorneys Association':
-      //   return <Portfolio locale={locale} id={73055443}/>
+      //   return <NtustPatentConf locale={locale} />
       // case 'Cryptocurrency Company Business Cards':
-      //   return <Portfolio locale={locale} id={68127253}/>
+      //   return <NcCrypto locale={locale} />
       // case 'Xuenn Digital Gaming Innovators':
-      //   return <Portfolio locale={locale} id={72725033}/>
+      //   return <NcXuenn locale={locale} />
       // case 'Pingxi Travellers Lodge':
-      //   return <Portfolio locale={locale} id={73147273}/>
+      //   return <Pingxi locale={locale} />
+      case 'CoinOf Cryptocurrency Investment Advisor':
+        return (
+          <Portfolio locale={locale} portfolioData={pypatData} id={73184365} />
+        )
+      case 'CV 2017':
+        return (
+          <Portfolio locale={locale} portfolioData={pypatData} id={72853469} />
+        )
+      case 'ZION GROTTA ROAD TIRE':
+        return (
+          <Portfolio locale={locale} portfolioData={zionData} id={73068935} youtube={true}/>
+        )
+      case 'Pypat IP Services Company':
+        return (
+          <Portfolio
+            locale={locale}
+            portfolioData={ntustconfData}
+            id={72853469}
+          />
+        )
+      case 'Asian Patent Attorneys Association':
+        return (
+          <Portfolio locale={locale} portfolioData={pypatData} id={73055443} />
+        )
+      case 'Cryptocurrency Company Business Cards':
+        return (
+          <Portfolio
+            locale={locale}
+            portfolioData={raistoneData}
+            id={68127253}
+          />
+        )
+      case 'Xuenn Digital Gaming Innovators':
+        return (
+          <Portfolio locale={locale} portfolioData={xuennData} id={72725033} />
+        )
+      case 'Pingxi Travellers Lodge':
+        return (
+          <Portfolio locale={locale} portfolioData={pingxiData} id={73147273} />
+        )
       case 'Technical Notes':
         return <Medium />
       case 'LinkedIn':
