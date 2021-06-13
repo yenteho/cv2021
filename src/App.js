@@ -2,7 +2,7 @@ import './App.css'
 import React, { useState, useEffect } from 'react'
 import AppView from './components/AppView'
 import colors from './colors/light.js'
-import { ThemeProvider, Container } from './components/base/common'
+import { ThemeProvider, Container, PageWrapper } from './components/base/common'
 import { ResetStyle, GlobalStyle } from './components/base/globalStyle'
 import Header from './components/nav/header'
 import { MenuPanel } from './components/panel/menuPanel'
@@ -28,11 +28,12 @@ function App() {
   const toggleMenuPanel = () => {
     setMenuPanel(!showMenuPanel)
   }
+  const isDisableScroll = showMenuPanel
   const [page, switchPage] = useState('Angel Ho')
   const getCurrentPage = () => {
     switch (page) {
       case 'Angel Ho':
-        return <Resume locale={locale} />
+        return <Resume locale={locale} showMenuPanel={showMenuPanel} />
       case 'Portfolio':
         return <Behance lang={lang} locale={locale} />
       case 'Euro Cup 188 Bet Sports Book':
@@ -66,13 +67,7 @@ function App() {
     <ThemeProvider theme={{ ...colors }}>
       <ResetStyle />
       <GlobalStyle />
-      <Container>
-        <MenuPanel
-          showMenuPanel={showMenuPanel}
-          toggleMenuPanel={toggleMenuPanel}
-          switchPage={switchPage}
-          page={page}
-        />
+      <Container isDisableScroll={isDisableScroll}>
         <Header
           lang={lang}
           setLang={setLang}
@@ -81,7 +76,16 @@ function App() {
           switchPage={switchPage}
           page={page}
         />
-        {currentPage}
+        <PageWrapper showMenuPanel={showMenuPanel}>
+          <MenuPanel
+            showMenuPanel={showMenuPanel}
+            toggleMenuPanel={toggleMenuPanel}
+            switchPage={switchPage}
+            page={page}
+          />
+          <div />
+          {currentPage}
+        </PageWrapper>
       </Container>
       <AppView />
     </ThemeProvider>

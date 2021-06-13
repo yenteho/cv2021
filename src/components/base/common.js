@@ -8453,44 +8453,19 @@ export const PageWrapper = styled.div`
   background: ${(props) => props.theme.color_P4_28};
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 33%;
+  ${(props) =>
+    props.showMenuPanel
+      ? `grid-template-columns: 320px 1fr;`
+      : `grid-template-columns: 1fr;`};
   height: 100%;
   ${MopCenterScrollWrapper} {
     display: grid;
     grid-template-columns: 64px minmax(534px, 1fr);
-    ${LeftSportsWrapper} {
-      grid-row-start: 1;
-      grid-row-end: 4;
-    }
   }
-  ${AmpContentCenterWrapper} {
-    display: none;
-  }
-  ${(props) =>
-    props.rightPanelPopUp &&
-    `
-      grid-template-columns: 1fr calc(33% + 15px);
-    `}
-  ${media.desktopMedium`
-    grid-template-columns: minmax(640px, 1fr) 33.4%;
-    ${(props) =>
-      props.rightPanelPopUp &&
-      `grid-template-columns: minmax(calc(640px - 15px), 1fr) calc(33.4% + 15px);`}
-    ${MopCenterScrollWrapper}{
-      display: block;
-      ${LeftSportsWrapper} {display: none;}
-    }
-  `}
-  ${media.desktop`
+  ${media.tablet`
     display: block;
-    ${AmpContentCenterWrapper} {
-      display: block;
-    }
     ${CenterPanelWrapper} {
       padding-bottom: 0px;
-    }
-    ${RightPanelWrapper}{
-      display: none;
     }
   `}
 `
