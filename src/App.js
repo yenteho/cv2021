@@ -45,7 +45,7 @@ function App() {
     setMenuPanel(!showMenuPanel)
   }
   const isDisableScroll = showMenuPanel
-  const [page, switchPage] = useState('Pypat IP Services Company')
+  const [page, switchPage] = useState('Resume')
   const getCurrentPage = () => {
     switch (page) {
       case 'Resume':

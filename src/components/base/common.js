@@ -1550,7 +1550,7 @@ export const PortfolioDetailWrapper = styled(RelativeWrapper)`
   text-align: left;
   color: ${(props) => (props.color ? props.color : props.theme.color_T2)};
   ${FlexLeftColumn} {
-    padding: 80px 0;
+    padding: 80px 16px;
     max-width: 600px;
     margin: 0 auto;
     ${F20} {
@@ -1575,13 +1575,16 @@ export const PortfolioDetail = ({ color, item, type, bu, date, ...rest }) => {
 export const PortfolioFooterWrapper = styled(RelativeWrapper)`
   text-align: left;
   a {
-    border-right: 1px solid
-      ${(props) => (props.color ? props.color : props.theme.color_T2)};
     color: ${(props) => (props.color ? props.color : props.theme.color_T2)};
     font-size: 12px;
     padding: 0 16px;
   }
-  ${FlexCenterColumn} {
+  a:not(:last-child) {
+    border-right: 1px solid
+      ${(props) => (props.color ? props.color : props.theme.color_T2)};
+  }
+  ${FlexCenter} {
+    flex-wrap: wrap;
     padding: 80px 0;
     max-width: 600px;
     margin: 0 auto;
@@ -1593,17 +1596,15 @@ export const PortfolioFooterWrapper = styled(RelativeWrapper)`
 export const Footer = ({ list, color, onClick }) => {
   return (
     <PortfolioFooterWrapper color={color}>
-      <FlexCenterColumn>
-        <FlexCenter>
-          {list &&
-            list.length > 0 &&
-            list.map(({ rel, href, ...rest }, index) => (
-              <a href={href} key={'contact' + index} {...rest}>
-                {rel}
-              </a>
-            ))}
-        </FlexCenter>
-      </FlexCenterColumn>
+      <FlexCenter>
+        {list &&
+          list.length > 0 &&
+          list.map(({ rel, href, ...rest }, index) => (
+            <a href={href} key={'contact' + index} {...rest}>
+              {rel}
+            </a>
+          ))}
+      </FlexCenter>
     </PortfolioFooterWrapper>
   )
 }

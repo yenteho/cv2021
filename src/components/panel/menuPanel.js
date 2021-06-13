@@ -58,6 +58,7 @@ export function MenuPanel({
                 enterMenuItem={() => {
                   // closeMenuPanel()
                   switchPage(item)
+                  toggleMenuPanel()
                 }}
               />
             )
@@ -75,6 +76,7 @@ export function MenuPanel({
                 enterMenuItem={() => {
                   // closeMenuPanel()
                   switchPage(item)
+                  toggleMenuPanel()
                 }}
               />
             )
@@ -89,9 +91,11 @@ export function MenuPanel({
                 text={item}
                 subText={type}
                 {...rest}
+                active={page === item}
                 enterMenuItem={() => {
                   // closeMenuPanel()
                   switchPage(item)
+                  toggleMenuPanel()
                 }}
               />
             )
@@ -105,9 +109,11 @@ export function MenuPanel({
                 text={item}
                 subText={type}
                 {...rest}
+                active={page === item}
                 enterMenuItem={() => {
                   // closeMenuPanel()
                   switchPage(item)
+                  toggleMenuPanel()
                 }}
               />
             )
