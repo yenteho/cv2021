@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
 import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
 import { AiOutlineSketch } from 'react-icons/ai'
 import { MdWeb, MdSlowMotionVideo, MdOndemandVideo } from 'react-icons/md'
@@ -6,18 +7,19 @@ import { FaReact, FaSass } from 'react-icons/fa'
 export const AboutMeData = [
   {
     item: 'Resume',
+    text: 'Resume',
     type: 'Work Experience & Awards',
     // icon: <FaReact/>,
     // favoriteActive: true,
     // addFavorite: () => toggleList(),
   },
-  {
-    item: 'Skill Set',
-    type: '',
-    // icon: <FaSass />,
-    // favoriteActive: true,
-    // addFavorite: () => console.log('click'),
-  },
+  // {
+  // item: 'Skill Set',
+  // type: '',
+  // icon: <FaSass />,
+  // favoriteActive: true,
+  // addFavorite: () => console.log('click'),
+  // },
 ]
 export const WebDesignData = [
   {
@@ -36,38 +38,110 @@ export const WebDesignData = [
   },
   {
     item: 'CoinOf Cryptocurrency Investment Advisor',
-    type: 'UX Design / UI Design',
-    // icon: <AiOutlineSketch />,
+    text: (
+      <FormattedMessage
+        id="coinof"
+        defaultMessage="CoinOf Cryptocurrency Investment Advisor"
+      />
+    ),
+    type: <FormattedMessage id="coinof.design" defaultMessage="Website" />,
   },
-  {
-    item: 'CV 2017',
-    type: 'Web Design & Frontend Developement',
-  },
+  // {
+  //   item: 'CV 2017',
+  //   type: 'Web Design & Frontend Developement',
+  // },
 ]
 export const AnimationDesignData = [
   {
-    item: 'ZION GROTTA ROAD TIRE',
+    item: 'Zion Grotto Road Tire',
+    text: (
+      <FormattedMessage
+        id="zion.animation"
+        defaultMessage="Zion Grotto Road Tire"
+      />
+    ),
+    type: (
+      <FormattedMessage
+        id="zion.namecard.design"
+        defaultMessage="Product Design, 3D Animation, 3D Modeling, 3D Redering, Branding "
+      />
+    ),
   },
 ]
 export const GraphicDesignData = [
   {
     item: 'Pypat IP Services Company',
-    type: 'Poster, Brochure, Banner, Manual, DM, Name Card Design',
+    text: (
+      <FormattedMessage
+        id="pypat.web"
+        defaultMessage="PyPat IP Services Firm"
+      />
+    ),
+    type: (
+      <FormattedMessage
+        id="pypat.web.design"
+        defaultMessage="Brand Identity, Tri-fold Brochure, DM, Envelope, User Interface"
+      />
+    ),
   },
   {
     item: 'Asian Patent Attorneys Association',
-    type: 'Poster, Brochure, Banner, Manual Design',
+    text: (
+      <FormattedMessage
+        id="ntust.conf"
+        defaultMessage="Asian Patent Attorneys Association x National Taiwan University of Science and Technology"
+      />
+    ),
+    type: (
+      <FormattedMessage
+        id="ntust.conf.design"
+        defaultMessage="Poster, Brochure, Banner, Manual"
+      />
+    ),
   },
   {
     item: 'Cryptocurrency Company Business Cards',
-    type: 'Name Card Design',
+    text: (
+      <FormattedMessage
+        id="raistone.namecard"
+        defaultMessage="Rai Stone Co., Ltd."
+      />
+    ),
+    type: (
+      <FormattedMessage
+        id="raistone.namecard.design"
+        defaultMessage="Cryptocurrency Company Business Cards"
+      />
+    ),
   },
   {
     item: 'Xuenn Digital Gaming Innovators',
-    type: 'Name Card Design',
+    text: (
+      <FormattedMessage
+        id="xuenn.namecard"
+        defaultMessage="Rai Stone Co., Ltd."
+      />
+    ),
+    type: (
+      <FormattedMessage
+        id="xuenn.namecard.design"
+        defaultMessage="Cryptocurrency Company Business Cards"
+      />
+    ),
   },
   {
     item: 'Pingxi Travellers Lodge',
-    type: 'Name Card Design',
+    text: (
+      <FormattedMessage
+        id="pingxie.namecard"
+        defaultMessage="Rai Stone Co., Ltd."
+      />
+    ),
+    type: (
+      <FormattedMessage
+        id="pingxie.namecard.design"
+        defaultMessage="Cryptocurrency Company Business Cards"
+      />
+    ),
   },
 ]

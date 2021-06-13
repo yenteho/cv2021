@@ -28,7 +28,7 @@ const layers = [
   },
 ]
 
-const Portfolio = ({ locale, id, portfolioData,youtube }) => {
+const Portfolio = ({ locale, id, portfolioData, youtube }) => {
   const [items, setItems] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
   const itemsTask = async () => {

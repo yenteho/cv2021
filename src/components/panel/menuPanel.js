@@ -11,6 +11,7 @@ import {
   MenuPanelItemListWrapper,
   Gap48,
 } from '../base/common'
+import { FormattedMessage, IntlProvider } from 'react-intl'
 import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
 import { AiOutlineSketch } from 'react-icons/ai'
 import { MdWeb, MdSlowMotionVideo, MdOndemandVideo } from 'react-icons/md'
@@ -27,6 +28,7 @@ export function MenuPanel({
   page,
   toggleMenuPanel,
   showMenuPanel,
+  locale,
 }) {
   const [showList, setList] = useState(false)
   const toggleList = () => {
@@ -34,7 +36,7 @@ export function MenuPanel({
     setList(!showList)
   }
   return (
-    <>
+    <IntlProvider messages={locale}>
       <LeftPanelPopUpTransition show={showMenuPanel}>
         <MenuPanelHeader
           text={'Portfolio'}
@@ -44,20 +46,22 @@ export function MenuPanel({
         <MenuPanelWrapper>
           {/* <BalanceButton text={'1,340,000,000.00 RMB'} genericLoading={false} /> */}
           <MenuPanelTitle menuPanelTitle={'About Me'} />
-          {AboutMeData.map(({ icon, item, type, favorite, ...rest }, index) => (
-            <MenuPanelItem
-              key={index}
-              icon={icon}
-              text={item}
-              subText={type}
-              {...rest}
-              active={page === item}
-              enterMenuItem={() => {
-                // closeMenuPanel()
-                switchPage(item)
-              }}
-            />
-          ))}
+          {AboutMeData.map(
+            ({ icon, item, text, type, favorite, ...rest }, index) => (
+              <MenuPanelItem
+                key={index}
+                icon={icon}
+                text={text}
+                subText={type}
+                {...rest}
+                active={page === item}
+                enterMenuItem={() => {
+                  // closeMenuPanel()
+                  switchPage(item)
+                }}
+              />
+            )
+          )}
           <MenuPanelTitle menuPanelTitle={'UI UX Web Design'} />
           {WebDesignData.map(
             ({ icon, item, type, favorite, ...rest }, index) => (
@@ -121,6 +125,6 @@ export function MenuPanel({
         </MenuPanelWrapper>
       </LeftPanelPopUpTransition>
       {/* {showMenuPanel && <GreyOut />} */}
-    </>
+    </IntlProvider>
   )
 }

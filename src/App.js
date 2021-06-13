@@ -30,6 +30,7 @@ import {
   pingxiData,
   ntustconfData,
   zionData,
+  coinofData,
 } from './components/data/portfolioData'
 function App() {
   const [lang, setLang] = useState('en')
@@ -73,15 +74,20 @@ function App() {
       //   return <Pingxi locale={locale} />
       case 'CoinOf Cryptocurrency Investment Advisor':
         return (
-          <Portfolio locale={locale} portfolioData={pypatData} id={73184365} />
+          <Portfolio locale={locale} portfolioData={coinofData} id={73184365} />
         )
       case 'CV 2017':
         return (
           <Portfolio locale={locale} portfolioData={pypatData} id={72853469} />
         )
-      case 'ZION GROTTA ROAD TIRE':
+      case 'Zion Grotto Road Tire':
         return (
-          <Portfolio locale={locale} portfolioData={zionData} id={73068935} youtube={true}/>
+          <Portfolio
+            locale={locale}
+            portfolioData={zionData}
+            id={73068935}
+            youtube={true}
+          />
         )
       case 'Pypat IP Services Company':
         return (
@@ -139,6 +145,7 @@ function App() {
             toggleMenuPanel={toggleMenuPanel}
             switchPage={switchPage}
             page={page}
+            locale={locale}
           />
           <div />
           {currentPage}

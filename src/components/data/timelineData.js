@@ -3,6 +3,14 @@ import { FormattedMessage } from 'react-intl'
 import { CgWorkAlt } from 'react-icons/cg'
 import { IoSchoolSharp, IoStarSharp, IoTrophySharp } from 'react-icons/io5'
 import { FaBaby } from 'react-icons/fa'
+
+// export const getMenuPanel = (func) => [
+//   {
+//     sport: '',
+//     image: <Icon />,
+//     addFavorites: func
+//   }
+// ]
 export const timelineData = [
   {
     icon: <CgWorkAlt />,

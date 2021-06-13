@@ -1190,6 +1190,7 @@ export const Photo = styled.div`
 export const ResumePageWrapper = styled(FlexCenterColumn)`
   overflow: hidden;
   height: 100%;
+  position: relative;
 `
 export const ResumeContainer = styled(FlexCenterColumn)`
   position: relative;

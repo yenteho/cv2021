@@ -3,6 +3,25 @@ import { FormattedMessage } from 'react-intl'
 import { CgWorkAlt } from 'react-icons/cg'
 import { IoSchoolSharp, IoStarSharp, IoTrophySharp } from 'react-icons/io5'
 import { FaBaby } from 'react-icons/fa'
+
+export const coinofData = {
+  color: '#444A9F',
+  gradientColor0: '#B1D2EC',
+  gradientColor25: '#B1D2EC',
+  gradientColor75: '#F6F6F6',
+  gradientColor100: '#5858C9',
+  item: (
+    <FormattedMessage
+      id="coinof"
+      defaultMessage="CoinOf Cryptocurrency Investment Advisor"
+    />
+  ),
+  type: <FormattedMessage id="coinof.design" defaultMessage="Website" />,
+  bu: (
+    <FormattedMessage id="coinof.company" defaultMessage="CoinOf Co., Ltd." />
+  ),
+  date: <FormattedMessage id="coinof.date" defaultMessage="May 2018" />,
+}
 export const zionData = {
   color: '#ffffff',
   gradientColor0: '#0D0E0C',
