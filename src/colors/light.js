@@ -81,6 +81,7 @@ const color_Shadow = `${readableColor(
   `rgba(0, 0, 0, 0.25)`,
   false
 )}`
+const color_GreyOut = `rgba(0, 0, 0, 0.6)`
 // const color_T1 = `${readableColor(
 //   `${primary}`,
 //   `${darken(0.4, `${primary}`)}`,
@@ -133,6 +134,7 @@ export default {
   color_B2_active,
   color_B3,
   color_Shadow,
+  color_GreyOut,
   color_White,
   color_Black,
 }

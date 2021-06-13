@@ -30,7 +30,7 @@ function App() {
     setMenuPanel(!showMenuPanel)
   }
   const isDisableScroll = showMenuPanel
-  const [page, switchPage] = useState('Resume')
+  const [page, switchPage] = useState('Pypat IP Services Company')
   const getCurrentPage = () => {
     switch (page) {
       case 'Resume':
@@ -48,7 +48,7 @@ function App() {
       case 'ZION GROTTA ROAD TIRE':
         return <Zion lang={lang} locale={locale} />
       case 'Pypat IP Services Company':
-        return <Pypat />
+        return <Pypat locale={locale} />
       case 'Asian Patent Attorneys Association':
         return <NtustPatentConf />
       case 'Cryptocurrency Company Business Cards':

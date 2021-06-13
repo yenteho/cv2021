@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 import styled, { css, keyframes } from 'styled-components'
 import { F32, F24, F22, F20, F18, F16, F15, F14, F13, F12, F11 } from './font'
 import {
@@ -38,7 +39,7 @@ const sizes = {
   desktopMedium: 1279,
   desktop: 1023,
   tabletLandscape: 959,
-  tablet: 639,
+  tablet: 768,
   mobile: 319,
 }
 
@@ -1526,11 +1527,150 @@ export const RadioButton = styled.input`
   }
 `
 //-------------------- Portfolio --------------------//
+export const PortfolioWrapper = styled(RelativeWrapper)`
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    ${(props) =>
+        props.gradientColor0 ? props.gradientColor0 : props.theme.color_B3}
+      0%,
+    ${(props) =>
+        props.gradientColor25 ? props.gradientColor25 : props.theme.color_B2}
+      25%,
+    ${(props) =>
+        props.gradientColor75 ? props.gradientColor75 : props.theme.color_B1}
+      75%,
+    ${(props) =>
+        props.gradientColor100 ? props.gradientColor100 : props.theme.color_B3}
+      100%
+  );
+`
+export const PortfolioDetailWrapper = styled(RelativeWrapper)`
+  text-align: left;
+  color: ${(props) => (props.color ? props.color : props.theme.color_T2)};
+  ${FlexLeftColumn} {
+    padding: 80px 0;
+    max-width: 600px;
+    margin: 0 auto;
+    ${F20} {
+      line-height: 28px;
+    }
+  }
+`
+export const PortfolioDetail = ({ color, item, type, bu, date, ...rest }) => {
+  return (
+    <PortfolioDetailWrapper color={color}>
+      <FlexLeftColumn>
+        {item && <F20>{item}</F20>}
+        {type && <F20>{type}</F20>}
+        <br />
+        {bu && <F20>{bu}</F20>}
+        {date && <F20>{date}</F20>}
+      </FlexLeftColumn>
+    </PortfolioDetailWrapper>
+  )
+}
+
+export const PortfolioFooterWrapper = styled(RelativeWrapper)`
+  text-align: left;
+  a {
+    border-right: 1px solid
+      ${(props) => (props.color ? props.color : props.theme.color_T2)};
+    color: ${(props) => (props.color ? props.color : props.theme.color_T2)};
+    font-size: 12px;
+    padding: 0 16px;
+  }
+  ${FlexCenterColumn} {
+    padding: 80px 0;
+    max-width: 600px;
+    margin: 0 auto;
+    ${F20} {
+      line-height: 28px;
+    }
+  }
+`
+export const PortfolioFooter = ({ list, color, onClick }) => {
+  return (
+    <PortfolioFooterWrapper color={color}>
+      <FlexCenterColumn>
+        <FlexCenter>
+          {list &&
+            list.length > 0 &&
+            list.map(({ rel, href, ...rest }, index) => (
+              <a href={href} key={'contact' + index} {...rest}>
+                {rel}
+              </a>
+            ))}
+        </FlexCenter>
+      </FlexCenterColumn>
+    </PortfolioFooterWrapper>
+  )
+}
 
 export const Img = styled.img`
   max-width: 100vw;
 `
-
+export const ContentHeader = ({
+  switchPage,
+  img,
+  alt,
+  sportCarouselItems,
+  eventPeriod,
+  competition,
+  icon,
+  onClick,
+  headerActive,
+  pageHeaderTabItems,
+  tab,
+  setTab,
+  goBack,
+  layers,
+  ...rest
+}) => {
+  return (
+    <RelativeWrapper>
+      {/* <HeaderBg img={img} alt={alt}> */}
+      {eventPeriod && (
+        <PageHeaderTitle
+          eventPeriod={eventPeriod}
+          competition={competition}
+          icon={icon}
+          goBack={goBack}
+          {...rest}
+        />
+      )}
+      {tab && (
+        <RelativeWrapper>
+          <ArrowButtonLeft />
+          <ArrowButtonRight />
+          <PageHeaderWrapper img>
+            <PageHeaderTabContainer>
+              <Shadow />
+              {pageHeaderTabItems &&
+                pageHeaderTabItems.map(({ competition }, index) => (
+                  <PageHeaderTab
+                    competition={competition}
+                    active={tab === competition}
+                    switchTab={() => {
+                      setTab(competition)
+                    }}
+                  />
+                ))}
+            </PageHeaderTabContainer>
+          </PageHeaderWrapper>
+        </RelativeWrapper>
+      )}
+      <ParallaxBanner
+        layers={layers}
+        style={{
+          height: '350px',
+          filter: 'opacity(30%)',
+        }}
+      />
+      {/* </HeaderBg> */}
+    </RelativeWrapper>
+  )
+}
 //-------------------- Icons --------------------//
 export const GenericLoadingWrapper = styled.div`
   ${(props) => props.theme.icons.generic_loading} svg {
@@ -2639,42 +2779,27 @@ export const BrandWrapper = styled(RelativeWrapper)`
 `
 //-------------------- PageHeader --------------------//
 
-export const PageHeaderTitleWrapper = styled.div`
-  color: ${(props) => props.theme.color_P3_1};
-  ${FlexSpaceBetween(48)};
+export const PageHeaderTitleWrapper = styled(FlexCenter)`
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  color: ${(props) => props.theme.color_T1};
   ${F13}, ${F14} {
     ${Truncate(1)};
     color: ${(props) => props.theme.color_P3_1_OP56};
     line-height: 16px;
   }
   ${F18} {
-    ${(props) => (props.allMarketPage ? `${Truncate(2)}` : `${Truncate(1)}`)};
     color: ${(props) => props.theme.color_P3_1};
-
     margin: 4px 0px;
   }
   text-align: center;
-  ${IconWrapper48} {
-    min-width: 48px;
-  }
-  ${InfoIconWrapper} {
-    g {
-      fill: ${(props) => props.theme.color_A6_5};
-    }
-    ${IconWrapper32} {
-      @media (hover: hover) {
-        &:hover {
-          g {
-            fill: ${(props) => props.theme.color_A6_5_Lplus4};
-          }
-        }
-      }
-      &:active {
-        g {
-          fill: ${(props) => props.theme.color_A6_5_Lplus4};
-        }
-      }
-    }
+  ${FlexCenterColumn} {
+    z-index: 4;
+    width: 100%;
+    background: ${(props) => props.theme.color_GreyOut};
+    padding: 16px;
   }
 `
 export const PageHeaderWrapper = styled(FlexCenter)`
@@ -2682,36 +2807,16 @@ export const PageHeaderWrapper = styled(FlexCenter)`
   height: 40px;
   background: ${(props) => (props.img ? '' : props.theme.color_S9)};
 `
-export const PageHeaderTitle = ({
-  eventPeriod,
-  competition,
-  icon,
-  goBack,
-  toggleCompetitionPage,
-  toggleDateFilter,
-  toggleInfo,
-  allMarketPage,
-}) => (
-  <PageHeaderTitleWrapper allMarketPage={allMarketPage}>
-    {goBack ? <BackButton goBack={goBack} data-btn-back /> : <IconWrapper48 />}
+export const PageHeaderTitle = ({ eventPeriod, competition }) => (
+  <PageHeaderTitleWrapper>
     <FlexCenterColumn>
-      <F14 condensed={1} uppercase={1} data-txt-title1={`${eventPeriod}`}>
+      <F14 condensed={1} uppercase={1}>
         {eventPeriod}
       </F14>
-      <F18
-        bold={1}
-        condensed={1}
-        uppercase={1}
-        data-txt-title2={`${competition}`}
-      >
+      <F18 bold={1} condensed={1} uppercase={1}>
         {competition}
       </F18>
     </FlexCenterColumn>
-    <IconWrapper48
-      onClick={toggleCompetitionPage || toggleDateFilter || toggleInfo}
-    >
-      <IconWrapper16>{icon}</IconWrapper16>
-    </IconWrapper48>
   </PageHeaderTitleWrapper>
 )
 export const PageHeaderTabContainer = styled(FlexScrollWrapper)`
