@@ -3,7 +3,22 @@ import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
 import { AiOutlineSketch } from 'react-icons/ai'
 import { MdWeb, MdSlowMotionVideo, MdOndemandVideo } from 'react-icons/md'
 import { FaReact, FaSass } from 'react-icons/fa'
-
+export const AboutMeData = [
+  {
+    item: 'Resume',
+    type: 'Work Experience & Awards',
+    // icon: <FaReact/>,
+    // favoriteActive: true,
+    // addFavorite: () => toggleList(),
+  },
+  {
+    item: 'Skill Set',
+    type: '',
+    // icon: <FaSass />,
+    // favoriteActive: true,
+    // addFavorite: () => console.log('click'),
+  },
+]
 export const WebDesignData = [
   {
     item: 'Euro Cup 188 Bet Sports Book',
@@ -37,7 +52,11 @@ export const AnimationDesignData = [
 export const GraphicDesignData = [
   {
     item: 'Pypat IP Services Company',
-    type: 'DM / Name Card Design',
+    type: 'Poster, Brochure, Banner, Manual, DM, Name Card Design',
+  },
+  {
+    item: 'Asian Patent Attorneys Association',
+    type: 'Poster, Brochure, Banner, Manual Design',
   },
   {
     item: 'Cryptocurrency Company Business Cards',

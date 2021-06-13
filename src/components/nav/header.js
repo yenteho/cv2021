@@ -56,8 +56,8 @@ const Header = ({
             {icons}
             <HeaderItem
               competition={'Angel Ho'}
-              active={page === 'Angel Ho'}
-              switchPage={() => switchPage('Angel Ho')}
+              active={page === 'Resume'}
+              switchPage={() => switchPage('Resume')}
             />
           </FlexLeft>
           <FlexRight>

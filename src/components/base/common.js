@@ -355,6 +355,10 @@ export const Gap8 = styled.div`
 export const Gap16 = styled.div`
   border-top: 16px solid transparent;
 `
+export const Gap48 = styled.div`
+  height: 48px;
+  width: 100%;
+`
 //-------------------- Fixed Page & Wrapper --------------------//
 
 export const RelativeWrapper = styled.div`
@@ -498,6 +502,7 @@ export const KeypadTransition = styled.div`
 `
 export const MenuPanelWrapper = styled(ContentScrollWrapper)`
   background: ${(props) => props.theme.color_B2};
+  padding-bottom: 48px;
 `
 export const LeftPanelPopUpTransition = styled.div`
   width: 320px;
@@ -3368,23 +3373,23 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
       &:hover {
         cursor: pointer;
         background: ${(props) => props.theme.color_B2_hover};
-        ${F14} {
-          color: ${(props) => props.theme.color_A3};
+        ${F14}, ${F12} {
+          color: ${(props) => props.theme.color_T2_hover};
         }
         g {
           fill: ${(props) =>
-            props.multiColorIcon ? null : props.theme.color_A3};
+            props.multiColorIcon ? null : props.theme.color_T2_hover};
         }
       }
     }
     &:active {
-      background: ${(props) => props.theme.color_P3_1_OP8_1};
-      ${F14} {
-        color: ${(props) => props.theme.color_A3};
+      background: ${(props) => props.theme.color_B2_active};
+      ${F14}, ${F12} {
+        color: ${(props) => props.theme.color_T2_active};
       }
       g {
         fill: ${(props) =>
-          props.multiColorIcon ? null : props.theme.color_A3};
+          props.multiColorIcon ? null : props.theme.color_T2_active};
       }
     }
   }
@@ -3415,12 +3420,12 @@ export const MenuPanelItemWrapper = styled(RelativeWrapper)`
     ${Truncate(1)}
     color: ${(props) => props.theme.color_A3};
   }
-  ${F14} {
+  ${F14}, ${F12} {
     ${Truncate(2)}
-    color: ${(props) =>
+    ${(props) =>
       props.active
-        ? `${props.theme.color_A3}; `
-        : `${props.theme.color_P3_11_OP64};`}
+        ? `color: ${props.theme.color_T2_active}; font-weight: bold;`
+        : `color: ${props.theme.color_T2};`}
   }
 `
 export const MenuPanelItem = ({

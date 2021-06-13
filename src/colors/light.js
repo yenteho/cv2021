@@ -59,45 +59,63 @@ const color_B2 = `#BFB9C5`
 const color_B2_OP50 = `${transparentize(0.5, `${color_B2}`)}`
 const color_B2_OP70 = `${transparentize(0.3, `${color_B2}`)}`
 const color_B2_hover = `${tint(0.2, `${color_B2}`)}`
-const color_B2_sctive = `${mix(0.1, '#000', `${color_B2}`)}`
+const color_B2_active = `${mix(0.1, '#000', `${color_B2}`)}`
 const color_B3 = `#27263A`
-
-const color_Shadow = `${readableColor(
-  `${primary}`,
-  `${mix(0.8, `${primary}`, '#000')}`,
-  `rgba(0, 0, 0, 0.25)`,
-  false
-)}`
 const color_T1 = `${readableColor(
   `${primary}`,
   `${darken(0.4, `${primary}`)}`,
   `${tint(0.8, `${primary}`)}`,
   false
 )}`
-const color_T1_hover = `${readableColor(
+const color_T1_hover = `${tint(1.0, `${primary}`)}`
+const color_T1_active = `${tint(1.0, `${primary}`)}`
+const color_T2 = `${primary}`
+const color_T2_hover = `${mix(0.2, '#000', `${primary}`)}`
+const color_T2_active = `${mix(0.5, '#000', `${primary}`)}`
+const color_TH = `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`
+const color_TH_hover = `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`
+const color_TH_active = `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`
+const color_Shadow = `${readableColor(
   `${primary}`,
-  `${darken(0.6, `${primary}`)}`,
-  `${tint(1.0, `${primary}`)}`,
+  `${mix(0.8, `${primary}`, '#000')}`,
+  `rgba(0, 0, 0, 0.25)`,
   false
 )}`
-const color_T1_active = `${readableColor(
-  `${primary}`,
-  `${darken(0.6, `${primary}`)}`,
-  `${tint(1.0, `${primary}`)}`,
-  false
-)}`
-const color_T2 = `${readableColor(
-  `${primary}`,
-  `${invert(`${setHue('42', `${primary}`)}`)}`,
-  `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`,
-  false
-)}`
+// const color_T1 = `${readableColor(
+//   `${primary}`,
+//   `${darken(0.4, `${primary}`)}`,
+//   `${tint(0.8, `${primary}`)}`,
+//   false
+// )}`
+// const color_T1_hover = `${readableColor(
+//   `${primary}`,
+//   `${darken(0.6, `${primary}`)}`,
+//   `${tint(1.0, `${primary}`)}`,
+//   false
+// )}`
+// const color_T1_active = `${readableColor(
+//   `${primary}`,
+//   `${darken(0.6, `${primary}`)}`,
+//   `${tint(1.0, `${primary}`)}`,
+//   false
+// )}`
+// const color_T2 = `${readableColor(
+//   `${primary}`,
+//   `${invert(`${setHue('42', `${primary}`)}`)}`,
+//   `${setLightness(0.6, `${setHue('42', `${primary}`)}`)}`,
+//   false
+// )}`
 
 export default {
   color_T1,
   color_T1_hover,
   color_T1_active,
   color_T2,
+  color_T2_hover,
+  color_T2_active,
+  color_TH,
+  color_TH_hover,
+  color_TH_active,
   color_P1,
   color_P1_hover,
   color_P1_active,
@@ -112,7 +130,7 @@ export default {
   color_B2_OP70,
   color_B2,
   color_B2_hover,
-  color_B2_sctive,
+  color_B2_active,
   color_B3,
   color_Shadow,
   color_White,
