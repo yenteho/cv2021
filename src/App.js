@@ -57,6 +57,22 @@ function App() {
         return <NcXuenn />
       case 'Pingxi Travellers Lodge':
         return <Pingxi />
+      // case 'CoinOf Cryptocurrency Investment Advisor':
+      //   return <Portfolio locale={locale} id={73184365}/>
+      // case 'CV 2017':
+      //   return <Portfolio locale={locale} id={72853469}/>
+      // case 'ZION GROTTA ROAD TIRE':
+      //   return <Portfolio locale={locale} id={73068935}/>
+      // case 'Pypat IP Services Company':
+      //   return <Portfolio locale={locale} id={72853469}/>
+      // case 'Asian Patent Attorneys Association':
+      //   return <Portfolio locale={locale} id={73055443}/>
+      // case 'Cryptocurrency Company Business Cards':
+      //   return <Portfolio locale={locale} id={68127253}/>
+      // case 'Xuenn Digital Gaming Innovators':
+      //   return <Portfolio locale={locale} id={72725033}/>
+      // case 'Pingxi Travellers Lodge':
+      //   return <Portfolio locale={locale} id={73147273}/>
       case 'Technical Notes':
         return <Medium />
       case 'LinkedIn':
