@@ -214,6 +214,7 @@ export const GlobalStyle = createGlobalStyle`
   * {
     -webkit-tap-highlight-color: transparent;
   }
+
   @media screen and (min-width: 1024px) {
     *{
       &::-webkit-scrollbar {
@@ -240,6 +241,7 @@ export const GlobalStyle = createGlobalStyle`
     *{
       user-select: none;
     }
+    body{${(props) => props.isDisableScroll && `overflow:hidden;`};}
   }
   html {
     font-size: 62.5%;

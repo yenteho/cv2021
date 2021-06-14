@@ -12,6 +12,7 @@ import {
   Gap48,
   MenuPanelWrapperDesktop,
   MenuPanelWrapperMobile,
+  MenuPanelContainer,
 } from '../base/common'
 import { IntlProvider } from 'react-intl'
 import {
@@ -113,7 +114,7 @@ export function MenuPanel({
           <Gap48 />
         </MenuPanelWrapperMobile>
       </LeftPanelPopUpTransition>
-      {/* {showMenuPanel && <GreyOut />} */}
+      {showMenuPanel && <GreyOut />}
     </IntlProvider>
   )
 }

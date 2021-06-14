@@ -130,8 +130,8 @@ function App() {
   return (
     <ThemeProvider theme={{ ...colors }}>
       <ResetStyle />
-      <GlobalStyle />
-      <Container isDisableScroll={isDisableScroll}>
+      <GlobalStyle isDisableScroll={isDisableScroll} />
+      <Container>
         <Header
           lang={lang}
           setLang={setLang}

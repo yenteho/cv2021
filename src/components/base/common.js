@@ -420,6 +420,18 @@ export const ContentContainer = styled(RelativeWrapper)`
     `
   }} */
 `
+//-------------------- GreyOut --------------------//
+export const GreyOut = styled.div`
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: ${(props) => props.theme.color_GreyOut};
+  pointer-events: auto;
+  z-index: 3;
+`
 //-------------------- TransitionWrapper --------------------//
 const PopUpTransition = styled.div`
   transition: transform 0.3s ease;
@@ -506,17 +518,16 @@ export const MenuPanelWrapper = styled(ContentScrollWrapper)`
   padding-bottom: 48px;
 `
 export const MenuPanelWrapperMobile = styled(MenuPanelWrapper)`
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `
 export const MenuPanelWrapperDesktop = styled(MenuPanelWrapper)`
-  ${media.tablet`display:none;`}
+  ${media.desktop`display:none;`}
 `
 export const LeftPanelPopUpTransition = styled.div`
   transition: transform 0.3s ease;
   width: 320px;
-  ${media.tablet`width:100%;`}
   position: fixed;
   bottom: 0;
   top: 0;
@@ -529,6 +540,11 @@ export const LeftPanelPopUpTransition = styled.div`
   ${(props) => (props.show ? `width: 100%;` : `width: 0px;`)};  */
   z-index: 4;
   pointer-events: auto;
+  ~ ${GreyOut} {
+    display: none;
+
+    ${media.desktop`display: block;`}
+  }
 `
 //-------------------- BetSlip Keypad Button  --------------------//
 export const KeypadButtonWrapper = styled(FlexCenter)`
@@ -959,18 +975,7 @@ export const PageBottomSpace = styled.div`
   width: 100%;
   ${media.desktop`min-height: 160px;`}
 `
-//-------------------- GreyOut --------------------//
-export const GreyOut = styled.div`
-  transform: translate3d(0, 0, 0);
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: ${(props) => (props.wlbRightPanel ? '5' : '3')};
-  background: ${(props) => props.theme.color_P3_OP32};
-  pointer-events: auto;
-`
+
 //-------------------- Loading --------------------//
 export const Loading = styled.div`
   width: 44px;
@@ -3608,8 +3613,6 @@ export const MenuPanelItem = ({
 )
 
 export const MenuPanelItemListWrapper = styled(RelativeWrapper)``
-
-export const MenuPanelContainer = styled(RelativeWrapper)``
 
 //-------------------- Settings Panel --------------------//
 const SettingsItemWrapper = styled(FlexLeft)`
@@ -8596,7 +8599,7 @@ export const PageWrapper = styled.div`
     display: grid;
     grid-template-columns: 64px minmax(534px, 1fr);
   }
-  ${media.tablet`
+  ${media.desktop`
     display: block;
     ${CenterPanelWrapper} {
       padding-bottom: 0px;
