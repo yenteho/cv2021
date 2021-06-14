@@ -10,10 +10,16 @@
   "resume.Github":"https://github.com/yenteho ",
   "resume.Website":"http://angelho.design",
 
-  "xuenn.company":"Xuenn Pte Ltd. – Online digital gaming company ",
+  "xuenn.company":"Xuenn Pte Ltd.",
+  "xuenn.type":"Online digital gaming company ",
   "xuenn.title":"IT Consultant – Sports UI Designer",
   "xuenn.locate":"Taipei, Taiwan",
   "xuenn.date":"JUL 2017 - Present Taipei, Taiwan ",
+  
+  "xuenn.eu":"2020 Euro Cup Megatron",
+  "xuenn.eu.type":"Implemented the largest scale responsive web frontend revamp of our website",
+  "xuenn.eu.time":"Aug 2018 - Jun 2021",
+  "xuenn.eu.design":"UI UX Website",
   "xuenn.eu.line1":"Introduced React Styled Components in React to instead of SASS for avoiding CSS class duplication, overlap, misspellings or pollution. ",
   "xuenn.eu.line2":"Imported React Context API to build expandable, flexible and automatic color system. ",
   "xuenn.eu.line3":"Developed Theme Generator for automatic color customization. ",
@@ -21,20 +27,36 @@
   "xuenn.eu.line5":"Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. ",
   "xuenn.eu.line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
   "xuenn.eu.line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time.",
-  "xuenn.wc":"",
+  "xuenn.wc":"2018 FIFA World Cup",
+  "xuenn.wc.type":"Completed sports competition product UI revamp and was 24/7 standing by our website during competition.",
+  "xuenn.wc.time":"JUL 2017 - JUL 2018",
+  "xuenn.wc.brands":"Supported current 4 online brands, 188bet, TouTou, Rich88 and V9BET Sports Website in Desktop, Mobile and Tablet devices, keep html /css mockup consistent with design guideline, and provided suggestions for our partners of their CSS customization.",
+  "xuenn.wc.negotiate":"Negotiated and coordinated with user in Philippines to discuss and check the final layouts, interactions and functions in InVision, Sketch and Zeplin. ",
+  "xuenn.wc.translate":"Executed and translated requirements of visual design performances into precise, intuitive, and functional user interfaces",
+  "xuenn.wc.train":"Trained developers on using Zeplin, InVision and Sketch tools to improve efficiency.",
+  "xuenn.wc.test":"Tested front-end code in multiple browsers to ensure cross-browser compatibility.",
+  "xuenn.wc.integrate":"Integrated BetRadar and Scoreboards, and divided LiveCenter and Feedex from original website to provide customized possibility for users, including football, basketball, tennis, ice hockey, rugby, darts, baseball, cricket, generic sports and other net sports.",
 
   "rapaq.company":"Frontend Engineer",
-  "rapaq.title":"RapaQ Co., Ltd., – E-commerce and social media for design professionals",
+  "rapaq.title":"RapaQ Co., Ltd.,",
+  "raoaq.type":"E-commerce and social media for design professionals",
   "rapaq.date":"MAR 2017 - JUN 2017",
   "rapaq.locate":"Taipei, Taiwan",
-
+  "rapaq.ec":"Used HTML, CSS(SCSS), JavaScript and jQuery to create user-friendly web pages for E-commerce ",
 
   "yolomoto.company":"Web Designer / Graphic Designer / Industrial Designer/ Animation Designer",
   "yolomoto.title":"Yolomoto Co., Ltd.  – Tire manufacturing startup company",
   "yolomoto.date":"SPE 2016 - FEB 2017",
   "yolomoto.locate":"Taipei, Taiwan",
 
-
+  "yolomoto.graphic":"Graphic Design - used Adobe Graphic software as Photoshop and Illustrator to design Logo, business card and Brochures",
+  "yolomoto.industrial":"Industrial Design - used Alias and Autodesk Showcase to make bike tire modeling and rendering",
+  "yolomoto.animation":"Animation Design - used Blender and After Effects to build 3D models and animation films",
+  "yolomoto.web":"Designed and developed business website for start-up company",
+  "yolomoto.frontend":"Used HTML5, CSS3, JavaScript and Bootstrap3 and JQuery to make user interface",
+  "yolomoto.consult":"Consulted on various materials and design techniques for new product lines and trade show displays",
+  "yolomoto.reddot":"Attended red-dot design competition ",
+  
   "boehmert.company":"Patent Engineer Intern",
   "boehmert.title":"BOEHMERT & BOEHMERT",
   "boehmert.date":"MAY 2016 - JUN 2016",
@@ -54,16 +76,11 @@
   "pypat.communicate":"Communicated with clients to optimize IP strategies",
   "pypat.forecast":"Provided the technology/function matrix for technology forecasting",
   
-  
-  
-
   "school.master":"M.A., Graduate Institute of Patent, College of Intellectual Property Studies",
   "school.master.department":"National Taiwan University of Science and Technology",
   "school.master.gpa":"(GPA 4.0/4.0)",
   "school.master.date":"SPE 2014 - JUN 2016",
   "school.master.locate":"Taipei, Taiwan",
-
-
 
   "association.nmun":"New York Model United Nations",
   "association.nmun.conf":"Attended UNEP conference and acted as a delegate of Seychelles",
