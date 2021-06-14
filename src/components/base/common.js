@@ -1072,7 +1072,7 @@ export const Counter = ({ counter }) => (
 
 export const MenuButtonWrapper = styled(FlexLeft)`
   height: 100%;
-  padding: ${(props) => (props.icon ? '16px 0 0 0' : '0 16px')};
+  padding: ${(props) => (props.icon ? '0 16px 0 0' : '0 16px')};
   ${F14} {
     line-height: 48px;
   }

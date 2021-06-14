@@ -11,18 +11,16 @@ import {
   MenuPanelItemListWrapper,
   Gap48,
 } from '../base/common'
-import { FormattedMessage, IntlProvider } from 'react-intl'
-import { SiAdobephotoshop, SiAdobexd, SiAdobeillustrator } from 'react-icons/si'
-import { AiOutlineSketch } from 'react-icons/ai'
-import { MdWeb, MdSlowMotionVideo, MdOndemandVideo } from 'react-icons/md'
+import { IntlProvider } from 'react-intl'
 import {
   WebDesignData,
   GraphicDesignData,
   AnimationDesignData,
   AboutMeData,
 } from '../data/menuPanelData'
-// import { MenuPanelInfoData } from '../../Data/menuPanelInfoData'
 
+// testData(() => {a() b()}).map
+// testData(() => {}, () => {}).map
 export function MenuPanel({
   switchPage,
   page,
@@ -44,80 +42,28 @@ export function MenuPanel({
           debug={() => console.log('debug')}
         />
         <MenuPanelWrapper>
-          {/* <BalanceButton text={'1,340,000,000.00 RMB'} genericLoading={false} /> */}
-          <MenuPanelTitle menuPanelTitle={'About Me'} />
-          {AboutMeData.map(
-            ({ icon, item, text, type, favorite, ...rest }, index) => (
-              <MenuPanelItem
-                key={index}
-                icon={icon}
-                text={text}
-                subText={type}
-                {...rest}
-                active={page === item}
-                enterMenuItem={() => {
-                  // closeMenuPanel()
-                  switchPage(item)
-                  toggleMenuPanel()
-                }}
-              />
-            )
-          )}
-          <MenuPanelTitle menuPanelTitle={'UI UX Web Design'} />
-          {WebDesignData.map(
-            ({ icon, item, type, favorite, ...rest }, index) => (
-              <MenuPanelItem
-                key={index}
-                icon={icon}
-                text={item}
-                subText={type}
-                {...rest}
-                active={page === item}
-                enterMenuItem={() => {
-                  // closeMenuPanel()
-                  switchPage(item)
-                  toggleMenuPanel()
-                }}
-              />
+          {AboutMeData(() => toggleMenuPanel()).map(
+            ({ menuPanelTitle, list = [], ...rest }, index) => (
+              <>
+                <MenuPanelTitle menuPanelTitle={menuPanelTitle} />
+                {list.map(({ icon, text, type, item, ...rest }, index) => (
+                  <MenuPanelItem
+                    key={index}
+                    icon={icon}
+                    text={text}
+                    subText={type}
+                    {...rest}
+                    active={page === item}
+                    enterMenuItem={() => {
+                      switchPage(item)
+                      // toggleMenuPanel()
+                    }}
+                  />
+                ))}
+              </>
             )
           )}
 
-          <MenuPanelTitle menuPanelTitle={'Animation'} />
-          {AnimationDesignData.map(
-            ({ icon, item, type, favorite, ...rest }, index) => (
-              <MenuPanelItem
-                key={index}
-                icon={icon}
-                text={item}
-                subText={type}
-                {...rest}
-                active={page === item}
-                enterMenuItem={() => {
-                  // closeMenuPanel()
-                  switchPage(item)
-                  toggleMenuPanel()
-                }}
-              />
-            )
-          )}
-          <MenuPanelTitle menuPanelTitle={'Graphic Design'} />
-          {GraphicDesignData.map(
-            ({ icon, item, type, favorite, ...rest }, index) => (
-              <MenuPanelItem
-                key={index}
-                icon={icon}
-                text={item}
-                subText={type}
-                {...rest}
-                active={page === item}
-                enterMenuItem={() => {
-                  // closeMenuPanel()
-                  switchPage(item)
-                  toggleMenuPanel()
-                }}
-              />
-            )
-          )}
           {/* <Separator1 /> */}
           {/* <MenuPanelItem
             text={'Settings'}
