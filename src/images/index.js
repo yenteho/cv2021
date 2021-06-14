@@ -51,5 +51,5 @@ export default {
   TC_boat,
   Water_boat,
   Print_TC,
-  Print_flower
+  Print_flower,
 }

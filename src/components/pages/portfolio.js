@@ -266,9 +266,9 @@ const Portfolio = ({
                 }
               />
               <Img src={Images.TC_tiger} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.TC_vegetables} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.TC_bitter} />
               {/* <Img src={Images.TC_boat} /> */}
               <PortfolioDetail
@@ -276,21 +276,26 @@ const Portfolio = ({
                 item={<FormattedMessage id="sketch" defaultMessage="sketch" />}
               />
               <Img src={Images.Sketch_war} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Sketch_light} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Sketch_car} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Sketch_crab} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Sketch_lizard} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Sketch_baby} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Sketch_camera} />
               <PortfolioDetail
                 color="#696969"
-                item={<FormattedMessage id="watercolor" defaultMessage="watercolor" />}
+                item={
+                  <FormattedMessage
+                    id="watercolor"
+                    defaultMessage="watercolor"
+                  />
+                }
               />
               <Img src={Images.Water_boat} />
               <PortfolioDetail
@@ -298,7 +303,7 @@ const Portfolio = ({
                 item={<FormattedMessage id="print" defaultMessage="print" />}
               />
               <Img src={Images.Print_flower} />
-              <Gap48/>
+              <Gap48 />
               <Img src={Images.Print_TC} />
             </>
           )}
