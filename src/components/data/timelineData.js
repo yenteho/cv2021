@@ -487,7 +487,7 @@ export const timelineData = [
   {
     icon: <IoTrophySharp />,
     date: (
-      <FormattedMessage id="school.juniorhigh.date" defaultMessage="APR 2006" />
+      <FormattedMessage id="school.juniorhigh.award.date" defaultMessage="APR 2006" />
     ),
     location: (
       <FormattedMessage
