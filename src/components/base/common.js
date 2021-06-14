@@ -1113,7 +1113,11 @@ export const MenuButtonWrapper = styled(FlexLeft)`
 export const MenuButton = ({ icon, toggleMenuPanel, text }) => (
   <MenuButtonWrapper onClick={toggleMenuPanel} icon={icon}>
     {icon && <IconWrapper24>{icon}</IconWrapper24>}
-    {text && <F14 uppercase>{text}</F14>}
+    {text && (
+      <F16 condensed={1} uppercase={1}>
+        {text}
+      </F16>
+    )}
   </MenuButtonWrapper>
 )
 
@@ -3427,7 +3431,9 @@ export const MenuPanelHeader = ({ text, closePanel }) => (
         <HiMenu />
       </IconWrapper24>
       <FlexLeft>
-        <F16 uppercase={1}>{text}</F16>
+        <F16 condensed={1} uppercase={1}>
+          {text}
+        </F16>
       </FlexLeft>
       {closePanel && <CloseButton onClick={closePanel} />}
     </PanelHeaderWrapper>
