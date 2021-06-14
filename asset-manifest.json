@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.64fdd56d.chunk.css",
-    "main.js": "/static/js/main.564d2a94.chunk.js",
-    "main.js.map": "/static/js/main.564d2a94.chunk.js.map",
+    "main.js": "/static/js/main.f4870b2a.chunk.js",
+    "main.js.map": "/static/js/main.f4870b2a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5c35a1ff.js",
     "runtime-main.js.map": "/static/js/runtime-main.5c35a1ff.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/static/css/2.2aa38b9c.chunk.css",
@@ -14,15 +14,20 @@
     "static/css/2.2aa38b9c.chunk.css.map": "/static/css/2.2aa38b9c.chunk.css.map",
     "static/css/main.64fdd56d.chunk.css.map": "/static/css/main.64fdd56d.chunk.css.map",
     "static/js/2.45a3bb5c.chunk.js.LICENSE.txt": "/static/js/2.45a3bb5c.chunk.js.LICENSE.txt",
+    "static/media/188Bet.4d06de2a.mp4": "/static/media/188Bet.4d06de2a.mp4",
     "static/media/photo.9ed3873d.jpg": "/static/media/photo.9ed3873d.jpg",
     "static/media/pypat-web.09a193cf.jpg": "/static/media/pypat-web.09a193cf.jpg",
-    "static/media/working_photo_clear.dda44263.jpg": "/static/media/working_photo_clear.dda44263.jpg"
+    "static/media/wc.4a8d9326.mp4": "/static/media/wc.4a8d9326.mp4",
+    "static/media/working_photo_clear.dda44263.jpg": "/static/media/working_photo_clear.dda44263.jpg",
+    "static/media/xuennZeplinTheme.09beea9f.mp4": "/static/media/xuennZeplinTheme.09beea9f.mp4",
+    "static/media/xuenncolor.ad20c3c6.mp4": "/static/media/xuenncolor.ad20c3c6.mp4",
+    "static/media/xuennstorybook.0944dd6f.mp4": "/static/media/xuennstorybook.0944dd6f.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.5c35a1ff.js",
     "static/css/2.2aa38b9c.chunk.css",
     "static/js/2.45a3bb5c.chunk.js",
     "static/css/main.64fdd56d.chunk.css",
-    "static/js/main.564d2a94.chunk.js"
+    "static/js/main.f4870b2a.chunk.js"
   ]
 }
