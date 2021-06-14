@@ -10,8 +10,13 @@ export const AboutMeData = (func) => [
     list: [
       {
         item: 'Resume',
-        text: 'Resume',
-        type: 'Work Experience & Awards',
+        text: <FormattedMessage id="resume" defaultMessage="Resume" />,
+        type: (
+          <FormattedMessage
+            id="resume.type"
+            defaultMessage="Work Experience and Awards"
+          />
+        ),
         // icon: <FaReact/>,
         // favoriteActive: true,
         // addFavorite: () => toggleList(),
@@ -30,16 +35,36 @@ export const AboutMeData = (func) => [
     list: [
       {
         item: 'Euro Cup 188 Bet Sports Book',
-        text: 'Euro Cup 188 Bet Sports Book',
-        type: 'Web Design & Frontend Developement',
+        text: (
+          <FormattedMessage
+            id="xuenn.eu"
+            defaultMessage="2020 Euro Cup Megatron"
+          />
+        ),
+        type: (
+          <FormattedMessage
+            id="xuenn.eu.design"
+            defaultMessage="UI UX Website and Frontend Developement"
+          />
+        ),
         // icon: <FaReact/>,
         // favoriteActive: true,
         // addFavorite: () => toggleList(),
       },
       {
         item: 'World Cup 188 / V9 / TT / R88 Bet Sports Book',
-        text: 'World Cup 188 / V9 / TT / R88 Bet Sports Book',
-        type: 'Frontend Developement',
+        text: (
+          <FormattedMessage
+            id="xuenn.wc"
+            defaultMessage="2018 FIFA World Cup"
+          />
+        ),
+        type: (
+          <FormattedMessage
+            id="xuenn.wc.design"
+            defaultMessage="UI UX Website and Frontend Developement"
+          />
+        ),
         // icon: <FaSass />,
         // favoriteActive: true,
         // addFavorite: () => console.log('click'),
