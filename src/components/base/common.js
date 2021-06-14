@@ -505,10 +505,18 @@ export const MenuPanelWrapper = styled(ContentScrollWrapper)`
   background: ${(props) => props.theme.color_B2};
   padding-bottom: 48px;
 `
+export const MenuPanelWrapperMobile = styled(MenuPanelWrapper)`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
+export const MenuPanelWrapperDesktop = styled(MenuPanelWrapper)`
+  ${media.tablet`display:none;`}
+`
 export const LeftPanelPopUpTransition = styled.div`
+  transition: transform 0.3s ease;
   width: 320px;
   ${media.tablet`width:100%;`}
-  transition: transform 0.3s ease;
   position: fixed;
   bottom: 0;
   top: 0;
@@ -3416,7 +3424,7 @@ export const MenuPanelHeader = ({ text, closePanel }) => (
       <FlexLeft>
         <F16 uppercase={1}>{text}</F16>
       </FlexLeft>
-      <CloseButton onClick={closePanel} />
+      {closePanel && <CloseButton onClick={closePanel} />}
     </PanelHeaderWrapper>
     {/* <ShadowLine/> */}
   </>
@@ -8573,6 +8581,7 @@ export const FilterLocateWrapperInner = styled.div`
     grid-template-columns: 0 100% 0;
   `}
 `
+
 export const PageWrapper = styled.div`
   overflow-y: hidden;
   background: ${(props) => props.theme.color_P4_28};

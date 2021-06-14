@@ -10,6 +10,8 @@ import {
   MenuPanelWrapper,
   MenuPanelItemListWrapper,
   Gap48,
+  MenuPanelWrapperDesktop,
+  MenuPanelWrapperMobile,
 } from '../base/common'
 import { IntlProvider } from 'react-intl'
 import {
@@ -21,6 +23,69 @@ import {
 
 // testData(() => {a() b()}).map
 // testData(() => {}, () => {}).map
+
+const MenuPanelList = ({ page, switchPage }) => {
+  const [showList, setList] = useState(false)
+  const toggleList = () => {
+    // console.log('TCL: showList', showList)
+    setList(!showList)
+  }
+  return (
+    <>
+      {AboutMeData().map(({ menuPanelTitle, list = [], ...rest }, index) => (
+        <>
+          <MenuPanelTitle menuPanelTitle={menuPanelTitle} />
+          {list.map(({ icon, text, type, item, ...rest }, index) => (
+            <MenuPanelItem
+              key={index}
+              icon={icon}
+              text={text}
+              subText={type}
+              {...rest}
+              active={page === item}
+              enterMenuItem={() => {
+                switchPage(item)
+              }}
+            />
+          ))}
+        </>
+      ))}
+    </>
+  )
+}
+const MenuPanelListMobile = ({ page, switchPage, toggleMenuPanel }) => {
+  const [showList, setList] = useState(false)
+  const toggleList = () => {
+    // console.log('TCL: showList', showList)
+    setList(!showList)
+  }
+  return (
+    <>
+      {AboutMeData(() => toggleMenuPanel()).map(
+        ({ menuPanelTitle, list = [], ...rest }, index) => (
+          <>
+            <MenuPanelTitle menuPanelTitle={menuPanelTitle} />
+            {list.map(({ icon, text, type, item, ...rest }, index) => (
+              <MenuPanelItem
+                key={index}
+                icon={icon}
+                text={text}
+                subText={type}
+                {...rest}
+                active={page === item}
+                enterMenuItem={() => {
+                  switchPage(item)
+                  toggleMenuPanel()
+                }}
+              />
+            ))}
+          </>
+        )
+      )}
+    </>
+  )
+}
+
 export function MenuPanel({
   switchPage,
   page,
@@ -28,11 +93,6 @@ export function MenuPanel({
   showMenuPanel,
   locale,
 }) {
-  const [showList, setList] = useState(false)
-  const toggleList = () => {
-    // console.log('TCL: showList', showList)
-    setList(!showList)
-  }
   return (
     <IntlProvider messages={locale}>
       <LeftPanelPopUpTransition show={showMenuPanel}>
@@ -41,42 +101,35 @@ export function MenuPanel({
           closePanel={toggleMenuPanel}
           debug={() => console.log('debug')}
         />
-        <MenuPanelWrapper>
-          {AboutMeData(() => toggleMenuPanel()).map(
-            ({ menuPanelTitle, list = [], ...rest }, index) => (
-              <>
-                <MenuPanelTitle menuPanelTitle={menuPanelTitle} />
-                {list.map(({ icon, text, type, item, ...rest }, index) => (
-                  <MenuPanelItem
-                    key={index}
-                    icon={icon}
-                    text={text}
-                    subText={type}
-                    {...rest}
-                    active={page === item}
-                    enterMenuItem={() => {
-                      switchPage(item)
-                      // toggleMenuPanel()
-                    }}
-                  />
-                ))}
-              </>
-            )
-          )}
+        <MenuPanelWrapperDesktop>
+          <MenuPanelList switchPage={switchPage} />
+          <Gap48 />
+        </MenuPanelWrapperDesktop>
+        <MenuPanelWrapperMobile>
+          <MenuPanelListMobile
+            toggleMenuPanel={toggleMenuPanel}
+            switchPage={switchPage}
+          />
+          <Gap48 />
+        </MenuPanelWrapperMobile>
+      </LeftPanelPopUpTransition>
+      {/* {showMenuPanel && <GreyOut />} */}
+    </IntlProvider>
+  )
+}
 
-          {/* <Separator1 /> */}
-          {/* <MenuPanelItem
+{
+  /* <Separator1 /> */
+}
+{
+  /* <MenuPanelItem
             text={'Settings'}
             enterMenuItem={() => toggleList()}
           />
           {showList && (
             <MenuPanelItemListWrapper>Test Panel</MenuPanelItemListWrapper>
-          )} */}
-          {/* <Separator1 /> */}
-          <Gap48 />
-        </MenuPanelWrapper>
-      </LeftPanelPopUpTransition>
-      {/* {showMenuPanel && <GreyOut />} */}
-    </IntlProvider>
-  )
+          )} */
+}
+{
+  /* <Separator1 /> */
 }

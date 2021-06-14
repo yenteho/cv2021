@@ -51,12 +51,12 @@ const Header = ({
         // ref={scrollRef}
         >
           <FlexLeft onClick={() => console.log('>')}>
-            {icons}
+            {/* {icons}
             <HeaderItem
               competition={'Resume'}
               active={page === 'Resume'}
               switchPage={() => switchPage('Resume')}
-            />
+            /> */}
           </FlexLeft>
           <FlexRight>
             {/* {headerData.map(({ item, counter, ...rest }, index) => (
