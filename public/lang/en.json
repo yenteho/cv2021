@@ -151,6 +151,20 @@
   "school.elementary.locate":"Taipei, Taiwan",
   "school.elementary.date":"SPE 1999 - JUN 2003",
 
+  "awards":"Awards",
+  "awards.type":"YODEX, IF",
+  "awards.if":"Hearing Spaces",
+  "awards.if.type":"IF Interior Design",
+  "art":"Art",
+  "handpainting":"Hand Painting",
+  "handpainting.type":"sketch, watercolor, traditional Chinese painting, calligraphy and print",
+  "handpainting.type.date":"Student projects",
+  "sketch":"sketch",
+  "watercolor":"watercolor",
+  "traditionalchinesepainting":"traditional Chinese painting",
+  "calligraphy":"calligraphy",
+  "print":"print",
+
 
   "birth":"Dec 1990",
   "birth.locate":"Taipei, Taiwan",

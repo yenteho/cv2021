@@ -1631,9 +1631,13 @@ export const PortfolioDetail = ({ color, item, type, bu, date, ...rest }) => {
       <FlexLeftColumn>
         {item && <F20>{item}</F20>}
         {type && <F20>{type}</F20>}
-        <br />
-        {bu && <F20>{bu}</F20>}
-        {date && <F20>{date}</F20>}
+        {(bu || date) && (
+          <>
+            <br />
+            {bu && <F20>{bu}</F20>}
+            {date && <F20>{date}</F20>}
+          </>
+        )}
       </FlexLeftColumn>
     </PortfolioDetailWrapper>
   )
@@ -1677,7 +1681,8 @@ export const Footer = ({ list, color, onClick }) => {
 }
 
 export const Img = styled.img`
-  max-width: 100vw;
+  width: 600px;
+  ${media.desktop`max-width: 100vw;`}
 `
 export const VideoWrapper = styled.video`
   max-width: 600px;

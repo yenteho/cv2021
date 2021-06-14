@@ -32,6 +32,8 @@ import {
   coinofData,
   euData,
   wcData,
+  artData,
+  awardsData,
 } from './components/data/portfolioData'
 
 // const isTouchScreen = 'ontouchstart' in document.documentElement
@@ -104,6 +106,12 @@ function App() {
         return (
           <Portfolio locale={locale} portfolioData={pingxiData} id={73147273} />
         )
+      case 'Awards':
+        return (
+          <Portfolio locale={locale} portfolioData={awardsData} awards={1} />
+        )
+      case 'Art':
+        return <Portfolio locale={locale} portfolioData={artData} art={1} />
       case 'Technical Notes':
         return <Medium />
       case 'LinkedIn':

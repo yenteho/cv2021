@@ -185,4 +185,31 @@ export const AboutMeData = (func) => [
       },
     ],
   },
+  {
+    menuPanelTitle: 'Awards',
+    list: [
+      {
+        item: 'Awards',
+        text: <FormattedMessage id="awards" defaultMessage="Awards" />,
+        type: <FormattedMessage id="awards.type" defaultMessage="YODEX, IF" />,
+      },
+    ],
+  },
+  {
+    menuPanelTitle: 'Art',
+    list: [
+      {
+        item: 'Art',
+        text: (
+          <FormattedMessage id="handpainting" defaultMessage="handpainting" />
+        ),
+        type: (
+          <FormattedMessage
+            id="handpainting.type"
+            defaultMessage="sketch, watercolor, traditional Chinese painting, calligraphy and print"
+          />
+        ),
+      },
+    ],
+  },
 ]

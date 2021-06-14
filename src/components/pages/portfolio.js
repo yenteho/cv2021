@@ -10,6 +10,7 @@ import {
   PortfolioDetail,
   Footer,
   Video,
+  Gap48,
 } from '../base/common'
 import { contactData } from '../data/contactData'
 
@@ -36,6 +37,8 @@ const Portfolio = ({
   youtube,
   xuennEu,
   xuennWc,
+  art,
+  awards,
 }) => {
   const [items, setItems] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
@@ -210,6 +213,93 @@ const Portfolio = ({
                   />
                 }
               />
+            </>
+          )}
+          {awards && (
+            <>
+              <Img src={Images.Yodex_chair} />
+
+              <PortfolioDetail
+                color="#696969"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="school.bachelor.award.yodex"
+                      defaultMessage="Young Designers' Exhibition (YODEX) - Craft Designs"
+                    />
+                    <br />
+                    <FormattedMessage
+                      id="school.bachelor.award.rank.yodex"
+                      defaultMessage="Excellence Awards"
+                    />
+                  </>
+                }
+              />
+              <Img src={Images.IF_interior} />
+              <PortfolioDetail
+                color="#696969"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="awards.if"
+                      defaultMessage="Hearing Spaces"
+                    />
+                    <br />
+                    <FormattedMessage
+                      id="awards.if.type"
+                      defaultMessage="IF Interior Design"
+                    />
+                  </>
+                }
+              />
+            </>
+          )}
+          {art && (
+            <>
+              <PortfolioDetail
+                color="#696969"
+                item={
+                  <FormattedMessage
+                    id="traditionalchinesepainting"
+                    defaultMessage="traditional Chinese painting"
+                  />
+                }
+              />
+              <Img src={Images.TC_tiger} />
+              <Gap48/>
+              <Img src={Images.TC_vegetables} />
+              <Gap48/>
+              <Img src={Images.TC_bitter} />
+              {/* <Img src={Images.TC_boat} /> */}
+              <PortfolioDetail
+                color="#696969"
+                item={<FormattedMessage id="sketch" defaultMessage="sketch" />}
+              />
+              <Img src={Images.Sketch_war} />
+              <Gap48/>
+              <Img src={Images.Sketch_light} />
+              <Gap48/>
+              <Img src={Images.Sketch_car} />
+              <Gap48/>
+              <Img src={Images.Sketch_crab} />
+              <Gap48/>
+              <Img src={Images.Sketch_lizard} />
+              <Gap48/>
+              <Img src={Images.Sketch_baby} />
+              <Gap48/>
+              <Img src={Images.Sketch_camera} />
+              <PortfolioDetail
+                color="#696969"
+                item={<FormattedMessage id="watercolor" defaultMessage="watercolor" />}
+              />
+              <Img src={Images.Water_boat} />
+              <PortfolioDetail
+                color="#696969"
+                item={<FormattedMessage id="print" defaultMessage="print" />}
+              />
+              <Img src={Images.Print_flower} />
+              <Gap48/>
+              <Img src={Images.Print_TC} />
             </>
           )}
           <ul>

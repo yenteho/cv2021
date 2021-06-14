@@ -205,3 +205,39 @@ export const pingxiData = {
     <FormattedMessage id="pingxie.namecard.date" defaultMessage="Feb 2018" />
   ),
 }
+export const awardsData = {
+  color: '#696969',
+  gradientColor0: '#D8D3CF',
+  gradientColor25: '#D0CAC6',
+  gradientColor75: '#CDC7C2',
+  gradientColor100: '#CDC7C2',
+  item: <FormattedMessage id="awards" defaultMessage="Awards" />,
+  type: <FormattedMessage id="awards.type" defaultMessage="YODEX, IF" />,
+  date: (
+    <FormattedMessage
+      id="handpainting.type.date"
+      defaultMessage="student projects"
+    />
+  ),
+}
+
+export const artData = {
+  color: '#696969',
+  gradientColor0: '#D8D3CF',
+  gradientColor25: '#D0CAC6',
+  gradientColor75: '#CDC7C2',
+  gradientColor100: '#CDC7C2',
+  item: <FormattedMessage id="handpainting" defaultMessage="Hand Painting" />,
+  type: (
+    <FormattedMessage
+      id="handpainting.type"
+      defaultMessage="sketch, watercolor, traditional Chinese painting, calligraphy and print"
+    />
+  ),
+  date: (
+    <FormattedMessage
+      id="handpainting.type.date"
+      defaultMessage="student projects"
+    />
+  ),
+}
