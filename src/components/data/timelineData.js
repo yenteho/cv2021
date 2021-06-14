@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import { CgWorkAlt } from 'react-icons/cg'
 import { IoSchoolSharp, IoStarSharp, IoTrophySharp } from 'react-icons/io5'
 import { FaBaby } from 'react-icons/fa'
+import { GiSoccerBall } from 'react-icons/gi'
 
 // export const getMenuPanel = (func) => [
 //   {
@@ -30,6 +31,171 @@ export const timelineData = [
         defaultMessage="IT Consultant – Sports UI Designer"
       />
     ),
+  },
+  {
+    icon: <GiSoccerBall />,
+    iconStyle: { background: '#5a4cb5' },
+    date: (
+      <FormattedMessage
+        id="xuenn.eu.time"
+        defaultMessage="DEC 2018 - Jun 2021"
+      />
+    ),
+    title: (
+      <FormattedMessage id="xuenn.eu" defaultMessage="2020 Euro Cup Megatron" />
+    ),
+    content: (
+      <FormattedMessage
+        id="xuenn.eu.type"
+        defaultMessage="Implemented the largest scale responsive web frontend revamp of our website"
+      />
+    ),
+    // project: (
+    //   <FormattedMessage
+    //     id="xuenn.eu"
+    //     defaultMessage="2020 Euro Cup Megatron"
+    //   />
+    // ),
+    // time: (
+    //   <FormattedMessage
+    //     id="xuenn.eu.time"
+    //     defaultMessage="DEC 2018 - Jun 2021"
+    //   />
+    // ),
+    list: [
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.eu.line2"
+            defaultMessage="Imported React Context API to build expandable, flexible and automatic color system. "
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.eu.line3"
+            defaultMessage="Developed Theme Generator for automatic color customization. "
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.eu.line4"
+            defaultMessage="Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  "
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.eu.line5"
+            defaultMessage="Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. "
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.eu.line6"
+            defaultMessage="Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. "
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.eu.line7"
+            defaultMessage="Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time."
+          />
+        ),
+      },
+    ],
+  },
+  {
+    icon: <GiSoccerBall />,
+    iconStyle: { background: '#5a4cb5' },
+    date: (
+      <FormattedMessage
+        id="xuenn.wc.time"
+        defaultMessage="JUL 2017 - JUL 2018"
+      />
+    ),
+    title: (
+      <FormattedMessage
+        id="xuenn.wc"
+        defaultMessage="2018 FIFA World Cup - Completed sports competition product UI revamp and was 24/7 standing by our website during competition."
+      />
+    ),
+    content: (
+      <FormattedMessage
+        id="xuenn.eu.type"
+        defaultMessage="Implemented the largest scale responsive web frontend revamp of our website"
+      />
+    ),
+    //   project: (
+    //   <FormattedMessage
+    //     id="xuenn.wc"
+    //     defaultMessage="2018 FIFA World Cup - Completed sports competition product UI revamp and was 24/7 standing by our website during competition."
+    //   />
+    // ),
+    // time: (
+    //   <FormattedMessage
+    //     id="xuenn.wc.time"
+    //     defaultMessage="JUL 2017 - JUL 2018"
+    //   />
+    // ),
+    list: [
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.wc.brands"
+            defaultMessage="Supported current 4 online brands, 188bet, TouTou, Rich88 and V9BET Sports Website in Desktop, Mobile and Tablet devices, keep html /css mockup consistent with design guideline, and provided suggestions for our partners of their CSS customization."
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.wc.negotiate"
+            defaultMessage="Negotiated and coordinated with user in Philippines to discuss and check the final layouts, interactions and functions in InVision, Sketch and Zeplin. "
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.wc.translate"
+            defaultMessage="Executed and translated requirements of visual design performances into precise, intuitive, and functional user interfaces"
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.wc.train"
+            defaultMessage="Trained developers on using Zeplin, InVision and Sketch tools to improve efficiency."
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.wc.test"
+            defaultMessage="Tested front-end code in multiple browsers to ensure cross-browser compatibility."
+          />
+        ),
+      },
+      {
+        text: (
+          <FormattedMessage
+            id="xuenn.wc.integrate"
+            defaultMessage="Integrated BetRadar and Scoreboards, and divided LiveCenter and Feedex from original website to provide customized possibility for users, including football, basketball, tennis, ice hockey, rugby, darts, baseball, cricket, generic sports and other net sports."
+          />
+        ),
+      },
+    ],
   },
   {
     icon: <CgWorkAlt />,

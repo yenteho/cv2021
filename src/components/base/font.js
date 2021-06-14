@@ -45,7 +45,7 @@ export const F20 = styled.h1`
       : 'normal'};
   text-transform: ${(props) => props.uppercase && 'uppercase'};
 `
-export const F18 = styled.h2`
+export const F18 = styled.h3`
   font-size: 1.8rem;
   line-height: 2rem;
   font-weight: ${(props) => props.bold && 'bold'};

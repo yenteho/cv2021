@@ -1495,17 +1495,48 @@ export const TimeLineDetail = ({ date, location }) => (
     <F12>{location}</F12>
   </TimeLineDetailWrapper>
 )
+export const ProjectListText = styled(F14)`
+  color: ${(props) => props.theme.color_T1};
+  margin-left: 0;
+  padding-left: 24px;
+  &:before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    padding: 0 16px;
+  }
+`
 export const TimelineContentWrapoer = styled.div`
   width: 100%;
   height: 100%;
-  ${F16}, ${F14} {
+  ${F16}, ${F14}, ${F18} {
     color: ${(props) => props.theme.color_T1};
   }
 `
-export const TimelineContent = ({ title, content }) => (
+export const TimelineContent = ({
+  title,
+  content,
+  project,
+  time,
+  list = [],
+}) => (
   <TimelineContentWrapoer>
-    <F16 bold>{title}</F16>
-    <F14>{content}</F14>
+    <F18>{title}</F18>
+    <F16>{content}</F16>
+    <br />
+    {project && <F14 bold>{project}</F14>}
+    {time && <F14>{time}</F14>}
+    <br />
+    <FlexLeftColumn>
+      {list &&
+        list.length > 0 &&
+        list.map(({ text, ...rest }, index) => (
+          <>
+            <ProjectListText>{text}</ProjectListText>
+            <br />
+          </>
+        ))}
+    </FlexLeftColumn>
   </TimelineContentWrapoer>
 )
 

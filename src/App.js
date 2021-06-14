@@ -30,6 +30,8 @@ import {
   ntustconfData,
   zionData,
   coinofData,
+  euData,
+  wcData,
 } from './components/data/portfolioData'
 
 // const isTouchScreen = 'ontouchstart' in document.documentElement
@@ -54,9 +56,9 @@ function App() {
       case 'Portfolio':
         return <Behance lang={lang} locale={locale} />
       case 'Euro Cup 188 Bet Sports Book':
-        return <Resume lang={lang} locale={locale} />
+        return <Portfolio locale={locale} portfolioData={euData} />
       case 'World Cup 188 / V9 / TT / R88 Bet Sports Book':
-        return <Resume lang={lang} locale={locale} />
+        return <Portfolio locale={locale} portfolioData={wcData} />
       // case 'CoinOf Cryptocurrency Investment Advisor':
       //   return <Coinof locale={locale} />
       // case 'CV 2017':

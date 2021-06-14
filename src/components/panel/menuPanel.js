@@ -35,7 +35,7 @@ const MenuPanelList = ({ page, switchPage }) => {
     <>
       {AboutMeData().map(({ menuPanelTitle, list = [], ...rest }, index) => (
         <>
-          <MenuPanelTitle menuPanelTitle={menuPanelTitle} />
+          {menuPanelTitle && <MenuPanelTitle menuPanelTitle={menuPanelTitle} />}
           {list.map(({ icon, text, type, item, ...rest }, index) => (
             <MenuPanelItem
               key={index}

@@ -138,7 +138,7 @@ section {
 
 ol,
 ul {
-  list-style: none;
+  // list-style: none;
 }
 
 blockquote,

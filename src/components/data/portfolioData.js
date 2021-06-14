@@ -4,6 +4,56 @@ import { CgWorkAlt } from 'react-icons/cg'
 import { IoSchoolSharp, IoStarSharp, IoTrophySharp } from 'react-icons/io5'
 import { FaBaby } from 'react-icons/fa'
 
+export const euData = {
+  color: '#F6901F',
+  gradientColor0: '#363636',
+  gradientColor25: '#363636',
+  gradientColor75: '#363636',
+  gradientColor100: '#363636',
+  item: (
+    <FormattedMessage
+      id="xuenn.eu"
+      defaultMessage="CoinOf Cryptocurrency Investment Advisor"
+    />
+  ),
+  type: (
+    <FormattedMessage id="xuenn.eu.design" defaultMessage="UI UX Website" />
+  ),
+  bu: (
+    <FormattedMessage
+      id="xuenn.company"
+      defaultMessage="Xuenn Pte Ltd. – Online digital gaming company "
+    />
+  ),
+  date: (
+    <FormattedMessage id="xuenn.eu.time" defaultMessage="DEC 2018 - Jun 2021" />
+  ),
+}
+export const wcData = {
+  color: '#F6901F',
+  gradientColor0: '#363636',
+  gradientColor25: '#363636',
+  gradientColor75: '#363636',
+  gradientColor100: '#363636',
+  item: (
+    <FormattedMessage
+      id="xuenn.eu"
+      defaultMessage="CoinOf Cryptocurrency Investment Advisor"
+    />
+  ),
+  type: (
+    <FormattedMessage id="xuenn.eu.design" defaultMessage="UI UX Website" />
+  ),
+  bu: (
+    <FormattedMessage
+      id="xuenn.company"
+      defaultMessage="Xuenn Pte Ltd. – Online digital gaming company "
+    />
+  ),
+  date: (
+    <FormattedMessage id="xuenn.eu.time" defaultMessage="DEC 2018 - Jun 2021" />
+  ),
+}
 export const coinofData = {
   color: '#444A9F',
   gradientColor0: '#B1D2EC',
