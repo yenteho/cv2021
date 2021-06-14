@@ -8008,7 +8008,7 @@ export const HeaderWrapper = styled(FlexScrollWrapper)`
   ${Shadow} {
     display: block;
   }
-  ${media.desktop`${HeaderItemWrapper}{display:none;}`}
+  // ${media.desktop`${HeaderItemWrapper}{display:none;}`}
 `
 
 export const BottomNavWrapper = styled(Flex)`

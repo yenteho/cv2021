@@ -42,7 +42,11 @@ const Header = ({
   return (
     <IntlProvider messages={locale}>
       <HeaderWrapper>
-        <MenuButton toggleMenuPanel={() => toggleMenuPanel()} />
+        <MenuButton toggleMenuPanel={() => toggleMenuPanel()} >
+          <HeaderItem
+              competition={'Portfolio'}
+            />
+        </MenuButton>
         <HeaderItemContainer
         // ref={scrollRef}
         >
@@ -61,7 +65,7 @@ const Header = ({
             />
           </FlexLeft>
           <FlexRight>
-            {headerData.map(({ item, counter, ...rest }, index) => (
+            {/* {headerData.map(({ item, counter, ...rest }, index) => (
               <HeaderItem
                 switchPage={() => switchPage(item)}
                 active={page === item}
@@ -70,7 +74,7 @@ const Header = ({
                 withBadge={item === 'My Events'}
                 counter={counter}
               />
-            ))}
+            ))} */}
             <div>
               <select
                 value={lang}
