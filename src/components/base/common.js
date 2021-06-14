@@ -1523,15 +1523,30 @@ export const TimelineContent = ({
 }) => (
   <TimelineContentWrapoer>
     {title && <F18>{title}</F18>}
-    {content && <F18>{content}</F18> } 
-    {position && <><br /><F16>{position}</F16></>}
-    {project && <><br /><F14>{project}</F14></>}
-    {time && <><br /><F14>{time}</F14></>}
+    {content && <F18>{content}</F18>}
+    {position && (
+      <>
+        <br />
+        <F16>{position}</F16>
+      </>
+    )}
+    {project && (
+      <>
+        <br />
+        <F14>{project}</F14>
+      </>
+    )}
+    {time && (
+      <>
+        <br />
+        <F14>{time}</F14>
+      </>
+    )}
     {list &&
       list.length > 0 &&
       list.map(({ text, ...rest }, index) => (
         <>
-        <br />
+          <br />
           <ProjectListText>{text}</ProjectListText>
         </>
       ))}
@@ -1664,6 +1679,17 @@ export const Footer = ({ list, color, onClick }) => {
 export const Img = styled.img`
   max-width: 100vw;
 `
+export const VideoWrapper = styled.video`
+  max-width: 600px;
+  // ${media.desktop`max-width: 100vw;`}
+`
+export const Video = ({ src }) => (
+  <VideoWrapper controls>
+    <source src={src} type="video/mp4" />
+    <source src="movie.ogg" type="video/ogg" />
+  </VideoWrapper>
+)
+
 export const ContentHeader = ({
   switchPage,
   img,

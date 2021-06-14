@@ -9,6 +9,7 @@ import {
   ContentHeader,
   PortfolioDetail,
   Footer,
+  Video,
 } from '../base/common'
 import { contactData } from '../data/contactData'
 
@@ -28,7 +29,14 @@ const layers = [
   },
 ]
 
-const Portfolio = ({ locale, id, portfolioData, youtube }) => {
+const Portfolio = ({
+  locale,
+  id,
+  portfolioData,
+  youtube,
+  xuennEu,
+  xuennWc,
+}) => {
   const [items, setItems] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
   const itemsTask = async () => {
@@ -81,6 +89,106 @@ const Portfolio = ({ locale, id, portfolioData, youtube }) => {
             bu={portfolioData.bu}
             date={portfolioData.date}
           />
+
+          {xuennEu && (
+            <>
+              <Video src={Images.Xuenn_ZeplinThemeGen} />
+              <PortfolioDetail
+                color="#ffffff"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="xuenn.eu.themegen"
+                      defaultMessage="Developed Theme Generator for automatic color customization. "
+                    />
+                    <br />
+                    <br />
+                    <FormattedMessage
+                      id="xuenn.eu.colorkeys"
+                      defaultMessage="Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  "
+                    />
+                  </>
+                }
+              />
+
+              <Video src={Images.Xuenn_ThemeGen} />
+              <PortfolioDetail
+                color="#ffffff"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="xuenn.eu.color"
+                      defaultMessage="Imported React Context API to build expandable, flexible and automatic color system. "
+                    />
+                  </>
+                }
+              />
+              <Video src={Images.Xuenn_Storybook} />
+              <PortfolioDetail
+                color="#ffffff"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="xuenn.eu.designsystem"
+                      defaultMessage="Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. "
+                    />
+                  </>
+                }
+              />
+              <Video src={Images.Xuenn_188} />
+              <PortfolioDetail
+                color="#ffffff"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="xuenn.eu.restructure"
+                      defaultMessage="Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time."
+                    />
+                  </>
+                }
+              />
+            </>
+          )}
+          {xuennWc && (
+            <>
+              <Video src={Images.Xuenn_wc} />
+              <PortfolioDetail
+                color="#ffffff"
+                item={
+                  <>
+                    <FormattedMessage
+                      id="xuenn.wc.brands"
+                      defaultMessage="Supported current 4 online brands, 188bet, TouTou, Rich88 and V9BET Sports Website in Desktop, Mobile and Tablet devices, keep html /css mockup consistent with design guideline, and provided suggestions for our partners of their CSS customization."
+                    />
+                    <br />
+                    <br />
+                    <FormattedMessage
+                      id="xuenn.wc.negotiate"
+                      defaultMessage="Negotiated and coordinated with user in Philippines to discuss and check the final layouts, interactions and functions in InVision, Sketch and Zeplin. "
+                    />
+                    <br />
+                    <br />
+                    <FormattedMessage
+                      id="xuenn.wc.translate"
+                      defaultMessage="Executed and translated requirements of visual design performances into precise, intuitive, and functional user interfaces"
+                    />
+                    <br />
+                    <br />
+                    <FormattedMessage
+                      id="xuenn.wc.train"
+                      defaultMessage="Trained developers on using Zeplin, InVision and Sketch tools to improve efficiency."
+                    />
+                    <br />
+                    <br />
+                    <FormattedMessage
+                      id="xuenn.wc.test"
+                      defaultMessage="Tested front-end code in multiple browsers to ensure cross-browser compatibility."
+                    />
+                  </>
+                }
+              />
+            </>
+          )}
           {youtube && (
             <>
               {' '}

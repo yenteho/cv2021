@@ -20,14 +20,13 @@ export const timelineData = [
       <FormattedMessage id="xuenn.locate" defaultMessage="Taipei, Taiwan" />
     ),
     title: (
-      <FormattedMessage
-        id="xuenn.company"
-        defaultMessage="Xuenn Pte Ltd."
-      />
+      <FormattedMessage id="xuenn.company" defaultMessage="Xuenn Pte Ltd." />
     ),
     content: (
       <FormattedMessage
-        id="xuenn.type" defaultMessage="Online digital gaming company "/>
+        id="xuenn.type"
+        defaultMessage="Online digital gaming company "
+      />
     ),
     position: (
       <FormattedMessage
@@ -70,7 +69,7 @@ export const timelineData = [
       {
         text: (
           <FormattedMessage
-            id="xuenn.eu.line2"
+            id="xuenn.eu.color"
             defaultMessage="Imported React Context API to build expandable, flexible and automatic color system. "
           />
         ),
@@ -78,7 +77,7 @@ export const timelineData = [
       {
         text: (
           <FormattedMessage
-            id="xuenn.eu.line3"
+            id="xuenn.eu.themegen"
             defaultMessage="Developed Theme Generator for automatic color customization. "
           />
         ),
@@ -86,7 +85,7 @@ export const timelineData = [
       {
         text: (
           <FormattedMessage
-            id="xuenn.eu.line4"
+            id="xuenn.eu.colorkeys"
             defaultMessage="Integrated color keys, vector Icons, background images all formats for Web, iOS and Android App to improve developing process.  "
           />
         ),
@@ -94,7 +93,7 @@ export const timelineData = [
       {
         text: (
           <FormattedMessage
-            id="xuenn.eu.line5"
+            id="xuenn.eu.designsystem"
             defaultMessage="Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. "
           />
         ),
@@ -102,7 +101,7 @@ export const timelineData = [
       {
         text: (
           <FormattedMessage
-            id="xuenn.eu.line6"
+            id="xuenn.eu.privatenpm"
             defaultMessage="Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. "
           />
         ),
@@ -110,7 +109,7 @@ export const timelineData = [
       {
         text: (
           <FormattedMessage
-            id="xuenn.eu.line7"
+            id="xuenn.eu.restructure"
             defaultMessage="Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time."
           />
         ),
@@ -210,18 +209,18 @@ export const timelineData = [
       <FormattedMessage id="rapaq.locate" defaultMessage="Taipei, Taiwan" />
     ),
     title: (
-      <FormattedMessage
-        id="rapaq.title"
-        defaultMessage="RapaQ Co., Ltd.,"
-      />
+      <FormattedMessage id="rapaq.title" defaultMessage="RapaQ Co., Ltd.," />
     ),
     content: (
-      <FormattedMessage id="raoaq.type" defaultMessage="E-commerce and social media for design professionals" />
+      <FormattedMessage
+        id="raoaq.type"
+        defaultMessage="E-commerce and social media for design professionals"
+      />
     ),
     position: (
       <FormattedMessage id="raoaq.company" defaultMessage="Frontend Engineer" />
     ),
-        project: (
+    project: (
       <FormattedMessage
         id="rapaq.ec"
         defaultMessage="Used HTML, CSS(SCSS), JavaScript and jQuery to create user-friendly web pages for E-commerce"

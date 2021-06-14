@@ -48,7 +48,7 @@ function App() {
     setMenuPanel(!showMenuPanel)
   }
   const isDisableScroll = showMenuPanel
-  const [page, switchPage] = useState('Resume')
+  const [page, switchPage] = useState('Euro Cup 188 Bet Sports Book')
   const getCurrentPage = () => {
     switch (page) {
       case 'Resume':
@@ -56,25 +56,9 @@ function App() {
       case 'Portfolio':
         return <Behance lang={lang} locale={locale} />
       case 'Euro Cup 188 Bet Sports Book':
-        return <Portfolio locale={locale} portfolioData={euData} />
+        return <Portfolio locale={locale} portfolioData={euData} xuennEu={1} />
       case 'World Cup 188 / V9 / TT / R88 Bet Sports Book':
-        return <Portfolio locale={locale} portfolioData={wcData} />
-      // case 'CoinOf Cryptocurrency Investment Advisor':
-      //   return <Coinof locale={locale} />
-      // case 'CV 2017':
-      //   return <Behance locale={locale} />
-      // case 'ZION GROTTA ROAD TIRE':
-      //   return <Zion locale={locale} />
-      // case 'Pypat IP Services Company':
-      //   return <Pypat locale={locale} />
-      // case 'Asian Patent Attorneys Association':
-      //   return <NtustPatentConf locale={locale} />
-      // case 'Cryptocurrency Company Business Cards':
-      //   return <NcCrypto locale={locale} />
-      // case 'Xuenn Digital Gaming Innovators':
-      //   return <NcXuenn locale={locale} />
-      // case 'Pingxi Travellers Lodge':
-      //   return <Pingxi locale={locale} />
+        return <Portfolio locale={locale} portfolioData={wcData} xuennWc={1} />
       case 'CoinOf Cryptocurrency Investment Advisor':
         return (
           <Portfolio locale={locale} portfolioData={coinofData} id={73184365} />
