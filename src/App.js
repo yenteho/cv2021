@@ -1,4 +1,3 @@
-import './App.css'
 import React, { useState, useEffect } from 'react'
 import AppView from './components/AppView'
 import colors from './colors/light.js'
@@ -32,6 +31,8 @@ import {
   zionData,
   coinofData,
 } from './components/data/portfolioData'
+
+// const isTouchScreen = 'ontouchstart' in document.documentElement
 function App() {
   const [lang, setLang] = useState('en')
   const [locale, setLocale] = useState(undefined)

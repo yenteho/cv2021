@@ -21,7 +21,7 @@ import {
   FilterItemContainer,
   FilterLocateWrapperInner,
 } from '../base/common'
-
+import { HiMenu } from 'react-icons/hi'
 const Header = ({
   icons,
   HeaderItems,
@@ -42,24 +42,18 @@ const Header = ({
   return (
     <IntlProvider messages={locale}>
       <HeaderWrapper>
-        <MenuButton toggleMenuPanel={() => toggleMenuPanel()} >
-          <HeaderItem
-              competition={'Portfolio'}
-            />
-        </MenuButton>
+        <MenuButton
+          toggleMenuPanel={() => toggleMenuPanel()}
+          text={'Portfolio'}
+          icon={<HiMenu />}
+        />
         <HeaderItemContainer
         // ref={scrollRef}
         >
-          <Shadow
-            fromColor={(props) => props.theme.color_P1}
-            toColor={(props) => props.theme.color_P1_OP0}
-            fromLeft={'left: 64px;'}
-            withWidth={'16px;'}
-          />
           <FlexLeft onClick={() => console.log('>')}>
             {icons}
             <HeaderItem
-              competition={'Angel Ho'}
+              competition={'Resume'}
               active={page === 'Resume'}
               switchPage={() => switchPage('Resume')}
             />

@@ -1070,31 +1070,37 @@ export const Counter = ({ counter }) => (
 )
 //-------------------- Resume Header --------------------//
 
-export const MenuButtonWrapper = styled(FlexCenter)`
-  width: 64px;
-  position: absolute;
+export const MenuButtonWrapper = styled(FlexLeft)`
   height: 100%;
-  left: 0;
-  background: ${(props) => props.theme.color_P1};
-  g {
-    fill: ${(props) =>
-      props.active ? `${props.theme.color_P2_1};` : `${props.theme.color_T1};`};
+  padding: ${(props) => (props.icon ? '16px 0 0 0' : '0 16px')};
+  ${F14} {
+    line-height: 48px;
+  }
+  color: ${(props) => props.theme.color_T1};
+  svg {
+    color: ${(props) => props.theme.color_T1};
   }
   @media (hover: hover) {
     &:hover {
       cursor: pointer;
-      background: ${(props) => props.theme.color_P1_Lplus4};
+      color: ${(props) => props.theme.color_T1_hover};
+      svg {
+        color: ${(props) => props.theme.color_T1_hover};
+      }
     }
   }
   &:active {
-    background: ${(props) => props.theme.color_P1_Lmin8};
+    color: ${(props) => props.theme.color_T1_active};
+    svg {
+      color: ${(props) => props.theme.color_T1_active};
+    }
+    background: ${(props) => props.theme.color_P1_hover};
   }
 `
-export const MenuButton = ({ toggleMenuPanel }) => (
-  <MenuButtonWrapper onClick={toggleMenuPanel}>
-    <IconWrapper24>
-      <HiMenu />
-    </IconWrapper24>
+export const MenuButton = ({ icon, toggleMenuPanel, text }) => (
+  <MenuButtonWrapper onClick={toggleMenuPanel} icon={icon}>
+    {icon && <IconWrapper24>{icon}</IconWrapper24>}
+    {text && <F14 uppercase>{text}</F14>}
   </MenuButtonWrapper>
 )
 
