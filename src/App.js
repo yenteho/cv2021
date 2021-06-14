@@ -48,7 +48,7 @@ function App() {
     setMenuPanel(!showMenuPanel)
   }
   const isDisableScroll = showMenuPanel
-  const [page, switchPage] = useState('Euro Cup 188 Bet Sports Book')
+  const [page, switchPage] = useState('Resume')
   const getCurrentPage = () => {
     switch (page) {
       case 'Resume':
