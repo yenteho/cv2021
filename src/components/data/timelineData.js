@@ -22,10 +22,14 @@ export const timelineData = [
     title: (
       <FormattedMessage
         id="xuenn.company"
-        defaultMessage="Xuenn Pte Ltd. – Online digital gaming company "
+        defaultMessage="Xuenn Pte Ltd."
       />
     ),
     content: (
+      <FormattedMessage
+        id="xuenn.type" defaultMessage="Online digital gaming company "/>
+    ),
+    position: (
       <FormattedMessage
         id="xuenn.title"
         defaultMessage="IT Consultant – Sports UI Designer"
@@ -208,11 +212,20 @@ export const timelineData = [
     title: (
       <FormattedMessage
         id="rapaq.title"
-        defaultMessage="RapaQ Co., Ltd., – E-commerce and social media for design professionals"
+        defaultMessage="RapaQ Co., Ltd.,"
       />
     ),
     content: (
-      <FormattedMessage id="rapaq.company" defaultMessage="Frontend Engineer" />
+      <FormattedMessage id="raoaq.type" defaultMessage="E-commerce and social media for design professionals" />
+    ),
+    position: (
+      <FormattedMessage id="raoaq.company" defaultMessage="Frontend Engineer" />
+    ),
+        project: (
+      <FormattedMessage
+        id="rapaq.ec"
+        defaultMessage="Used HTML, CSS(SCSS), JavaScript and jQuery to create user-friendly web pages for E-commerce"
+      />
     ),
   },
   {
@@ -233,7 +246,7 @@ export const timelineData = [
         defaultMessage="Yolomoto Co., Ltd.  – Tire manufacturing startup company"
       />
     ),
-    content: (
+    position: (
       <FormattedMessage
         id="yolomoto.company"
         defaultMessage="Web Designer / Graphic Designer / Industrial Designer/ Animation Designer"
@@ -258,7 +271,7 @@ export const timelineData = [
         defaultMessage="BOEHMERT & BOEHMERT"
       />
     ),
-    content: (
+    position: (
       <FormattedMessage
         id="boehmert.company"
         defaultMessage="Patent Engineer Intern"
@@ -286,7 +299,7 @@ export const timelineData = [
         defaultMessage="M.A., Graduate Institute of Patent, College of Intellectual Property Studies"
       />
     ),
-    content: (
+    position: (
       <>
         <FormattedMessage
           id="school.master.department"
@@ -415,7 +428,7 @@ export const timelineData = [
         defaultMessage="Taitung County 'Permanent Public Toilets' Competitions"
       />
     ),
-    content: (
+    position: (
       <FormattedMessage
         id="school.bachelor.award.rank.permanent"
         defaultMessage="Bronze Award Winners"

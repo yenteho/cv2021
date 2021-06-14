@@ -9,23 +9,53 @@
   "resume.Behance":"https://www.behance.net/yente_ho ",
   "resume.Github":"https://github.com/yenteho ",
   "resume.Website":"http://angelho.design",
-  "xuenn.company":"軒昂有限公司 – 線上娛樂",
+
+  "xuenn.company":"軒昂有限公司",
+  "xuenn.type":"運動類型線上娛樂平台",
   "xuenn.title":"IT Consultant – Sports UI 設計師",
   "xuenn.locate":"台北, 台灣",
   "xuenn.date":"2017 七月 - 至今 ",
+
+  "xuenn.eu":"2020 Euro Cup Megatron",
+  "xuenn.eu.type":"Implemented the largest scale responsive web frontend revamp of our website",
+  "xuenn.eu.time":"Aug 2018 - Jun 2021",
+  "xuenn.eu.design":"UI UX Website",
   "xuenn.eu.line1":"2021 Euro Cup 運彩項目產品的前端網站大型重構，在與確認資訊架構後，於設計端製作 Design System，定義嚴謹的設計架構，規範包括色彩、字體、RWD Grids等各類基本組件。使用 React Styled Components 製作 Storybook，使用 private NPM 工具，針對公司內部產品客製化可互動、模組化的 UI Library，提供開發團隊迅速有效率的 UI 迭代模式，讓開發前的互動設計得到完整的測試，以確保RWD網頁在不同裝置上的跨瀏覽器兼容性，方便開發快速銜接前端資料的串接。 ",
   "xuenn.eu.line2":"建構可橫跨 Web、iOS App、Android App 的色彩代碼運算系統，使客戶能快速客製化專屬介面，商業面提供更多元的選擇。Icon 全面改 SVG 以 Webpack、 Babel 編譯工具打包，以提供更輕量化且保留變更色彩之彈性。 ",
   "xuenn.eu.line3":"開發維護跨平台跨瀏覽器優化及支援四大線上188bet, TouTou, Rich88, V9BET平台運動娛樂產品網站，長期作為窗口對菲律賓及印尼商開團隊進行設計上的協調合作，透過Figma、Sketch、Zeplin 和 InVision轉譯商業語言為設計圖面，確認需求及功能，進一步進行可行性評估後，才將需求提供給開發團隊。",
   "xuenn.eu.line4":"2018 World Cup前重構100多種的主要下注頁面為RWD自適應網頁設計，增強代碼的重用性，並整合Bet Radar 和 Scoreboards兩套新舊系統的即時資訊更新介面，提供可客製化抽換的CSS色彩配置及架構，讓不同品牌能靈活轉換外觀，項目包括足球，籃球，網球，冰球，橄欖球，飛鏢，棒球，板球，通用體育活動，並從原本的網站將直播電視獨立出來，為用戶提供客製化的可能性。建立icon-fonts系統，為4個品牌客製化套用，以替換先前的Sprite Image系統。並至菲律賓出差，與用戶討論規劃新項目開發。",
-  "rapaq.company":"RapaQ Co., Ltd., – 給設計師的電子商務平台及社群平台",
+  "xuenn.eu.line5":"Built Storybook and Design System to make it easy to keep track of all UI widgets cases and all responsive web behavior, which could highly raise reusability and reduce communication costs. ",
+  "xuenn.eu.line6":"Built private NPM UI Library as bootstrap of our team, which can increase efficiency of any UI change requirements from UI to front-end development process. ",
+  "xuenn.eu.line7":"Restructured all UI layout from Adaptive Web Design to real Responsive Website Design with grid system, flexbox and media query, supporting all mainstream web browser on all devices at the same time.",
+  "xuenn.wc":"2018 FIFA World Cup",
+  "xuenn.wc.type":"Completed sports competition product UI revamp and was 24/7 standing by our website during competition.",
+  "xuenn.wc.time":"JUL 2017 - JUL 2018",
+  "xuenn.wc.brands":"Supported current 4 online brands, 188bet, TouTou, Rich88 and V9BET Sports Website in Desktop, Mobile and Tablet devices, keep html /css mockup consistent with design guideline, and provided suggestions for our partners of their CSS customization.",
+  "xuenn.wc.negotiate":"Negotiated and coordinated with user in Philippines to discuss and check the final layouts, interactions and functions in InVision, Sketch and Zeplin. ",
+  "xuenn.wc.translate":"Executed and translated requirements of visual design performances into precise, intuitive, and functional user interfaces",
+  "xuenn.wc.train":"Trained developers on using Zeplin, InVision and Sketch tools to improve efficiency.",
+  "xuenn.wc.test":"Tested front-end code in multiple browsers to ensure cross-browser compatibility.",
+  "xuenn.wc.integrate":"Integrated BetRadar and Scoreboards, and divided LiveCenter and Feedex from original website to provide customized possibility for users, including football, basketball, tennis, ice hockey, rugby, darts, baseball, cricket, generic sports and other net sports.",
+
+  "rapaq.company":"RapaQ Co., Ltd.,",
+  "raoaq.type":"給設計師的電子商務平台及社群平台",
   "rapaq.title":"前端工程師",
   "rapaq.date":"2017 三月 - 2017 六月",
   "rapaq.locate":"台北, 台灣",
+  "rapaq.ec":"根據UI Sketch 匯出至 Zeplin 圖面，使用Html5(pug)、Css3(Sass)及Bootstrap4處理視覺畫面切版,使用JavaScript，搭配JQuery及其Plugin、Vue等框架製作 RWD 網站頁面",
   
   "yolomoto.company":"Yolomoto Co., Ltd.  – 輪胎產業新創公司",
   "yolomoto.title":"網頁設計師 / 平面設計師 / 工業設計師/ 動畫設計師",
   "yolomoto.date":"2016 九月 - 2017 二月",
   "yolomoto.locate":"台北, 台灣",
+
+  "yolomoto.graphic":"Graphic Design - used Adobe Graphic software as Photoshop and Illustrator to design Logo, business card and Brochures",
+  "yolomoto.industrial":"Industrial Design - used Alias and Autodesk Showcase to make bike tire modeling and rendering",
+  "yolomoto.animation":"Animation Design - used Blender and After Effects to build 3D models and animation films",
+  "yolomoto.web":"Designed and developed business website for start-up company",
+  "yolomoto.frontend":"Used HTML5, CSS3, JavaScript and Bootstrap3 and JQuery to make user interface",
+  "yolomoto.consult":"Consulted on various materials and design techniques for new product lines and trade show displays",
+  "yolomoto.reddot":"Attended red-dot design competition ",
 
   "boehmert.company":"BOEHMERT & BOEHMERT",
   "boehmert.title":"專利工程師",
@@ -46,13 +76,11 @@
   "pypat.communicate":"與客戶溝通優惠專利策略",
   "pypat.forecast":"透過功效矩陣製作進行技術預測",
 
-
   "school.master":"國立臺灣科技大學",
   "school.master.department":"智慧財產學院 ｜ 專利研究所",
   "school.master.gpa":"（GPA: 4.0/4.0)",
   "school.master.date":"2014 九月 -  2016 六月",
   "school.master.locate":"台北, 台灣",
-
 
   "association.nmun":"紐約模擬聯合國 New York Model United Nations",
   "association.nmun.conf":"參加聯合國環境衛生署會議並擔任塞席爾共和國代表",
@@ -149,7 +177,6 @@
   "pingxie.namecard":"平溪十分旅人名宿",
   "pingxie.namecard.design":"名片、杯墊",
   "pingxie.namecard.date":"2016 二月"
-
 }
 
 

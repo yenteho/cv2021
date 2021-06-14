@@ -1515,28 +1515,26 @@ export const TimelineContentWrapoer = styled.div`
 `
 export const TimelineContent = ({
   title,
+  position,
   content,
   project,
   time,
   list = [],
 }) => (
   <TimelineContentWrapoer>
-    <F18>{title}</F18>
-    <F16>{content}</F16>
-    <br />
-    {project && <F14 bold>{project}</F14>}
-    {time && <F14>{time}</F14>}
-    <br />
-    <FlexLeftColumn>
-      {list &&
-        list.length > 0 &&
-        list.map(({ text, ...rest }, index) => (
-          <>
-            <ProjectListText>{text}</ProjectListText>
-            <br />
-          </>
-        ))}
-    </FlexLeftColumn>
+    {title && <F18>{title}</F18>}
+    {content && <F18>{content}</F18> } 
+    {position && <><br /><F16>{position}</F16></>}
+    {project && <><br /><F14>{project}</F14></>}
+    {time && <><br /><F14>{time}</F14></>}
+    {list &&
+      list.length > 0 &&
+      list.map(({ text, ...rest }, index) => (
+        <>
+        <br />
+          <ProjectListText>{text}</ProjectListText>
+        </>
+      ))}
   </TimelineContentWrapoer>
 )
 

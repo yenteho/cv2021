@@ -17,7 +17,7 @@ const Timeline = () => {
       <VerticalElementContainer>
         {timelineData.map(
           (
-            { title, content, date, location, icon, iconStyle, list },
+            { title, position, content,project, date, location, icon, iconStyle, list },
             index
           ) => (
             <Fragment key={`VerticalElementContainer_${index}`}>
@@ -26,7 +26,7 @@ const Timeline = () => {
                 icon={icon}
                 iconStyle={iconStyle}
               >
-                <TimelineContent title={title} content={content} list={list} />
+              <TimelineContent title={title} position={position} content={content} project={project} list={list} />
               </VerticalTimelineElement>
             </Fragment>
           )
