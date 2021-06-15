@@ -159,11 +159,11 @@
   "handpainting":"Hand Painting",
   "handpainting.type":"sketch, watercolor, traditional Chinese painting, calligraphy and print",
   "handpainting.type.date":"Student projects",
-  "sketch":"sketch",
-  "watercolor":"watercolor",
-  "traditionalchinesepainting":"traditional Chinese painting",
-  "calligraphy":"calligraphy",
-  "print":"print",
+  "sketch":"Sketch",
+  "watercolor":"Satercolor",
+  "traditionalchinesepainting":"Traditional Chinese Painting",
+  "calligraphy":"Calligraphy",
+  "print":"Print",
 
 
   "birth":"Dec 1990",

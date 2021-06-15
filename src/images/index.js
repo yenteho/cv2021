@@ -6,6 +6,8 @@ import Xuenn_ZeplinThemeGen from './video/xuennZeplinTheme.mp4'
 import Xuenn_Storybook from './video/xuennstorybook.mp4'
 import Xuenn_188 from './video/188Bet.mp4'
 import Xuenn_wc from './video/wc.mp4'
+import Xuenn_ccFootball from './video/ContentCenterFootball.mp4'
+import Xuenn_ccBasketabll from './video/ContentCenterBasketball.mp4'
 import Yodex_chair from './img/藺一伴展板.png'
 import Yodex_interior from './img/藺一伴展板.png'
 import IF_chair from './img/藺一伴IF.jpeg'
@@ -25,6 +27,7 @@ import TC_boat from './img/art/國畫船.jpeg'
 import Water_boat from './img/art/水彩船.jpeg'
 import Print_TC from './img/art/瓷版.jpeg'
 import Print_flower from './img/art/瓷版花圃.jpeg'
+import Calligraphy_w from './img/art/書法蘭亭序.jpeg'
 export default {
   Photo,
   Working,
@@ -34,6 +37,8 @@ export default {
   Xuenn_Storybook,
   Xuenn_188,
   Xuenn_wc,
+  Xuenn_ccFootball,
+  Xuenn_ccBasketabll,
   IF_chair,
   IF_interior,
   Yodex_chair,
@@ -52,4 +57,5 @@ export default {
   Water_boat,
   Print_TC,
   Print_flower,
+  Calligraphy_w,
 }

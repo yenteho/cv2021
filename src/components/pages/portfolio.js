@@ -155,6 +155,10 @@ const Portfolio = ({
           {xuennWc && (
             <>
               <Video src={Images.Xuenn_wc} />
+              <Gap48 />
+              <Video src={Images.Xuenn_ccFootball} />
+              <Gap48 />
+              <Video src={Images.Xuenn_ccBasketabll} />
               <PortfolioDetail
                 color="#ffffff"
                 item={
@@ -305,6 +309,16 @@ const Portfolio = ({
               <Img src={Images.Print_flower} />
               <Gap48 />
               <Img src={Images.Print_TC} />
+              <PortfolioDetail
+                color="#696969"
+                item={
+                  <FormattedMessage
+                    id="calligraphy"
+                    defaultMessage="Calligraphy"
+                  />
+                }
+              />
+              <Img src={Images.Calligraphy_w} />
             </>
           )}
           <ul>
